@@ -1,0 +1,2 @@
+{"app":"bank","step":"session","ok":true,"secret":"perfbench-session","login_status":"302","token_exp_epoch":1790999999,"seconds":3}
+[10:27:13Z bank/session] http://frontend:80/home -> 200, 3 in a row

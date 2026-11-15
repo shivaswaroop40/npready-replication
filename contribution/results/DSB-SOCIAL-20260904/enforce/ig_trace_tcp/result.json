@@ -1,0 +1,21 @@
+{
+ "drops_total": 3260,
+ "drops_by_edge": {
+  "nginx-thrift->compose-post-service:9090": 1996,
+  "user-timeline-service->user-timeline-mongodb:27017": 256,
+  "url-shorten-service->url-shorten-mongodb:27017": 248,
+  "post-storage-service->post-storage-mongodb:27017": 246,
+  "social-graph-service->social-graph-mongodb:27017": 244,
+  "user-service->user-mongodb:27017": 242,
+  "nginx-thrift->jaeger:None": 28
+ },
+ "wrk2_requests_last_run": "112",
+ "wrk2_non2xx_last_run": "112",
+ "wrk2_socket_errors_last_run": [
+  "0",
+  "0",
+  "0",
+  "4"
+ ],
+ "locust_fails": "non2xx=112/112 sockerr=('0', '0', '0', '4')"
+}

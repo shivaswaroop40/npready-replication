@@ -1,0 +1,21 @@
+#!/bin/bash
+# mock systemd-run: --scope execs the command in place (pid recorded per node and unit);
+# otherwise a detached "service"
+node=${MOCK_NODE:-cp-01}; d=/run/mock/$node; mkdir -p "$d"
+scope=0 unit=""
+while [ $# -gt 0 ]; do
+  case $1 in --scope) scope=1 ;; --quiet|--collect) ;; --unit=*) unit=${1#--unit=} ;; --) shift; break ;; -*) ;; *) break ;; esac
+  shift
+done
+alive() { [ -f "$d/$1.pid" ] && kill -0 "$(cat "$d/$1.pid")" 2>/dev/null; }
+if [ "$scope" = 1 ]; then
+  case $unit in *.scope) ;; *) unit=$unit.scope ;; esac
+  if alive "$unit"; then echo "Unit $unit already exists" >&2; exit 1; fi
+  echo $$ > "$d/$unit.pid"
+  if [ "$(ps -o pgid= -p $$ | tr -d ' ')" = "$$" ]; then exec "$@"; else exec setsid "$@"; fi
+else
+  case $unit in *.service) ;; *) unit=$unit.service ;; esac
+  if alive "$unit"; then echo "Unit $unit already exists" >&2; exit 1; fi
+  setsid nohup "$@" </dev/null >/dev/null 2>>"$d/$unit.err" &
+  echo $! > "$d/$unit.pid"
+fi

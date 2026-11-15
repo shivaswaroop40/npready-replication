@@ -1,0 +1,24 @@
+# otel: images.txt resolved 2026-10-02 (thesis run 2026-09-06)
+# ref	digest the tag points at now	amd64	note
+busybox:latest	sha256:fd7dc98638c8e305f4dc34e979f1c0fdfdcaeb0fbf8fcff77ae834b6da3d7e6e	yes	tag last pushed 2026-09-23, AFTER the thesis run
+docker.io/bats/bats:v1.4.1	sha256:f9e5272f8ccd9a21554e461c596b08553d052af78e509b8dffbd80ba89a34164	yes	tag last pushed 2022-04-30, before the thesis run
+ghcr.io/open-feature/flagd:v0.11.2	sha256:d9fea4520b79e786c63549e6820aaad95589385bee00e4389402b0a901840ced	yes	
+ghcr.io/open-telemetry/demo:1.11.1-accountingservice	sha256:f09dfbd4adf590fcf94070cb832583c1e9572edd558b1c5761429a14d7bf4d9e	yes	
+ghcr.io/open-telemetry/demo:1.11.1-adservice	sha256:509fb536e401d44128b95975fed58d8181a9f3104d17e50b645d6e531384bafb	yes	
+ghcr.io/open-telemetry/demo:1.11.1-cartservice	sha256:b4ff68be3ef54dfe365cfdab71f35332933f1f27121ef3a839299ad53c92a836	yes	
+ghcr.io/open-telemetry/demo:1.11.1-checkoutservice	sha256:d946019878299529d6272233daa8bc1e76d3ce4ddcee76448f14f8253c5d80e9	yes	
+ghcr.io/open-telemetry/demo:1.11.1-currencyservice	sha256:c6ad7f28380165c04849c142b978a4e1738078f776ad21cdcfc58de66e458ee6	yes	
+ghcr.io/open-telemetry/demo:1.11.1-emailservice	sha256:848727a693bde91351fda4eb036ec59642eee1ca9f3bc3d50ef96bc7c5004524	yes	
+ghcr.io/open-telemetry/demo:1.11.1-frauddetectionservice	sha256:f3f73f902b94d5d399dbf418b11dbcafac6f2847a1b8299f09f76e0734e543c1	yes	
+ghcr.io/open-telemetry/demo:1.11.1-frontend	sha256:3e8d9efdbf7b17743400e6f570df302437bb99aae97ecc20ed2ff55a9d24bd39	yes	
+ghcr.io/open-telemetry/demo:1.11.1-imageprovider	sha256:e8acb917b786f3696ebf99e6cd9a1bed18d21a6853270a3afc4b6038d90afa82	yes	
+ghcr.io/open-telemetry/demo:1.11.1-kafka	sha256:7a967505ac81471e9cc1ccf4e0127ba1ee671f607be432ec2ff8cc259f99d9bf	yes	
+ghcr.io/open-telemetry/demo:1.11.1-paymentservice	sha256:0a27cca2ef0f8d8cafcdff171620c30a14d2a2128c7c8bef4a8c0cca95b12e43	yes	
+ghcr.io/open-telemetry/demo:1.11.1-productcatalogservice	sha256:55a66eeb1aa320686fe6cfd84bb5fc5dac04b8fffe5333b8936126a64ed8d69a	yes	
+ghcr.io/open-telemetry/demo:1.11.1-quoteservice	sha256:60758ab8a64b114d68b7dd5e5264525695fc54b3e239fe86d23accb5e135e184	yes	
+ghcr.io/open-telemetry/demo:1.11.1-recommendationservice	sha256:c57a5e4b0f72cb1cbc78670d2265f5007119a6575768500e4e196a547b1f0568	yes	
+ghcr.io/open-telemetry/demo:1.11.1-shippingservice	sha256:9d5f194e6f428bcfa5f1013d0e77510e669ba453539e77d6242ee669c19cc9c5	yes	
+locustio/locust:2.31.5	sha256:d9f2fe8899e3cc924b17afcdda25e1cbd4164955e06bac208cecf6aefea0a685	yes	tag last pushed 2024-08-31, before the thesis run
+otel/opentelemetry-collector-contrib:0.105.0	sha256:3ff721e65733a9c2d94e81cfb350e76f1cd218964d5608848e2e73293ea88114	yes	tag last pushed 2024-07-16, before the thesis run
+valkey/valkey:7.2-alpine	sha256:c6c2f0020be34bbf684a53a0ef716ab16ff70295186d4d9f2518435beb7afbff	yes	tag last pushed 2026-09-21, AFTER the thesis run
+williamyeh/hey@sha256:6e63ae9c5801204cf7abe22c9ddf82d1bcbc7140ffd206a9bd83a8a643dcd6f2	sha256:6e63ae9c5801204cf7abe22c9ddf82d1bcbc7140ffd206a9bd83a8a643dcd6f2	yes	

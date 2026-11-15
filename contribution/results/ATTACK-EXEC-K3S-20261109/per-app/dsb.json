@@ -1,0 +1,326 @@
+{
+  "app": "dsb",
+  "attack_edges": 8,
+  "rounds": {
+    "unprotected": [
+      {
+        "edge": "nginx-thrift->user-mongodb:27017",
+        "dst_ip": "10.42.0.128",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "nginx-thrift->social-graph-redis:6379",
+        "dst_ip": "10.42.1.62",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "media-frontend->post-storage-mongodb:27017",
+        "dst_ip": "10.42.1.187",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "compose-post-service->user-mongodb:27017",
+        "dst_ip": "10.42.0.128",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "text-service->social-graph-mongodb:27017",
+        "dst_ip": "10.42.1.233",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "home-timeline-service->user-memcached:11211",
+        "dst_ip": "10.42.1.17",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "unique-id-service->post-storage-mongodb:27017",
+        "dst_ip": "10.42.1.187",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "url-shorten-service->home-timeline-redis:6379",
+        "dst_ip": "10.42.1.9",
+        "reachable": true,
+        "log": "RC=0"
+      }
+    ],
+    "synth": {
+      "edges": [
+        {
+          "edge": "nginx-thrift->user-mongodb:27017",
+          "dst_ip": "10.42.0.128",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "nginx-thrift->social-graph-redis:6379",
+          "dst_ip": "10.42.1.62",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "media-frontend->post-storage-mongodb:27017",
+          "dst_ip": "10.42.1.187",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "compose-post-service->user-mongodb:27017",
+          "dst_ip": "10.42.0.128",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "text-service->social-graph-mongodb:27017",
+          "dst_ip": "10.42.1.233",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "home-timeline-service->user-memcached:11211",
+          "dst_ip": "10.42.1.17",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "unique-id-service->post-storage-mongodb:27017",
+          "dst_ip": "10.42.1.187",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "url-shorten-service->home-timeline-redis:6379",
+          "dst_ip": "10.42.1.9",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "synth_plus_config": {
+      "edges": [
+        {
+          "edge": "nginx-thrift->user-mongodb:27017",
+          "dst_ip": "10.42.0.128",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "nginx-thrift->social-graph-redis:6379",
+          "dst_ip": "10.42.1.62",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "media-frontend->post-storage-mongodb:27017",
+          "dst_ip": "10.42.1.187",
+          "reachable": false,
+          "log": ""
+        },
+        {
+          "edge": "compose-post-service->user-mongodb:27017",
+          "dst_ip": "10.42.0.128",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "text-service->social-graph-mongodb:27017",
+          "dst_ip": "10.42.1.233",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "home-timeline-service->user-memcached:11211",
+          "dst_ip": "10.42.1.17",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "unique-id-service->post-storage-mongodb:27017",
+          "dst_ip": "10.42.1.187",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "url-shorten-service->home-timeline-redis:6379",
+          "dst_ip": "10.42.1.9",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "otterize": {
+      "edges": [
+        {
+          "edge": "nginx-thrift->user-mongodb:27017",
+          "dst_ip": "10.42.0.128",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "nginx-thrift->social-graph-redis:6379",
+          "dst_ip": "10.42.1.62",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "media-frontend->post-storage-mongodb:27017",
+          "dst_ip": "10.42.1.187",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "compose-post-service->user-mongodb:27017",
+          "dst_ip": "10.42.0.128",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "text-service->social-graph-mongodb:27017",
+          "dst_ip": "10.42.1.233",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "home-timeline-service->user-memcached:11211",
+          "dst_ip": "10.42.1.17",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "unique-id-service->post-storage-mongodb:27017",
+          "dst_ip": "10.42.1.187",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "url-shorten-service->home-timeline-redis:6379",
+          "dst_ip": "10.42.1.9",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "ig_snapshot_socket": {
+      "edges": [
+        {
+          "edge": "nginx-thrift->user-mongodb:27017",
+          "dst_ip": "10.42.0.128",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "nginx-thrift->social-graph-redis:6379",
+          "dst_ip": "10.42.1.62",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "media-frontend->post-storage-mongodb:27017",
+          "dst_ip": "10.42.1.187",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "compose-post-service->user-mongodb:27017",
+          "dst_ip": "10.42.0.128",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "text-service->social-graph-mongodb:27017",
+          "dst_ip": "10.42.1.233",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "home-timeline-service->user-memcached:11211",
+          "dst_ip": "10.42.1.17",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "unique-id-service->post-storage-mongodb:27017",
+          "dst_ip": "10.42.1.187",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "url-shorten-service->home-timeline-redis:6379",
+          "dst_ip": "10.42.1.9",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "ig_trace_tcp": {
+      "edges": [
+        {
+          "edge": "nginx-thrift->user-mongodb:27017",
+          "dst_ip": "10.42.0.128",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "nginx-thrift->social-graph-redis:6379",
+          "dst_ip": "10.42.1.62",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "media-frontend->post-storage-mongodb:27017",
+          "dst_ip": "10.42.1.187",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "compose-post-service->user-mongodb:27017",
+          "dst_ip": "10.42.0.128",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "text-service->social-graph-mongodb:27017",
+          "dst_ip": "10.42.1.233",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "home-timeline-service->user-memcached:11211",
+          "dst_ip": "10.42.1.17",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "unique-id-service->post-storage-mongodb:27017",
+          "dst_ip": "10.42.1.187",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "url-shorten-service->home-timeline-redis:6379",
+          "dst_ip": "10.42.1.9",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    }
+  }
+}

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wrk2-b
+  namespace: dsb
+  labels: {app: wrk2-client, journey: B}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: wrk2-client, journey: B}}
+  template:
+    metadata: {labels: {app: wrk2-client, journey: B}}
+    spec:
+      containers:
+      - name: wrk2
+        image: deathstarbench/wrk2-client:latest
+        command: ["/bin/sh","-c"]
+        args: ["while true; do /usr/local/bin/wrk -D exp -t 2 -c 8 -d 150 -L -s /scripts/compose-post.lua http://nginx-thrift.dsb.svc.cluster.local:8080/wrk2-api/post/compose -R 20; sleep 2; done"]
+        resources: {requests: {cpu: 100m, memory: 64Mi}, limits: {cpu: 500m, memory: 256Mi}}
+        volumeMounts: [{name: scripts, mountPath: /scripts}]
+      volumes: [{name: scripts, configMap: {name: wrk2-scripts}}]

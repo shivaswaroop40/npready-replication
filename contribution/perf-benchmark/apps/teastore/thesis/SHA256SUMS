@@ -1,0 +1,5 @@
+# sha256 of the thesis files this bundle was built from, relative to results/TEASTORE-20260906/
+3e7b473c3086b208d7699081fe4091ca90b3fb20ae8489922ad01d57ad6934c9  manifests/teastore-ribbon.yaml
+bcf76e111cc44e57f02bad3d43980724f732fafbb27cdfa515d7cb6a5e75feb7  teastore_capture.sh
+d8cf6096708af228643fde90b8af55312a9e6d711a8ddec94456d67193f31a90  workloads/loadgen-a.yaml
+def7189236306821b35a354a5818f4809d7b08c0b1f9913a0ed373f1a793ba11  workloads/locustfile_A.py

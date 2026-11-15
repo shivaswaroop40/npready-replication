@@ -1,0 +1,364 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-compose-post-service
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app: compose-post-service}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-home-timeline-redis
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: home-timeline-redis}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: home-timeline-service}}
+    ports: [{port: 6379, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-home-timeline-service
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: home-timeline-service}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: compose-post-service}}
+    ports: [{port: 9090, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: nginx-thrift}}
+    ports: [{port: 9090, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-jaeger
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app: jaeger}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-media-frontend
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app: media-frontend}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-media-memcached
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app: media-memcached}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-media-mongodb
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app: media-mongodb}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-media-service
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: media-service}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: compose-post-service}}
+    ports: [{port: 9090, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-nginx-thrift
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: nginx-thrift}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: wrk2-client}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-post-storage-memcached
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app: post-storage-memcached}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-post-storage-mongodb
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: post-storage-mongodb}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: post-storage-service}}
+    ports: [{port: 27017, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-post-storage-service
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: post-storage-service}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: compose-post-service}}
+    ports: [{port: 9090, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: home-timeline-service}}
+    ports: [{port: 9090, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-social-graph-mongodb
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: social-graph-mongodb}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: social-graph-service}}
+    ports: [{port: 27017, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-social-graph-redis
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: social-graph-redis}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: social-graph-service}}
+    ports: [{port: 6379, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-social-graph-service
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: social-graph-service}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: home-timeline-service}}
+    ports: [{port: 9090, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: user-service}}
+    ports: [{port: 9090, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-text-service
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: text-service}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: compose-post-service}}
+    ports: [{port: 9090, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-unique-id-service
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: unique-id-service}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: compose-post-service}}
+    ports: [{port: 9090, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-url-shorten-memcached
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app: url-shorten-memcached}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-url-shorten-mongodb
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: url-shorten-mongodb}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: url-shorten-service}}
+    ports: [{port: 27017, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-url-shorten-service
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: url-shorten-service}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: text-service}}
+    ports: [{port: 9090, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-user-memcached
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: user-memcached}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: user-service}}
+    ports: [{port: 11211, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-user-mention-service
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: user-mention-service}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: text-service}}
+    ports: [{port: 9090, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-user-mongodb
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: user-mongodb}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: user-mention-service}}
+    ports: [{port: 27017, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: user-service}}
+    ports: [{port: 27017, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-user-service
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: user-service}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: compose-post-service}}
+    ports: [{port: 9090, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: social-graph-service}}
+    ports: [{port: 9090, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-user-timeline-mongodb
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: user-timeline-mongodb}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: user-timeline-service}}
+    ports: [{port: 27017, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-user-timeline-redis
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: user-timeline-redis}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: user-timeline-service}}
+    ports: [{port: 6379, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-user-timeline-service
+  namespace: dsb
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: user-timeline-service}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: compose-post-service}}
+    ports: [{port: 9090, protocol: TCP}]

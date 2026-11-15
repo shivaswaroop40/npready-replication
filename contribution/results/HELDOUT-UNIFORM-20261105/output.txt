@@ -1,0 +1,512 @@
+
+====================================================================================================
+Input hashes (MANIFEST.sha256, paths relative to contribution/results/)
+====================================================================================================
+  OK  RESCORE-20261104/rescore_platform.py
+  OK  BOUTIQUE-20260903/score_boutique.py
+  OK  BOUTIQUE-20260903/scores/scores.json
+  OK  BOUTIQUE-20260903/captureA/hubble_boutique.json
+  OK  BOUTIQUE-20260903/captureB/hubble_boutique.json
+  OK  BOUTIQUE-20260903/captureA/ig_tcp.json
+  OK  BOUTIQUE-20260903/captureA/ig_snap.json
+  OK  BOUTIQUE-20260903/captureA/ipmap.json
+  OK  BOUTIQUE-20260903/captureA/otterize_t1.json
+  OK  BOUTIQUE-20260903/captureA/pods.txt
+  OK  BOUTIQUE-20260903/captureB/pods.txt
+  OK  BOUTIQUE-20260903/attacks/A_boutique.json
+  OK  BOUTIQUE-20260903/policies/config_derived_edges.json
+  OK  BOUTIQUE-20260903/policies/netpol_synth.yaml
+  OK  BOUTIQUE-20260903/enforce/synth/result.json
+  OK  BOUTIQUE-20260903/enforce/synth/pods_after_restart.txt
+  OK  BOUTIQUE-20260903/enforce/synth/hubble_drops.json
+  OK  BOUTIQUE-20260903/policies/netpol_synth_plus_config.yaml
+  OK  BOUTIQUE-20260903/enforce/synth_plus_config/result.json
+  OK  BOUTIQUE-20260903/enforce/synth_plus_config/pods_after_restart.txt
+  OK  BOUTIQUE-20260903/enforce/synth_plus_config/hubble_drops.json
+  OK  BOUTIQUE-20260903/policies/netpol_otterize.yaml
+  OK  BOUTIQUE-20260903/enforce/otterize/result.json
+  OK  BOUTIQUE-20260903/enforce/otterize/pods_after_restart.txt
+  OK  BOUTIQUE-20260903/enforce/otterize/hubble_drops.json
+  OK  BOUTIQUE-20260903/policies/netpol_ig_trace_tcp.yaml
+  OK  BOUTIQUE-20260903/enforce/ig_trace_tcp/result.json
+  OK  BOUTIQUE-20260903/enforce/ig_trace_tcp/pods_after_restart.txt
+  OK  BOUTIQUE-20260903/enforce/ig_trace_tcp/hubble_drops.json
+  OK  BOUTIQUE-20260903/policies/netpol_ig_snapshot_socket.yaml
+  OK  BOUTIQUE-20260903/enforce/ig_snapshot_socket/result.json
+  OK  BOUTIQUE-20260903/enforce/ig_snapshot_socket/pods_after_restart.txt
+  OK  BOUTIQUE-20260903/enforce/ig_snapshot_socket/hubble_drops.json
+  OK  BOUTIQUE-20260903/workloads/loadgenerator-b.yaml
+  OK  DSB-SOCIAL-20260904/score_dsb.py
+  OK  DSB-SOCIAL-20260904/scores/scores.json
+  OK  DSB-SOCIAL-20260904/captureA/hubble_dsb.json
+  OK  DSB-SOCIAL-20260904/captureB/hubble_dsb.json
+  OK  DSB-SOCIAL-20260904/captureA/ig_tcp.json
+  OK  DSB-SOCIAL-20260904/captureA/ig_snap.json
+  OK  DSB-SOCIAL-20260904/captureA/ipmap.json
+  OK  DSB-SOCIAL-20260904/captureA/otterize_t1.json
+  OK  DSB-SOCIAL-20260904/captureA/pods.txt
+  OK  DSB-SOCIAL-20260904/captureB/pods.txt
+  OK  DSB-SOCIAL-20260904/attacks/A_dsb.json
+  OK  DSB-SOCIAL-20260904/policies/config_derived_edges.json
+  OK  DSB-SOCIAL-20260904/policies/netpol_synth.yaml
+  OK  DSB-SOCIAL-20260904/enforce/synth/result.json
+  OK  DSB-SOCIAL-20260904/enforce/synth/pods_after_restart.txt
+  OK  DSB-SOCIAL-20260904/enforce/synth/hubble_drops.json
+  OK  DSB-SOCIAL-20260904/policies/netpol_synth_plus_config.yaml
+  OK  DSB-SOCIAL-20260904/enforce/synth_plus_config/result.json
+  OK  DSB-SOCIAL-20260904/enforce/synth_plus_config/pods_after_restart.txt
+  OK  DSB-SOCIAL-20260904/enforce/synth_plus_config/hubble_drops.json
+  OK  DSB-SOCIAL-20260904/policies/netpol_otterize.yaml
+  OK  DSB-SOCIAL-20260904/enforce/otterize/result.json
+  OK  DSB-SOCIAL-20260904/enforce/otterize/pods_after_restart.txt
+  OK  DSB-SOCIAL-20260904/enforce/otterize/hubble_drops.json
+  OK  DSB-SOCIAL-20260904/policies/netpol_ig_trace_tcp.yaml
+  OK  DSB-SOCIAL-20260904/enforce/ig_trace_tcp/result.json
+  OK  DSB-SOCIAL-20260904/enforce/ig_trace_tcp/pods_after_restart.txt
+  OK  DSB-SOCIAL-20260904/enforce/ig_trace_tcp/hubble_drops.json
+  OK  DSB-SOCIAL-20260904/policies/netpol_ig_snapshot_socket.yaml
+  OK  DSB-SOCIAL-20260904/enforce/ig_snapshot_socket/result.json
+  OK  DSB-SOCIAL-20260904/enforce/ig_snapshot_socket/pods_after_restart.txt
+  OK  DSB-SOCIAL-20260904/enforce/ig_snapshot_socket/hubble_drops.json
+  OK  BANK-20260904/score_bank.py
+  OK  BANK-20260904/scores/scores.json
+  OK  BANK-20260904/captureA/hubble_bank.json
+  OK  BANK-20260904/captureB/hubble_bank.json
+  OK  BANK-20260904/captureA/ig_tcp.json
+  OK  BANK-20260904/captureA/ig_snap.json
+  OK  BANK-20260904/captureA/ipmap.json
+  OK  BANK-20260904/captureA/otterize_t1.json
+  OK  BANK-20260904/captureA/pods.txt
+  OK  BANK-20260904/captureB/pods.txt
+  OK  BANK-20260904/attacks/A_bank.json
+  OK  BANK-20260904/policies/config_derived_edges.json
+  OK  BANK-20260904/policies/netpol_synth.yaml
+  OK  BANK-20260904/enforce/synth/result.json
+  OK  BANK-20260904/enforce/synth/pods_after_restart.txt
+  OK  BANK-20260904/enforce/synth/hubble_drops.json
+  OK  BANK-20260904/policies/netpol_synth_plus_config.yaml
+  OK  BANK-20260904/enforce/synth_plus_config/result.json
+  OK  BANK-20260904/enforce/synth_plus_config/pods_after_restart.txt
+  OK  BANK-20260904/enforce/synth_plus_config/hubble_drops.json
+  OK  BANK-20260904/policies/netpol_otterize.yaml
+  OK  BANK-20260904/enforce/otterize/result.json
+  OK  BANK-20260904/enforce/otterize/pods_after_restart.txt
+  OK  BANK-20260904/enforce/otterize/hubble_drops.json
+  OK  BANK-20260904/policies/netpol_ig_trace_tcp.yaml
+  OK  BANK-20260904/enforce/ig_trace_tcp/result.json
+  OK  BANK-20260904/enforce/ig_trace_tcp/pods_after_restart.txt
+  OK  BANK-20260904/enforce/ig_trace_tcp/hubble_drops.json
+  OK  BANK-20260904/policies/netpol_ig_snapshot_socket.yaml
+  OK  BANK-20260904/enforce/ig_snapshot_socket/result.json
+  OK  BANK-20260904/enforce/ig_snapshot_socket/pods_after_restart.txt
+  OK  BANK-20260904/enforce/ig_snapshot_socket/hubble_drops.json
+  OK  BANK-20260904/workloads/loadgenerator-a.yaml
+  OK  BANK-20260904/workloads/loadgenerator-b.yaml
+  OK  OTEL-20260906/score_otel.py
+  OK  OTEL-20260906/scores/scores.json
+  OK  OTEL-20260906/captureA/hubble_otel.json
+  OK  OTEL-20260906/captureB/hubble_otel.json
+  OK  OTEL-20260906/captureA/ig_tcp.json
+  OK  OTEL-20260906/captureA/ig_snap.json
+  OK  OTEL-20260906/captureA/ipmap.json
+  OK  OTEL-20260906/captureA/otterize_t1.json
+  OK  OTEL-20260906/captureA/pods.txt
+  OK  OTEL-20260906/captureB/pods.txt
+  OK  OTEL-20260906/attacks/A_otel.json
+  OK  OTEL-20260906/policies/config_derived_edges.json
+  OK  OTEL-20260906/policies/netpol_synth.yaml
+  OK  OTEL-20260906/enforce/synth/result.json
+  OK  OTEL-20260906/enforce/synth/hubble_drops.json
+  OK  OTEL-20260906/policies/netpol_synth_plus_config.yaml
+  OK  OTEL-20260906/enforce/synth_plus_config/result.json
+  OK  OTEL-20260906/enforce/synth_plus_config/hubble_drops.json
+  OK  OTEL-20260906/policies/netpol_otterize.yaml
+  OK  OTEL-20260906/enforce/otterize/result.json
+  OK  OTEL-20260906/enforce/otterize/hubble_drops.json
+  OK  OTEL-20260906/policies/netpol_ig_trace_tcp.yaml
+  OK  OTEL-20260906/enforce/ig_trace_tcp/result.json
+  OK  OTEL-20260906/enforce/ig_trace_tcp/hubble_drops.json
+  OK  OTEL-20260906/policies/netpol_ig_snapshot_socket.yaml
+  OK  OTEL-20260906/enforce/ig_snapshot_socket/result.json
+  OK  OTEL-20260906/enforce/ig_snapshot_socket/hubble_drops.json
+  OK  OTEL-20260906/workloads/loadgen-a.yaml
+  OK  OTEL-20260906/workloads/loadgen-b.yaml
+  OK  TEASTORE-20260906/score_teastore.py
+  OK  TEASTORE-20260906/scores/scores.json
+  OK  TEASTORE-20260906/captureA/hubble_teastore.json
+  OK  TEASTORE-20260906/captureB/hubble_teastore.json
+  OK  TEASTORE-20260906/captureA/ig_tcp.json
+  OK  TEASTORE-20260906/captureA/ig_snap.json
+  OK  TEASTORE-20260906/captureA/ipmap.json
+  OK  TEASTORE-20260906/captureA/otterize_t1.json
+  OK  TEASTORE-20260906/captureA/pods.txt
+  OK  TEASTORE-20260906/captureB/pods.txt
+  OK  TEASTORE-20260906/attacks/A_teastore.json
+  OK  TEASTORE-20260906/policies/config_derived_edges.json
+  OK  TEASTORE-20260906/policies/netpol_synth.yaml
+  OK  TEASTORE-20260906/enforce/synth/result.json
+  OK  TEASTORE-20260906/enforce/synth/pods_after_restart.txt
+  OK  TEASTORE-20260906/enforce/synth/hubble_drops.json
+  OK  TEASTORE-20260906/policies/netpol_synth_plus_config.yaml
+  OK  TEASTORE-20260906/enforce/synth_plus_config/result.json
+  OK  TEASTORE-20260906/enforce/synth_plus_config/pods_after_restart.txt
+  OK  TEASTORE-20260906/enforce/synth_plus_config/hubble_drops.json
+  OK  TEASTORE-20260906/policies/netpol_otterize.yaml
+  OK  TEASTORE-20260906/enforce/otterize/result.json
+  OK  TEASTORE-20260906/enforce/otterize/pods_after_restart.txt
+  OK  TEASTORE-20260906/enforce/otterize/hubble_drops.json
+  OK  TEASTORE-20260906/policies/netpol_ig_trace_tcp.yaml
+  OK  TEASTORE-20260906/enforce/ig_trace_tcp/result.json
+  OK  TEASTORE-20260906/enforce/ig_trace_tcp/pods_after_restart.txt
+  OK  TEASTORE-20260906/enforce/ig_trace_tcp/hubble_drops.json
+  OK  TEASTORE-20260906/policies/netpol_ig_snapshot_socket.yaml
+  OK  TEASTORE-20260906/enforce/ig_snapshot_socket/result.json
+  OK  TEASTORE-20260906/enforce/ig_snapshot_socket/pods_after_restart.txt
+  OK  TEASTORE-20260906/enforce/ig_snapshot_socket/hubble_drops.json
+  OK  TEASTORE-20260906/workloads/loadgen-a.yaml
+  OK  TEASTORE-20260906/workloads/loadgen-b.yaml
+  163 OK, 0 BAD, 163 files, 3387803207 bytes
+
+====================================================================================================
+Online Boutique (BOUTIQUE-20260903)
+====================================================================================================
+
+  Reproduction of BOUTIQUE-20260903/scores/scores.json under the stored tool-specific adapters
+  63 PASS, 0 FAIL
+
+  Stored policies/netpol_<tool>.yaml against the stored adapter's ingress edges
+    synth                policy  16 triples, adapter  16; equal=True; adapter-only []; policy-only []
+    synth_plus_config    policy  16 triples, adapter  16; equal=True; adapter-only []; policy-only []
+    otterize             policy  16 triples, adapter  16; equal=True; adapter-only []; policy-only []
+    ig_trace_tcp         policy   1 triples, adapter   1; equal=True; adapter-only []; policy-only []
+    ig_snapshot_socket   policy  17 triples, adapter  17; equal=True; adapter-only []; policy-only []
+
+  L_B: stored 16 ingress pairs (18 in all), uniform 16 (18 in all); |A| = 8
+
+  tool                 | stored |P| beyond     FD     OP | uniform |P| beyond     FD     OP | changed
+  synth                |         18      0  0.000  0.000 |          18      0  0.000  0.000 | no
+  synth_plus_config    |         28      0  0.000  0.000 |          28      0  0.000  0.000 | no
+  otterize             |         16      0  0.000  0.000 |          16      0  0.000  0.000 | no
+  ig_trace_tcp         |          1      0  0.938  0.000 |           1      0  0.938  0.000 | no
+  ig_snapshot_socket   |         16      0  0.000  0.000 |          16      0  0.000  0.000 | no
+
+  Port granularity (computed here; the stored scorer reports pair granularity only)
+    synth                stored 0.000 (0/16)  uniform 0.000 (0/16)
+    synth_plus_config    stored 0.000 (0/16)  uniform 0.000 (0/16)
+    ig_trace_tcp         stored 1.000 (16/16)  uniform 0.938 (15/16)
+    ig_snapshot_socket   stored 0.000 (0/16)  uniform 0.000 (0/16)
+
+  Pairs each tool gains under the uniform rule (relaxation; in L_B ingress; in A)
+
+  Sensitivities outside the uniform rule
+    snapshot_eph_direction     (ig_snapshot_socket): |P| 19, FD 0.000, OP 0.000, beyond 3; added ['paymentservice->checkoutservice', 'shippingservice->checkoutservice', 'shippingservice->frontend']; removed []
+    snapshot_all_tcp_states    (ig_snapshot_socket): |P| 16, FD 0.000, OP 0.000, beyond 0; added []; removed []
+    trace_tcp_plus_close       (ig_trace_tcp): |P| 1, FD 0.938, OP 0.000, beyond 0; added []; removed []
+
+  Over-privilege under the isolation rule (a target no policy selects admits every source)
+    synth                stored 0.000 (targets 11), uniform 0.000 (targets 11); rendered targets == adapter destinations: True
+    synth_plus_config    stored 0.000 (targets 11), uniform 0.000 (targets 11); rendered targets == adapter destinations: True
+    otterize             stored 0.000 (targets 11), uniform 0.000 (targets 11); rendered targets == adapter destinations: True
+    ig_trace_tcp         stored 1.000 (targets 1), uniform 1.000 (targets 1); rendered targets == adapter destinations: True
+    ig_snapshot_socket   stored 0.000 (targets 11), uniform 0.000 (targets 11); rendered targets == adapter destinations: True
+
+  Stored rendered policies under the isolation rule: synth 0.000, synth_plus_config 0.000, otterize 0.000, ig_trace_tcp 1.000, ig_snapshot_socket 0.000
+
+====================================================================================================
+DSB social network (DSB-SOCIAL-20260904)
+====================================================================================================
+
+  Reproduction of DSB-SOCIAL-20260904/scores/scores.json under the stored tool-specific adapters
+  63 PASS, 0 FAIL
+
+  Stored policies/netpol_<tool>.yaml against the stored adapter's ingress edges
+    synth                policy  14 triples, adapter  14; equal=True; adapter-only []; policy-only []
+    synth_plus_config    policy  14 triples, adapter  14; equal=True; adapter-only []; policy-only []
+    otterize             policy   5 triples, adapter   5; equal=True; adapter-only []; policy-only []
+    ig_trace_tcp         policy   5 triples, adapter   5; equal=True; adapter-only []; policy-only []
+    ig_snapshot_socket   policy  25 triples, adapter  25; equal=True; adapter-only []; policy-only []
+
+  L_B: stored 30 ingress pairs (38 in all), uniform 30 (38 in all); |A| = 8
+
+  tool                 | stored |P| beyond     FD     OP | uniform |P| beyond     FD     OP | changed
+  synth                |         18      0  0.533  0.000 |          18      0  0.533  0.000 | no
+  synth_plus_config    |         42      0  0.533  0.000 |          42      0  0.533  0.000 | no
+  otterize             |          5      0  0.833  0.000 |           5      0  0.833  0.000 | no
+  ig_trace_tcp         |          5      0  0.833  0.000 |           5      0  0.833  0.000 | no
+  ig_snapshot_socket   |         25      3  0.267  0.000 |          38     10  0.100  0.000 | YES
+
+  Port granularity (computed here; the stored scorer reports pair granularity only)
+    synth                stored 0.533 (16/30)  uniform 0.533 (16/30)
+    synth_plus_config    stored 0.533 (16/30)  uniform 0.533 (16/30)
+    ig_trace_tcp         stored 0.833 (25/30)  uniform 0.833 (25/30)
+    ig_snapshot_socket   stored 0.267 (8/30)  uniform 0.100 (3/30)
+
+  Pairs each tool gains under the uniform rule (relaxation; in L_B ingress; in A)
+    ig_snapshot_socket   + compose-post-service->jaeger                  udp                          L_B=False A=False
+    ig_snapshot_socket   + home-timeline-service->jaeger                 udp                          L_B=False A=False
+    ig_snapshot_socket   + media-service->jaeger                         udp                          L_B=True A=False
+    ig_snapshot_socket   + nginx-thrift->jaeger                          udp                          L_B=True A=False
+    ig_snapshot_socket   + nginx-thrift->kube-dns                        udp                          L_B=False A=False
+    ig_snapshot_socket   + post-storage-service->jaeger                  udp                          L_B=False A=False
+    ig_snapshot_socket   + social-graph-service->jaeger                  udp                          L_B=True A=False
+    ig_snapshot_socket   + text-service->jaeger                          udp                          L_B=False A=False
+    ig_snapshot_socket   + unique-id-service->jaeger                     udp                          L_B=True A=False
+    ig_snapshot_socket   + url-shorten-service->jaeger                   udp                          L_B=False A=False
+    ig_snapshot_socket   + user-mention-service->jaeger                  udp                          L_B=False A=False
+    ig_snapshot_socket   + user-service->jaeger                          udp                          L_B=True A=False
+    ig_snapshot_socket   + user-timeline-service->jaeger                 udp                          L_B=False A=False
+
+  Sensitivities outside the uniform rule
+    snapshot_eph_direction     (ig_snapshot_socket): |P| 38, FD 0.100, OP 0.000, beyond 10; added []; removed []
+    snapshot_all_tcp_states    (ig_snapshot_socket): |P| 39, FD 0.067, OP 0.000, beyond 10; added ['post-storage-service->post-storage-memcached']; removed []
+    trace_tcp_plus_close       (ig_trace_tcp): |P| 5, FD 0.833, OP 0.000, beyond 0; added []; removed []
+
+  Stored rendered policies under the isolation rule: synth 0.000, synth_plus_config 0.000, otterize 0.000, ig_trace_tcp 0.000, ig_snapshot_socket 0.000
+
+====================================================================================================
+Bank of Anthos (BANK-20260904)
+====================================================================================================
+
+  Reproduction of BANK-20260904/scores/scores.json under the stored tool-specific adapters
+  63 PASS, 0 FAIL
+
+  Stored policies/netpol_<tool>.yaml against the stored adapter's ingress edges
+    synth                policy  11 triples, adapter  11; equal=True; adapter-only []; policy-only []
+    synth_plus_config    policy  15 triples, adapter  15; equal=True; adapter-only []; policy-only []
+    otterize             policy  11 triples, adapter  11; equal=True; adapter-only []; policy-only []
+    ig_trace_tcp         policy   8 triples, adapter   8; equal=True; adapter-only []; policy-only []
+    ig_snapshot_socket   policy   7 triples, adapter   7; equal=True; adapter-only []; policy-only []
+
+  L_B: stored 12 ingress pairs (18 in all), uniform 12 (18 in all); |A| = 8
+
+  tool                 | stored |P| beyond     FD     OP | uniform |P| beyond     FD     OP | changed
+  synth                |         16      0  0.083  0.000 |          16      0  0.083  0.000 | no
+  synth_plus_config    |         24      3  0.000  0.000 |          24      3  0.000  0.000 | no
+  otterize             |         11      0  0.083  0.000 |          11      0  0.083  0.000 | no
+  ig_trace_tcp         |          8      0  0.333  0.000 |           8      0  0.333  0.000 | no
+  ig_snapshot_socket   |          6      0  0.500  0.000 |           6      0  0.500  0.000 | no
+
+  Port granularity (computed here; the stored scorer reports pair granularity only)
+    synth                stored 0.083 (1/12)  uniform 0.083 (1/12)
+    synth_plus_config    stored 0.000 (0/12)  uniform 0.000 (0/12)
+    ig_trace_tcp         stored 0.417 (5/12)  uniform 0.333 (4/12)
+    ig_snapshot_socket   stored 0.500 (6/12)  uniform 0.500 (6/12)
+
+  Pairs each tool gains under the uniform rule (relaxation; in L_B ingress; in A)
+
+  Sensitivities outside the uniform rule
+    snapshot_eph_direction     (ig_snapshot_socket): |P| 6, FD 0.500, OP 0.000, beyond 0; added []; removed []
+    snapshot_all_tcp_states    (ig_snapshot_socket): |P| 10, FD 0.167, OP 0.000, beyond 0; added ['frontend->balancereader', 'frontend->contacts', 'frontend->transactionhistory', 'frontend->userservice']; removed []
+    trace_tcp_plus_close       (ig_trace_tcp): |P| 9, FD 0.250, OP 0.000, beyond 0; added ['ledgerwriter->balancereader']; removed []
+
+  Stored rendered policies under the isolation rule: synth 0.000, synth_plus_config 0.000, otterize 0.000, ig_trace_tcp 0.000, ig_snapshot_socket 0.000
+
+====================================================================================================
+OpenTelemetry demo (OTEL-20260906)
+====================================================================================================
+
+  Reproduction of OTEL-20260906/scores/scores.json under the stored tool-specific adapters
+  38 PASS, 0 FAIL
+  Note: enforce/<tool>/result.json exists for ['ig_snapshot_socket', 'ig_trace_tcp', 'otterize', 'synth (ours, traffic A)', 'synth_plus_config (ours, traffic A + config)'], which the stored scores.json does not list under live_enforcement; not compared.
+
+  Stored policies/netpol_<tool>.yaml against the stored adapter's ingress edges
+    synth                policy  19 triples, adapter  20; equal=False; adapter-only ['loadgen->frontend:8080']; policy-only []
+    synth_plus_config    policy  29 triples, adapter  33; equal=False; adapter-only ['frontend->loadgen:8089', 'frontend->opentelemetry-demo-jaeger:16686', 'loadgen->flagd:8013', 'loadgen->frontend:8080']; policy-only []
+    otterize             policy  22 triples, adapter  23; equal=False; adapter-only ['loadgen->frontend']; policy-only []
+    ig_trace_tcp         policy   3 triples, adapter   4; equal=False; adapter-only ['loadgen->frontend:8080']; policy-only []
+    ig_snapshot_socket   policy  20 triples, adapter  21; equal=False; adapter-only ['loadgen->frontend:8080']; policy-only []
+
+  L_B: stored 25 ingress pairs (35 in all), uniform 25 (35 in all); |A| = 8
+
+  tool                 | stored |P| beyond     FD     OP | uniform |P| beyond     FD     OP | changed
+  synth                |         26      0  0.200  0.000 |          26      0  0.200  0.000 | no
+  synth_plus_config    |         51      8  0.000  0.000 |          51      8  0.000  0.000 | no
+  otterize             |         23      0  0.080  0.000 |          23      0  0.080  0.000 | no
+  ig_trace_tcp         |          4      0  0.840  0.000 |           4      0  0.840  0.000 | no
+  ig_snapshot_socket   |         21      0  0.160  0.000 |          21      0  0.160  0.000 | no
+
+  Port granularity (computed here; the stored scorer reports pair granularity only)
+    synth                stored 0.200 (5/25)  uniform 0.200 (5/25)
+    synth_plus_config    stored 0.000 (0/25)  uniform 0.000 (0/25)
+    ig_trace_tcp         stored 0.840 (21/25)  uniform 0.840 (21/25)
+    ig_snapshot_socket   stored 0.160 (4/25)  uniform 0.160 (4/25)
+
+  Pairs each tool gains under the uniform rule (relaxation; in L_B ingress; in A)
+
+  Sensitivities outside the uniform rule
+    snapshot_eph_direction     (ig_snapshot_socket): |P| 21, FD 0.160, OP 0.000, beyond 0; added []; removed []
+    snapshot_all_tcp_states    (ig_snapshot_socket): |P| 21, FD 0.160, OP 0.000, beyond 0; added []; removed []
+    trace_tcp_plus_close       (ig_trace_tcp): |P| 8, FD 0.680, OP 0.000, beyond 0; added ['checkoutservice->cartservice', 'checkoutservice->kafka', 'checkoutservice->productcatalogservice', 'frauddetectionservice->kafka']; removed []
+
+  Stored rendered policies under the isolation rule: synth 0.000, synth_plus_config 0.000, otterize 0.000, ig_trace_tcp 0.000, ig_snapshot_socket 0.000
+
+====================================================================================================
+TeaStore (TEASTORE-20260906)
+====================================================================================================
+
+  Reproduction of TEASTORE-20260906/scores/scores.json under the stored tool-specific adapters
+  58 PASS, 0 FAIL
+  Note: enforce/<tool>/result.json exists for ['ig_trace_tcp'], which the stored scores.json does not list under live_enforcement; not compared.
+
+  Stored policies/netpol_<tool>.yaml against the stored adapter's ingress edges
+    synth                policy  12 triples, adapter  12; equal=True; adapter-only []; policy-only []
+    synth_plus_config    policy  12 triples, adapter  12; equal=True; adapter-only []; policy-only []
+    otterize             policy  12 triples, adapter  12; equal=True; adapter-only []; policy-only []
+    ig_trace_tcp         policy  11 triples, adapter  11; equal=True; adapter-only []; policy-only []
+    ig_snapshot_socket   policy  12 triples, adapter  12; equal=True; adapter-only []; policy-only []
+
+  L_B: stored 12 ingress pairs (18 in all), uniform 12 (18 in all); |A| = 7
+
+  tool                 | stored |P| beyond     FD     OP | uniform |P| beyond     FD     OP | changed
+  synth                |         18      0  0.000  0.000 |          18      0  0.000  0.000 | no
+  synth_plus_config    |         20      0  0.000  0.000 |          20      0  0.000  0.000 | no
+  otterize             |         12      0  0.000  0.000 |          12      0  0.000  0.000 | no
+  ig_trace_tcp         |         11      0  0.083  0.000 |          11      0  0.083  0.000 | no
+  ig_snapshot_socket   |         12      0  0.000  0.000 |          12      0  0.000  0.000 | no
+
+  Port granularity (computed here; the stored scorer reports pair granularity only)
+    synth                stored 0.000 (0/12)  uniform 0.000 (0/12)
+    synth_plus_config    stored 0.000 (0/12)  uniform 0.000 (0/12)
+    ig_trace_tcp         stored 0.083 (1/12)  uniform 0.083 (1/12)
+    ig_snapshot_socket   stored 0.000 (0/12)  uniform 0.000 (0/12)
+
+  Pairs each tool gains under the uniform rule (relaxation; in L_B ingress; in A)
+
+  Sensitivities outside the uniform rule
+    snapshot_eph_direction     (ig_snapshot_socket): |P| 12, FD 0.000, OP 0.000, beyond 0; added []; removed []
+    snapshot_all_tcp_states    (ig_snapshot_socket): |P| 12, FD 0.000, OP 0.000, beyond 0; added []; removed []
+    trace_tcp_plus_close       (ig_trace_tcp): |P| 12, FD 0.000, OP 0.000, beyond 0; added ['persistence->db']; removed []
+
+  Stored rendered policies under the isolation rule: synth 0.000, synth_plus_config 0.000, otterize 0.000, ig_trace_tcp 0.000, ig_snapshot_socket 0.000
+
+====================================================================================================
+Facts behind the text corrections
+====================================================================================================
+
+  Online Boutique, trace_tcp, loadgenerator->frontend
+    connect events by dst.port: {80: 11}; accept events by src.port: {8080: 11}
+    stored adapter ports [80], uniform [80, 8080], L_B ports [8080]
+    rendered trace_tcp policy ports [80] (targets ['frontend']); rendered snapshot policy ports [80, 8080]; loadgenerator-b labels {'app': 'loadgenerator', 'journey': 'B'}
+    live trace_tcp result.json drops_by_edge {'loadgenerator-b->frontend:8080': 600}, Locust fails 21(100.00%)
+    live trace_tcp hubble_drops (600): {'loadgenerator-b->frontend:TCP/8080 POLICY_DENIED INGRESS': 600}
+    live snapshot hubble_drops (32): {'reserved:world->frontend:TCP/8080 POLICY_DENIED INGRESS': 32}
+    roles without a trace_tcp policy: ['adservice', 'cartservice', 'checkoutservice', 'currencyservice', 'emailservice', 'loadgenerator', 'paymentservice', 'productcatalogservice', 'recommendationservice', 'redis-cart', 'shippingservice']
+    trace_tcp drops on its missed pairs: 0
+    missed pairs seen only on connections opened before the window (ESTABLISHED socket or close event, no connect or accept): 15 of 15; absent from capture A: []
+      missed cartservice->redis-cart              dst selected False Hubble A True  {'snapshot_TCP_state1': 4}
+      missed checkoutservice->cartservice         dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed checkoutservice->currencyservice     dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed checkoutservice->emailservice        dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed checkoutservice->paymentservice      dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed checkoutservice->productcatalogservice dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed checkoutservice->shippingservice     dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed frontend->adservice                  dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed frontend->cartservice                dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed frontend->checkoutservice            dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed frontend->currencyservice            dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed frontend->productcatalogservice      dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed frontend->recommendationservice      dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed frontend->shippingservice            dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+      missed recommendationservice->productcatalogservice dst selected False Hubble A True  {'snapshot_TCP_state1': 2}
+
+  Bank of Anthos, trace_tcp, loadgenerator->frontend
+    connect events by dst.port: {80: 1288}; accept events by src.port: {8080: 1288}
+    stored adapter ports [80], uniform [80, 8080], L_B ports [8080]
+    rendered trace_tcp policy ports [80] (targets ['accounts-db', 'balancereader', 'contacts', 'frontend', 'ledger-db', 'ledgerwriter', 'transactionhistory', 'userservice']); rendered snapshot policy ports [80, 8080]; loadgenerator-b labels {'app': 'loadgenerator', 'journey': 'B'}
+    live trace_tcp result.json drops_by_edge {'loadgenerator-b->frontend:8080': 210, '?->frontend:8080': 50}, Locust fails 5(100.00%)
+    live trace_tcp hubble_drops (260): {'loadgenerator-b->frontend:TCP/8080 POLICY_DENIED INGRESS': 210, 'reserved:world->frontend:TCP/8080 POLICY_DENIED INGRESS': 50}
+    live snapshot hubble_drops (40): {'frontend->userservice:TCP/8080 POLICY_DENIED INGRESS': 40}
+    roles without a trace_tcp policy: ['loadgenerator']
+    trace_tcp drops on its missed pairs: 0
+    missed pairs seen only on connections opened before the window (ESTABLISHED socket or close event, no connect or accept): 3 of 4; absent from capture A: ['frontend->ledgerwriter']
+      missed contacts->accounts-db                dst selected True  Hubble A True  {'snapshot_TCP_state1': 4}
+      missed frontend->ledgerwriter               dst selected True  Hubble A False {}
+      missed ledgerwriter->balancereader          dst selected True  Hubble A True  {'trace_tcp_close': 2}
+      missed userservice->accounts-db             dst selected True  Hubble A True  {'snapshot_TCP_state1': 4}
+
+  OpenTelemetry demo
+    no stored policy has a loadgen selector: True
+      synth                label keys ['app.kubernetes.io/component']; adapter ingress edges from loadgen ['loadgen->frontend:8080']
+      synth_plus_config    label keys ['app.kubernetes.io/component']; adapter ingress edges from loadgen ['loadgen->flagd:8013', 'loadgen->frontend:8080']
+      otterize             label keys ['app.kubernetes.io/component']; adapter ingress edges from loadgen ['loadgen->frontend']
+      ig_trace_tcp         label keys ['app.kubernetes.io/component']; adapter ingress edges from loadgen ['loadgen->frontend:8080']
+      ig_snapshot_socket   label keys ['app.kubernetes.io/component']; adapter ingress edges from loadgen ['loadgen->frontend:8080']
+    loadgen-a labels {'app.kubernetes.io/component': 'loadgen', 'journey': 'A'}, loadgen-b labels {'app.kubernetes.io/component': 'loadgen', 'journey': 'B'}, share component label: True
+    load generator pods A ['loadgen-a-85bf4799f8-l2lrv'], B ['loadgen-b-85bb867664-kfnrh']
+      synth                result.json loadgen-b->frontend:8080 = 336; hubble {'loadgen-b->opentelemetry-demo-frontend:TCP/8080 POLICY_DENIED INGRESS': 336}
+      synth_plus_config    result.json loadgen-b->frontend:8080 = 336; hubble {'loadgen-b->opentelemetry-demo-frontend:TCP/8080 POLICY_DENIED INGRESS': 336}
+      otterize             result.json loadgen-b->frontend:8080 = 336; hubble {'loadgen-b->opentelemetry-demo-frontend:TCP/8080 POLICY_DENIED INGRESS': 336}
+      ig_trace_tcp         result.json loadgen-b->frontend:8080 = 336; hubble {'loadgen-b->opentelemetry-demo-frontend:TCP/8080 POLICY_DENIED INGRESS': 336}
+      ig_snapshot_socket   result.json loadgen-b->frontend:8080 = 336; hubble {'loadgen-b->opentelemetry-demo-frontend:TCP/8080 POLICY_DENIED INGRESS': 336}
+    fused pairs beyond L_B: 8, all declared: True
+      declared for the source role itself: ['frontend->currencyservice', 'frontend->flagd', 'frontend->shippingservice']
+      only through role() prefix matching: ['frontend->frontend', 'frontend->imageprovider', 'frontend->loadgen', 'frontend->opentelemetry-demo-jaeger', 'loadgen->flagd']
+        frontend->currencyservice                  admitted by rendered policy True  declared by [('default/opentelemetry-demo-frontend', 8080, True)]
+        frontend->flagd                            admitted by rendered policy True  declared by [('default/opentelemetry-demo-frontend', 8013, True), ('default/opentelemetry-demo-frontendproxy', 8013, False)]
+        frontend->frontend                         admitted by rendered policy True  declared by [('default/opentelemetry-demo-frontendproxy', 8080, False)]
+        frontend->imageprovider                    admitted by rendered policy True  declared by [('default/opentelemetry-demo-frontendproxy', 8081, False)]
+        frontend->loadgen                          admitted by rendered policy False declared by [('default/opentelemetry-demo-frontendproxy', 8089, False)]
+        frontend->opentelemetry-demo-jaeger        admitted by rendered policy False declared by [('default/opentelemetry-demo-frontendproxy', 16686, False)]
+        frontend->shippingservice                  admitted by rendered policy True  declared by [('default/opentelemetry-demo-frontend', 8080, True)]
+        loadgen->flagd                             admitted by rendered policy False declared by [('default/opentelemetry-demo-loadgenerator', 8013, False)]
+
+  TeaStore, trace_tcp, persistence->db
+    events: {'close on db': 2}
+      close {'pod': 'teastore-db-5c9f5b96d7-75phf', 'comm': 'mysqld', 'src_port': 3306, 'peer_role': 'persistence', 'dst_port': 34418, 'timestamp': '2026-09-06T15:53:55.959411313Z'}
+      close {'pod': 'teastore-db-5c9f5b96d7-75phf', 'comm': 'mysqld', 'src_port': 3306, 'peer_role': 'persistence', 'dst_port': 34394, 'timestamp': '2026-09-06T15:53:56.083557458Z'}
+    snapshot sockets: {'TCP state 1 on db': 2, 'TCP state 1 on persistence': 2}
+    in stored policy False, in uniform False; db targeted True with sources []; live {'teastore-persistence->teastore-db:3306': 204, 'teastore-webui->?:8080': 21, '?->teastore-webui:None': 2}
+
+  DSB, snapshot_socket
+    UDP sockets with a remote port: 19; to jaeger:6831 15 from 12 services; to kube-dns:53 4 from ['nginx-thrift']
+    stored |P| 25, beyond 3, FD 0.267; uniform |P| 38, beyond 10, FD 0.1
+    still missed under uniform: ['nginx-thrift->compose-post-service', 'post-storage-service->post-storage-memcached', 'user-mention-service->user-memcached']
+    L_B edges uniform snapshot admits and the synthesiser does not: ['compose-post-service->home-timeline-service', 'compose-post-service->media-service', 'compose-post-service->post-storage-service', 'compose-post-service->text-service', 'compose-post-service->unique-id-service', 'compose-post-service->user-service', 'compose-post-service->user-timeline-service', 'home-timeline-service->social-graph-service', 'media-service->jaeger', 'social-graph-service->jaeger', 'text-service->url-shorten-service', 'text-service->user-mention-service', 'unique-id-service->jaeger', 'user-service->jaeger']
+
+====================================================================================================
+Stored against uniform, every application and tool (pair granularity)
+====================================================================================================
+  application          tool                 |       |P|  beyond            FD            OP | changed
+  Online Boutique      synth                |  18 -> 18   0 -> 0  0.000 -> 0.000 0.000/0.000 -> 0.000/0.000 | no
+  Online Boutique      synth_plus_config    |  28 -> 28   0 -> 0  0.000 -> 0.000 0.000/0.000 -> 0.000/0.000 | no
+  Online Boutique      otterize             |  16 -> 16   0 -> 0  0.000 -> 0.000 0.000/0.000 -> 0.000/0.000 | no
+  Online Boutique      ig_trace_tcp         |   1 -> 1    0 -> 0  0.938 -> 0.938 0.000/1.000 -> 0.000/1.000 | no
+  Online Boutique      ig_snapshot_socket   |  16 -> 16   0 -> 0  0.000 -> 0.000 0.000/0.000 -> 0.000/0.000 | no
+  DSB social network   synth                |  18 -> 18   0 -> 0  0.533 -> 0.533  0.000 -> 0.000  | no
+  DSB social network   synth_plus_config    |  42 -> 42   0 -> 0  0.533 -> 0.533  0.000 -> 0.000  | no
+  DSB social network   otterize             |   5 -> 5    0 -> 0  0.833 -> 0.833  0.000 -> 0.000  | no
+  DSB social network   ig_trace_tcp         |   5 -> 5    0 -> 0  0.833 -> 0.833  0.000 -> 0.000  | no
+  DSB social network   ig_snapshot_socket   |  25 -> 38   3 -> 10 0.267 -> 0.100  0.000 -> 0.000  | YES
+  Bank of Anthos       synth                |  16 -> 16   0 -> 0  0.083 -> 0.083  0.000 -> 0.000  | no
+  Bank of Anthos       synth_plus_config    |  24 -> 24   3 -> 3  0.000 -> 0.000  0.000 -> 0.000  | no
+  Bank of Anthos       otterize             |  11 -> 11   0 -> 0  0.083 -> 0.083  0.000 -> 0.000  | no
+  Bank of Anthos       ig_trace_tcp         |   8 -> 8    0 -> 0  0.333 -> 0.333  0.000 -> 0.000  | no
+  Bank of Anthos       ig_snapshot_socket   |   6 -> 6    0 -> 0  0.500 -> 0.500  0.000 -> 0.000  | no
+  OpenTelemetry demo   synth                |  26 -> 26   0 -> 0  0.200 -> 0.200  0.000 -> 0.000  | no
+  OpenTelemetry demo   synth_plus_config    |  51 -> 51   8 -> 8  0.000 -> 0.000  0.000 -> 0.000  | no
+  OpenTelemetry demo   otterize             |  23 -> 23   0 -> 0  0.080 -> 0.080  0.000 -> 0.000  | no
+  OpenTelemetry demo   ig_trace_tcp         |   4 -> 4    0 -> 0  0.840 -> 0.840  0.000 -> 0.000  | no
+  OpenTelemetry demo   ig_snapshot_socket   |  21 -> 21   0 -> 0  0.160 -> 0.160  0.000 -> 0.000  | no
+  TeaStore             synth                |  18 -> 18   0 -> 0  0.000 -> 0.000  0.000 -> 0.000  | no
+  TeaStore             synth_plus_config    |  20 -> 20   0 -> 0  0.000 -> 0.000  0.000 -> 0.000  | no
+  TeaStore             otterize             |  12 -> 12   0 -> 0  0.000 -> 0.000  0.000 -> 0.000  | no
+  TeaStore             ig_trace_tcp         |  11 -> 11   0 -> 0  0.083 -> 0.083  0.000 -> 0.000  | no
+  TeaStore             ig_snapshot_socket   |  12 -> 12   0 -> 0  0.000 -> 0.000  0.000 -> 0.000  | no
+  (Online Boutique over-privilege: allow-list / isolation rule)
+
+====================================================================================================
+Check summary
+====================================================================================================
+  stored_scores.bank                         63 PASS   0 FAIL
+  stored_scores.boutique                     63 PASS   0 FAIL
+  stored_scores.dsb                          63 PASS   0 FAIL
+  stored_scores.otel                         38 PASS   0 FAIL
+  stored_scores.teastore                     58 PASS   0 FAIL
+  thesis_tab_twojourney.bank                 22 PASS   0 FAIL
+  thesis_tab_twojourney.boutique             22 PASS   0 FAIL
+  thesis_tab_twojourney.dsb                  22 PASS   0 FAIL
+  thesis_tab_twojourney.otel                 22 PASS   0 FAIL
+  thesis_tab_twojourney.teastore             22 PASS   0 FAIL
+  stored scores.json reproduction: 285 PASS, 0 FAIL
+  thesis tab:twojourney (stored adapters): 110 PASS, 0 FAIL
+  all checks: 395 PASS, 0 FAIL; input hashes 163 OK, 0 BAD

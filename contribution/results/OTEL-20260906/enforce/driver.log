@@ -1,0 +1,16 @@
+[otel-enf 15:19:52Z] === synth: policies 17/17 ===
+[otel-enf 15:20:15Z] checkout+frontend restarted
+[otel-enf 15:20:28Z] journey B under synth for 180s
+   drops=678 edges=4
+       336 loadgen-b->frontend:8080
+       114 checkoutservice->paymentservice:8080
+       114 checkoutservice->shippingservice:8080
+       114 checkoutservice->currencyservice:8080
+[otel-enf 15:23:30Z] remove synth policy
+[otel-enf 15:23:50Z] === synth_plus_config: policies 17/17 ===
+[otel-enf 15:23:53Z] checkout+frontend restarted
+[otel-enf 15:24:03Z] journey B under synth_plus_config for 180s
+   drops=336 edges=1
+       336 loadgen-b->frontend:8080
+[otel-enf 15:27:06Z] remove synth_plus_config policy
+[otel-enf 15:27:14Z] TARGETED ENFORCEMENT DONE

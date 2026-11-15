@@ -1,0 +1,1 @@
+{"apiVersion": "batch/v1", "kind": "Job", "metadata": {"name": "pb-steady", "namespace": "${APP_NS}", "annotations": {"mock/kind": "steady", "mock/duration": "${STEADY_SECONDS}"}}, "spec": {"ttlSecondsAfterFinished": 60, "template": {"metadata": {}, "spec": {"restartPolicy": "Never", "containers": [{"name": "g", "image": "x"}]}}}}

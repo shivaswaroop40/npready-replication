@@ -1,0 +1,19 @@
+#!/bin/bash
+# mock systemctl: stop (TERM to the unit's process group, then KILL), is-active, list-units
+node=${MOCK_NODE:-cp-01}; d=/run/mock/$node; mkdir -p "$d"
+cmd=$1; shift; args=()
+for a in "$@"; do case $a in --quiet|--all|--plain|--no-legend) ;; *) args+=("$a") ;; esac; done
+alive() { [ -f "$d/$1.pid" ] && kill -0 "$(cat "$d/$1.pid")" 2>/dev/null; }
+case $cmd in
+  stop) for u in "${args[@]}"; do
+          if alive "$u"; then p=$(cat "$d/$u.pid")
+            kill -TERM -- "-$p" 2>/dev/null || kill -TERM "$p" 2>/dev/null
+            for _ in $(seq 75); do kill -0 "$p" 2>/dev/null || break; sleep 0.2; done
+            kill -KILL -- "-$p" 2>/dev/null; kill -KILL "$p" 2>/dev/null
+          fi
+          rm -f "${d:?}/${u:?}.pid"
+        done ;;
+  is-active) alive "${args[0]}" ;;
+  list-units) for f in "$d"/pb-*.scope.pid; do [ -e "$f" ] || continue; u=$(basename "$f" .pid); alive "$u" && echo "$u loaded active running"; done; exit 0 ;;
+  *) exit 0 ;;
+esac

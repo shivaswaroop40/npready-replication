@@ -1,0 +1,26 @@
+configmap/accounts-db-config created
+service/accounts-db created
+statefulset.apps/accounts-db created
+service/balancereader created
+deployment.apps/balancereader created
+configmap/environment-config created
+configmap/service-api-config created
+configmap/demo-data-config created
+serviceaccount/bank-of-anthos created
+service/contacts created
+deployment.apps/contacts created
+service/frontend created
+deployment.apps/frontend created
+secret/jwt-key created
+configmap/ledger-db-config created
+service/ledger-db created
+statefulset.apps/ledger-db created
+service/ledgerwriter created
+deployment.apps/ledgerwriter created
+deployment.apps/loadgenerator created
+service/transactionhistory created
+deployment.apps/transactionhistory created
+service/userservice created
+deployment.apps/userservice created
+apply exit 0
+deployment.apps/userservice env updated

@@ -1,0 +1,290 @@
+{
+  "app": "teastore",
+  "attack_edges": 7,
+  "rounds": {
+    "unprotected": [
+      {
+        "edge": "webui->db:3306",
+        "dst_ip": "10.42.1.45",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "image->db:3306",
+        "dst_ip": "10.42.1.45",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "recommender->db:3306",
+        "dst_ip": "10.42.1.45",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "auth->image:8080",
+        "dst_ip": "10.42.1.239",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "recommender->auth:8080",
+        "dst_ip": "10.42.1.212",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "image->persistence:8080",
+        "dst_ip": "10.42.1.117",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "registry->db:3306",
+        "dst_ip": "10.42.1.45",
+        "reachable": true,
+        "log": "RC=0"
+      }
+    ],
+    "synth": {
+      "edges": [
+        {
+          "edge": "webui->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "image->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommender->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "auth->image:8080",
+          "dst_ip": "10.42.1.239",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommender->auth:8080",
+          "dst_ip": "10.42.1.212",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "image->persistence:8080",
+          "dst_ip": "10.42.1.117",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "registry->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "synth_plus_config": {
+      "edges": [
+        {
+          "edge": "webui->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "image->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommender->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "auth->image:8080",
+          "dst_ip": "10.42.1.239",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommender->auth:8080",
+          "dst_ip": "10.42.1.212",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "image->persistence:8080",
+          "dst_ip": "10.42.1.117",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "registry->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "otterize": {
+      "edges": [
+        {
+          "edge": "webui->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "image->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommender->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "auth->image:8080",
+          "dst_ip": "10.42.1.239",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommender->auth:8080",
+          "dst_ip": "10.42.1.212",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "image->persistence:8080",
+          "dst_ip": "10.42.1.117",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "registry->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "ig_snapshot_socket": {
+      "edges": [
+        {
+          "edge": "webui->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "image->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommender->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "auth->image:8080",
+          "dst_ip": "10.42.1.239",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommender->auth:8080",
+          "dst_ip": "10.42.1.212",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "image->persistence:8080",
+          "dst_ip": "10.42.1.117",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "registry->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "ig_trace_tcp": {
+      "edges": [
+        {
+          "edge": "webui->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "image->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommender->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "auth->image:8080",
+          "dst_ip": "10.42.1.239",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommender->auth:8080",
+          "dst_ip": "10.42.1.212",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "image->persistence:8080",
+          "dst_ip": "10.42.1.117",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "registry->db:3306",
+          "dst_ip": "10.42.1.45",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    }
+  }
+}

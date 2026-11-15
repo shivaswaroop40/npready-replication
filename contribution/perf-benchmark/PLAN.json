@@ -1,0 +1,27 @@
+[
+ {
+  "name": "boutique",
+  "app": "boutique",
+  "rep_list": [
+   1,
+   2,
+   3
+  ],
+  "runs": 15,
+  "est_hours": 14.71,
+  "est_run_min": 52.2,
+  "run_timeout_s": 5400,
+  "command": "run_matrix.sh boutique --rep-list '1 2 3'",
+  "basis": "5 measured runs (conds ['baseline', 'hubble', 'ig_snap', 'ig_tcp', 'otterize']); fixed part of a full run 26.9 min (condition switch 50 s, app restart 57 s, idle 60 s, warm-up 180 s, window 1200 s, snapshots); fixed-count at c16: keep-alive 45.2 req/s, new conn 43.1 req/s -> 6 x 10000 requests = 22.7 min, plus 26 s per test (pause, job start, pre-hook); full run 52.2 min; deploy 0.9 min; setup 1.0 h; x1.05 slack on run time",
+  "basis_detail": {
+   "full_run_min": 52.2,
+   "rate": {
+    "keepalive": 45.20006585770096,
+    "newconn": 43.14321565739222
+   },
+   "ovh_s": 25.826663423080447,
+   "deploy_s": 54.0,
+   "fixed_full_min": 26.9
+  }
+ }
+]

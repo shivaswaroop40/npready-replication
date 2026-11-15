@@ -1,0 +1,11 @@
+app,rep,cond,flag
+dsb,1,hubble,"Hubble lost 149 events during the run (ring buffer), 61 of them in the steady window"
+dsb,10,hubble,"Hubble lost 152 events during the run (ring buffer), 61 of them in the steady window"
+dsb,2,hubble,"Hubble lost 153 events during the run (ring buffer), 61 of them in the steady window"
+dsb,3,hubble,"Hubble lost 257 events during the run (ring buffer), 122 of them in the steady window"
+dsb,4,hubble,"Hubble lost 151 events during the run (ring buffer), 61 of them in the steady window"
+dsb,5,hubble,"Hubble lost 259 events during the run (ring buffer), 122 of them in the steady window"
+dsb,6,hubble,"Hubble lost 261 events during the run (ring buffer), 120 of them in the steady window"
+dsb,7,hubble,"Hubble lost 254 events during the run (ring buffer), 122 of them in the steady window"
+dsb,8,hubble,"Hubble lost 157 events during the run (ring buffer), 60 of them in the steady window"
+dsb,9,hubble,"Hubble lost 253 events during the run (ring buffer), 122 of them in the steady window"

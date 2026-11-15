@@ -1,0 +1,62 @@
+=== boutique: 8 attack edges ===
+--- unprotected ---
+  [unprot] frontend->redis-cart:6379  reachable=True
+  [unprot] frontend->paymentservice:50051  reachable=True
+  [unprot] frontend->emailservice:8080  reachable=True
+  [unprot] adservice->paymentservice:50051  reachable=True
+  [unprot] productcatalogservice->redis-cart:6379  reachable=True
+  [unprot] recommendationservice->checkoutservice:5050  reachable=True
+  [unprot] currencyservice->cartservice:7070  reachable=True
+  [unprot] loadgenerator->redis-cart:6379  reachable=True
+--- synth (11 policies) ---
+  [synth] frontend->redis-cart:6379  reachable=False
+  [synth] frontend->paymentservice:50051  reachable=False
+  [synth] frontend->emailservice:8080  reachable=False
+  [synth] adservice->paymentservice:50051  reachable=False
+  [synth] productcatalogservice->redis-cart:6379  reachable=False
+  [synth] recommendationservice->checkoutservice:5050  reachable=False
+  [synth] currencyservice->cartservice:7070  reachable=False
+  [synth] loadgenerator->redis-cart:6379  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- synth_plus_config (11 policies) ---
+  [synth_plus_config] frontend->redis-cart:6379  reachable=False
+  [synth_plus_config] frontend->paymentservice:50051  reachable=False
+  [synth_plus_config] frontend->emailservice:8080  reachable=False
+  [synth_plus_config] adservice->paymentservice:50051  reachable=False
+  [synth_plus_config] productcatalogservice->redis-cart:6379  reachable=False
+  [synth_plus_config] recommendationservice->checkoutservice:5050  reachable=False
+  [synth_plus_config] currencyservice->cartservice:7070  reachable=False
+  [synth_plus_config] loadgenerator->redis-cart:6379  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- otterize (11 policies) ---
+  [otterize] frontend->redis-cart:6379  reachable=False
+  [otterize] frontend->paymentservice:50051  reachable=False
+  [otterize] frontend->emailservice:8080  reachable=False
+  [otterize] adservice->paymentservice:50051  reachable=False
+  [otterize] productcatalogservice->redis-cart:6379  reachable=False
+  [otterize] recommendationservice->checkoutservice:5050  reachable=False
+  [otterize] currencyservice->cartservice:7070  reachable=False
+  [otterize] loadgenerator->redis-cart:6379  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- ig_snapshot_socket (11 policies) ---
+  [ig_snapshot_socket] frontend->redis-cart:6379  reachable=False
+  [ig_snapshot_socket] frontend->paymentservice:50051  reachable=False
+  [ig_snapshot_socket] frontend->emailservice:8080  reachable=False
+  [ig_snapshot_socket] adservice->paymentservice:50051  reachable=False
+  [ig_snapshot_socket] productcatalogservice->redis-cart:6379  reachable=False
+  [ig_snapshot_socket] recommendationservice->checkoutservice:5050  reachable=False
+  [ig_snapshot_socket] currencyservice->cartservice:7070  reachable=False
+  [ig_snapshot_socket] loadgenerator->redis-cart:6379  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- ig_trace_tcp (1 policies) ---
+  [ig_trace_tcp] frontend->redis-cart:6379  reachable=True
+  [ig_trace_tcp] frontend->paymentservice:50051  reachable=True
+  [ig_trace_tcp] frontend->emailservice:8080  reachable=True
+  [ig_trace_tcp] adservice->paymentservice:50051  reachable=True
+  [ig_trace_tcp] productcatalogservice->redis-cart:6379  reachable=True
+  [ig_trace_tcp] recommendationservice->checkoutservice:5050  reachable=True
+  [ig_trace_tcp] currencyservice->cartservice:7070  reachable=True
+  [ig_trace_tcp] loadgenerator->redis-cart:6379  reachable=True
+    => over_privilege(executed) = 8/8 = 1.0
+written /root/ae/out/boutique/boutique.json
+probe exit 0

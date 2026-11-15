@@ -1,0 +1,21 @@
+namespace: {name: dsb-attacks, create: true, labels: {npready.dev/purpose: attack-validation, npready.dev/disposable: "true"}}
+compromisedIdentity: {labels: {app: compromised-workload}, serviceAccountName: ""}
+families:
+  - id: "06-internal-recon"
+    enabled: true
+    technique: T1046
+    edgeClass: in_cluster
+    kind: tcp
+    targets:
+      - {host: user-mongodb.dsb.svc, port: 27017}
+      - {host: social-graph-mongodb.dsb.svc, port: 27017}
+      - {host: post-storage-mongodb.dsb.svc, port: 27017}
+      - {host: social-graph-redis.dsb.svc, port: 6379}
+      - {host: home-timeline-redis.dsb.svc, port: 6379}
+      - {host: user-memcached.dsb.svc, port: 11211}
+      - {host: compose-post-service.dsb.svc, port: 9090}
+      - {host: user-service.dsb.svc, port: 9090}
+      - {host: text-service.dsb.svc, port: 9090}
+      - {host: nginx-thrift.dsb.svc, port: 8080}
+      - {host: jaeger.dsb.svc, port: 16686}
+    expect: blocked

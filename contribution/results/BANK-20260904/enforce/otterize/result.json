@@ -1,0 +1,8 @@
+{
+ "drops_total": 336,
+ "drops_by_edge": {
+  "frontend->ledgerwriter:8080": 336
+ },
+ "locust_aggregated_last": "Aggregated                                                                       240  114(47.50%) |    861       2    6403     15 |    1.00        0.60",
+ "locust_fails": "114(47.50%)"
+}

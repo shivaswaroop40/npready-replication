@@ -1,0 +1,7 @@
+{"note": "Attack edges: a compromised legitimate identity reaching a service it has no business with. None appears in the declared configuration.",
+ "edges": [
+  ["frontend","redis-cart",6379], ["frontend","paymentservice",50051], ["frontend","emailservice",8080],
+  ["adservice","paymentservice",50051], ["productcatalogservice","redis-cart",6379],
+  ["recommendationservice","checkoutservice",5050], ["currencyservice","cartservice",7070],
+  ["loadgenerator","redis-cart",6379]
+ ]}

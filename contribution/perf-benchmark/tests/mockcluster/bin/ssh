@@ -1,0 +1,8 @@
+#!/bin/bash
+# mock ssh [-n] [-o X]... root@IP "cmd": the command runs in this container as node MOCK_NODE
+nflag=0; args=()
+while [ $# -gt 0 ]; do case $1 in -n) nflag=1 ;; -o) shift ;; -q) ;; *) args+=("$1") ;; esac; shift; done
+host=${args[0]#*@}; cmd="${args[*]:1}"
+case $host in 127.0.0.2|worker-01) node=worker-01 ;; 127.0.0.3|worker-02) node=worker-02 ;; *) node=cp-01 ;; esac
+printf '%s: %.300s\n' "$node" "$cmd" >> /run/mock/ssh.log
+if [ "$nflag" = 1 ]; then MOCK_NODE=$node exec bash -c "$cmd" </dev/null; else MOCK_NODE=$node exec bash -c "$cmd"; fi

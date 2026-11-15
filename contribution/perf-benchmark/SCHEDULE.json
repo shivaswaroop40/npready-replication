@@ -1,0 +1,43 @@
+{
+ "deadline": "2026-10-07",
+ "policy": "start the next app as soon as the previous app's results are pulled and checked; OTel and TeaStore run side by side at the end",
+ "order": [
+  {
+   "app": "boutique",
+   "plays": [
+    "boutique"
+   ],
+   "est_start_utc": "2026-10-02T20:00Z",
+   "est_hours": 14.7
+  },
+  {
+   "app": "dsb",
+   "plays": [
+    "dsb"
+   ],
+   "est_start_utc": "2026-10-03T11:00Z",
+   "est_hours": 19.4
+  },
+  {
+   "app": "bank",
+   "plays": [
+    "bank-a",
+    "bank-b",
+    "bank-c"
+   ],
+   "est_start_utc": "2026-10-04T06:30Z",
+   "est_hours": 11.4
+  },
+  {
+   "app": "otel+teastore",
+   "plays": [
+    "otel",
+    "teastore"
+   ],
+   "est_start_utc": "2026-10-04T18:00Z",
+   "est_hours": 13.6
+  }
+ ],
+ "est_all_done_utc": "2026-10-05T08:00Z",
+ "buffer": "Oct 5 afternoon to Oct 7: room to re-run one whole app"
+}

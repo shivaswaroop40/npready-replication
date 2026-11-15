@@ -1,0 +1,72 @@
+PB_STEADY_BEGIN epoch=1790936788 app=dsb kind=wrk2 users=- rate=20 seconds=15
+Running 15s test @ http://nginx-thrift.dsb.svc.cluster.local:8080/wrk2-api/home-timeline/read
+  2 threads and 8 connections
+
+  Thread calibration: mean lat.: 6.244ms, rate sampling interval: 78ms
+  Thread calibration: mean lat.: 6.307ms, rate sampling interval: 80ms
+
+-----------------------------------------------------------------------
+Test Results @ http://nginx-thrift.dsb.svc.cluster.local:8080/wrk2-api/home-timeline/read 
+  Thread Stats   Avg      Stdev     99%   +/- Stdev
+    Latency     4.52ms   12.18ms  42.88ms   89.91%
+    Req/Sec    10.67     10.07    38.00     77.60%
+  Latency Distribution (HdrHistogram - Recorded Latency)
+ 50.000%  515.00us
+ 75.000%  632.00us
+ 90.000%    3.26ms
+ 99.000%   42.88ms
+ 99.900%   43.04ms
+ 99.990%   43.04ms
+ 99.999%   43.04ms
+100.000%   43.04ms
+
+  Detailed Percentile spectrum:
+       Value   Percentile   TotalCount 1/(1-Percentile)
+
+       0.009     0.000000            1         1.00
+       0.017     0.100000           13         1.11
+       0.021     0.200000           22         1.25
+       0.341     0.300000           33         1.43
+       0.444     0.400000           44         1.67
+       0.515     0.500000           55         2.00
+       0.531     0.550000           60         2.22
+       0.552     0.600000           66         2.50
+       0.566     0.650000           72         2.86
+       0.601     0.700000           77         3.33
+       0.632     0.750000           82         4.00
+       0.660     0.775000           85         4.44
+       0.721     0.800000           88         5.00
+       0.775     0.825000           90         5.71
+       0.967     0.850000           93         6.67
+       1.215     0.875000           96         8.00
+       2.651     0.887500           97         8.89
+      34.879     0.900000           99        10.00
+      34.975     0.912500          100        11.43
+      40.831     0.925000          101        13.33
+      41.439     0.937500          103        16.00
+      41.439     0.943750          103        17.78
+      41.855     0.950000          104        20.00
+      41.951     0.956250          105        22.86
+      41.951     0.962500          105        26.67
+      42.687     0.968750          106        32.00
+      42.687     0.971875          106        35.56
+      42.783     0.975000          107        40.00
+      42.783     0.978125          107        45.71
+      42.783     0.981250          107        53.33
+      42.879     0.984375          108        64.00
+      42.879     0.985938          108        71.11
+      42.879     0.987500          108        80.00
+      42.879     0.989062          108        91.43
+      42.879     0.990625          108       106.67
+      43.039     0.992188          109       128.00
+      43.039     1.000000          109          inf
+#[Mean    =        4.521, StdDeviation   =       12.180]
+#[Max     =       43.008, Total count    =          109]
+#[Buckets =           27, SubBuckets     =         2048]
+-----------------------------------------------------------------------
+  320 requests in 15.10s, 38.75KB read
+  Socket errors: connect 0, read 0, write 0, timeout 2
+Requests/sec:     21.20  
+Transfer/sec:      2.57KB
+PB_STEADY_RC=0 epoch=1790936803
+=== PB_END ===

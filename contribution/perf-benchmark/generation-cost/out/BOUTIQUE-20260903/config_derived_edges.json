@@ -1,0 +1,228 @@
+{
+  "needed": [
+    {
+      "src": "default/frontend",
+      "dst": "default/productcatalogservice",
+      "port": 3550,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "default/currencyservice",
+      "port": 7000,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:CURRENCY_SERVICE_ADDR=currencyservice:7000"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "default/cartservice",
+      "port": 7070,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:CART_SERVICE_ADDR=cartservice:7070"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "default/recommendationservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:RECOMMENDATION_SERVICE_ADDR=recommendationservice:8080"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "default/shippingservice",
+      "port": 50051,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:SHIPPING_SERVICE_ADDR=shippingservice:50051"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "default/checkoutservice",
+      "port": 5050,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:CHECKOUT_SERVICE_ADDR=checkoutservice:5050"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "default/adservice",
+      "port": 9555,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:AD_SERVICE_ADDR=adservice:9555"
+    },
+    {
+      "src": "default/cartservice",
+      "dst": "default/redis-cart",
+      "port": 6379,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:REDIS_ADDR=redis-cart:6379"
+    },
+    {
+      "src": "default/loadgenerator",
+      "dst": "default/frontend",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FRONTEND_ADDR=frontend:8080"
+    },
+    {
+      "src": "default/recommendationservice",
+      "dst": "default/productcatalogservice",
+      "port": 3550,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550"
+    },
+    {
+      "src": "default/checkoutservice",
+      "dst": "default/productcatalogservice",
+      "port": 3550,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550"
+    },
+    {
+      "src": "default/checkoutservice",
+      "dst": "default/shippingservice",
+      "port": 50051,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:SHIPPING_SERVICE_ADDR=shippingservice:50051"
+    },
+    {
+      "src": "default/checkoutservice",
+      "dst": "default/paymentservice",
+      "port": 50051,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:PAYMENT_SERVICE_ADDR=paymentservice:50051"
+    },
+    {
+      "src": "default/checkoutservice",
+      "dst": "default/emailservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:EMAIL_SERVICE_ADDR=emailservice:8080"
+    },
+    {
+      "src": "default/checkoutservice",
+      "dst": "default/currencyservice",
+      "port": 7000,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:CURRENCY_SERVICE_ADDR=currencyservice:7000"
+    },
+    {
+      "src": "default/checkoutservice",
+      "dst": "default/cartservice",
+      "port": 7070,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:CART_SERVICE_ADDR=cartservice:7070"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/adservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/currencyservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/cartservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/redis-cart",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/loadgenerator",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/recommendationservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/checkoutservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/emailservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/paymentservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/shippingservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/productcatalogservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    }
+  ]
+}

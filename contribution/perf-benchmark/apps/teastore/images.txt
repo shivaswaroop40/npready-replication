@@ -1,0 +1,9 @@
+descartesresearch/teastore-auth
+descartesresearch/teastore-db
+descartesresearch/teastore-image
+descartesresearch/teastore-persistence
+descartesresearch/teastore-recommender
+descartesresearch/teastore-registry
+descartesresearch/teastore-webui
+locustio/locust:2.31.5
+williamyeh/hey@sha256:6e63ae9c5801204cf7abe22c9ddf82d1bcbc7140ffd206a9bd83a8a643dcd6f2

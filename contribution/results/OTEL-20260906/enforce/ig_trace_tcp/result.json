@@ -1,0 +1,50 @@
+{
+  "drops_by_edge": {
+    "frauddetectionservice->kafka:9092": 106,
+    "accountingservice->kafka:9092": 112,
+    "loadgen-b->frontend:8080": 336,
+    "checkoutservice->flagd:8013": 26,
+    "checkoutservice->kafka:9092": 106,
+    "cartservice->valkey:6379": 10,
+    "frauddetectionservice->flagd:8013": 4,
+    "adservice->flagd:8013": 4,
+    "paymentservice->flagd:8013": 4,
+    "cartservice->flagd:8013": 8
+  },
+  "app_edge_drops": 716,
+  "total_drops": 716,
+  "top": [
+    [
+      "loadgen-b->frontend:8080",
+      336
+    ],
+    [
+      "accountingservice->kafka:9092",
+      112
+    ],
+    [
+      "frauddetectionservice->kafka:9092",
+      106
+    ],
+    [
+      "checkoutservice->kafka:9092",
+      106
+    ],
+    [
+      "checkoutservice->flagd:8013",
+      26
+    ],
+    [
+      "cartservice->valkey:6379",
+      10
+    ],
+    [
+      "cartservice->flagd:8013",
+      8
+    ],
+    [
+      "frauddetectionservice->flagd:8013",
+      4
+    ]
+  ]
+}

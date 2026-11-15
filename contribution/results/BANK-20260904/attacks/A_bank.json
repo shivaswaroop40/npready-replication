@@ -1,0 +1,3 @@
+{"note": "Compromised legitimate identity reaching a datastore or service it never uses. None is declared in any Bank of Anthos config.",
+ "edges": [["frontend","accounts-db",5432],["frontend","ledger-db",5432],["contacts","ledger-db",5432],["balancereader","accounts-db",5432],
+           ["transactionhistory","accounts-db",5432],["userservice","ledger-db",5432],["loadgenerator","accounts-db",5432],["contacts","userservice",8080]]}

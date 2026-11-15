@@ -1,0 +1,6 @@
+#!/bin/bash
+# mock scp: strips user@host: and copies (same file = no-op, like a remote copy onto itself)
+args=(); while [ $# -gt 0 ]; do case $1 in -q) ;; -o) shift ;; *) args+=("$1") ;; esac; shift; done
+p() { case $1 in *@*:*) echo "${1#*:}" ;; *) echo "$1" ;; esac; }
+s=$(p "${args[0]}"); t=$(p "${args[1]}")
+[ "$s" -ef "$t" ] || cp "$s" "$t"

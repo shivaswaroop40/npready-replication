@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wrk2-a
+  namespace: dsb
+  labels: {app: wrk2-client, journey: A}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: wrk2-client, journey: A}}
+  template:
+    metadata: {labels: {app: wrk2-client, journey: A}}
+    spec:
+      containers:
+      - name: wrk2
+        image: deathstarbench/wrk2-client:latest
+        command: ["/bin/sh","-c"]
+        args: ["while true; do /usr/local/bin/wrk -D exp -t 2 -c 8 -d 300 -L -s /scripts/read-home-timeline.lua http://nginx-thrift.dsb.svc.cluster.local:8080/wrk2-api/home-timeline/read -R 20; sleep 2; done"]
+        resources: {requests: {cpu: 100m, memory: 64Mi}, limits: {cpu: 500m, memory: 256Mi}}
+        volumeMounts: [{name: scripts, mountPath: /scripts}]
+      volumes: [{name: scripts, configMap: {name: wrk2-scripts}}]

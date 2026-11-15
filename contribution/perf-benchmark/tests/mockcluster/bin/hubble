@@ -1,0 +1,2 @@
+#!/bin/bash
+case "$1" in version) echo "hubble v1.18.0" ;; *) while :; do sleep 5; done ;; esac

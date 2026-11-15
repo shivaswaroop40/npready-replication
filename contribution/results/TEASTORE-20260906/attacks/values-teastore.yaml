@@ -1,0 +1,17 @@
+namespace: {name: teastore-attacks, create: true, labels: {npready.dev/purpose: attack-validation, npready.dev/disposable: "true"}}
+compromisedIdentity: {labels: {app: compromised-workload}, serviceAccountName: ""}
+families:
+  - id: "06-internal-recon"
+    enabled: true
+    technique: T1046
+    edgeClass: in_cluster
+    kind: tcp
+    targets:
+      - {host: teastore-db.teastore.svc, port: 3306}
+      - {host: teastore-persistence.teastore.svc, port: 8080}
+      - {host: teastore-auth.teastore.svc, port: 8080}
+      - {host: teastore-image.teastore.svc, port: 8080}
+      - {host: teastore-recommender.teastore.svc, port: 8080}
+      - {host: teastore-registry.teastore.svc, port: 8080}
+      - {host: teastore-webui.teastore.svc, port: 8080}
+    expect: blocked

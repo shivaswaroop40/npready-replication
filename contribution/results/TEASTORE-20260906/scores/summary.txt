@@ -1,0 +1,6 @@
+tool                                           admit false_deny_B over_priv |  drops dropped_edges locust_fails not_ready
+synth (ours, traffic A)                           18          0.0       0.0 |     76             6          n/a         0
+synth_plus_config (ours, traffic A + config)      20          0.0       0.0 |     50             7          n/a         0
+otterize                                          12          0.0       0.0 |     19             3          n/a         0
+ig_trace_tcp                                      11        0.083       0.0 |      -             -            -         -
+ig_snapshot_socket                                12          0.0       0.0 |     69             6          n/a         0

@@ -1,0 +1,62 @@
+=== bank: 8 attack edges ===
+--- unprotected ---
+  [unprot] frontend->accounts-db:5432  reachable=True
+  [unprot] frontend->ledger-db:5432  reachable=True
+  [unprot] contacts->ledger-db:5432  reachable=True
+  [unprot] balancereader->accounts-db:5432  reachable=True
+  [unprot] transactionhistory->accounts-db:5432  reachable=True
+  [unprot] userservice->ledger-db:5432  reachable=True
+  [unprot] loadgenerator->accounts-db:5432  reachable=True
+  [unprot] contacts->userservice:8080  reachable=True
+--- synth (8 policies) ---
+  [synth] frontend->accounts-db:5432  reachable=False
+  [synth] frontend->ledger-db:5432  reachable=False
+  [synth] contacts->ledger-db:5432  reachable=False
+  [synth] balancereader->accounts-db:5432  reachable=False
+  [synth] transactionhistory->accounts-db:5432  reachable=False
+  [synth] userservice->ledger-db:5432  reachable=False
+  [synth] loadgenerator->accounts-db:5432  reachable=False
+  [synth] contacts->userservice:8080  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- synth_plus_config (8 policies) ---
+  [synth_plus_config] frontend->accounts-db:5432  reachable=False
+  [synth_plus_config] frontend->ledger-db:5432  reachable=False
+  [synth_plus_config] contacts->ledger-db:5432  reachable=False
+  [synth_plus_config] balancereader->accounts-db:5432  reachable=False
+  [synth_plus_config] transactionhistory->accounts-db:5432  reachable=False
+  [synth_plus_config] userservice->ledger-db:5432  reachable=False
+  [synth_plus_config] loadgenerator->accounts-db:5432  reachable=False
+  [synth_plus_config] contacts->userservice:8080  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- otterize (8 policies) ---
+  [otterize] frontend->accounts-db:5432  reachable=False
+  [otterize] frontend->ledger-db:5432  reachable=False
+  [otterize] contacts->ledger-db:5432  reachable=False
+  [otterize] balancereader->accounts-db:5432  reachable=False
+  [otterize] transactionhistory->accounts-db:5432  reachable=False
+  [otterize] userservice->ledger-db:5432  reachable=False
+  [otterize] loadgenerator->accounts-db:5432  reachable=False
+  [otterize] contacts->userservice:8080  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- ig_snapshot_socket (8 policies) ---
+  [ig_snapshot_socket] frontend->accounts-db:5432  reachable=False
+  [ig_snapshot_socket] frontend->ledger-db:5432  reachable=False
+  [ig_snapshot_socket] contacts->ledger-db:5432  reachable=False
+  [ig_snapshot_socket] balancereader->accounts-db:5432  reachable=False
+  [ig_snapshot_socket] transactionhistory->accounts-db:5432  reachable=False
+  [ig_snapshot_socket] userservice->ledger-db:5432  reachable=False
+  [ig_snapshot_socket] loadgenerator->accounts-db:5432  reachable=False
+  [ig_snapshot_socket] contacts->userservice:8080  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- ig_trace_tcp (8 policies) ---
+  [ig_trace_tcp] frontend->accounts-db:5432  reachable=False
+  [ig_trace_tcp] frontend->ledger-db:5432  reachable=False
+  [ig_trace_tcp] contacts->ledger-db:5432  reachable=False
+  [ig_trace_tcp] balancereader->accounts-db:5432  reachable=False
+  [ig_trace_tcp] transactionhistory->accounts-db:5432  reachable=False
+  [ig_trace_tcp] userservice->ledger-db:5432  reachable=False
+  [ig_trace_tcp] loadgenerator->accounts-db:5432  reachable=False
+  [ig_trace_tcp] contacts->userservice:8080  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+written /root/ae/out/bank/bank.json
+probe exit 0

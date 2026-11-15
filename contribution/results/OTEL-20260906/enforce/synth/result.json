@@ -1,0 +1,9 @@
+{
+ "drops_total": 678,
+ "drops_by_edge": {
+  "loadgen-b->frontend:8080": 336,
+  "checkoutservice->paymentservice:8080": 114,
+  "checkoutservice->shippingservice:8080": 114,
+  "checkoutservice->currencyservice:8080": 114
+ }
+}

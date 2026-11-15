@@ -1,0 +1,92 @@
+[enforce 15:33:00Z] === synth: apply policy ===
+[enforce 15:33:08Z] policies active: 8 / expected 8
+[enforce 15:33:08Z] restart every deployment one at a time (scale 0->1) so connections re-establish under the policy
+   accounts-db ready=yes after ~5s
+   ledger-db ready=yes after ~5s
+   frontend ready=yes after ~0s
+   userservice ready=yes after ~0s
+   contacts ready=yes after ~0s
+   balancereader ready=yes after ~60s
+   ledgerwriter ready=yes after ~60s
+   transactionhistory ready=yes after ~60s
+[enforce 15:36:57Z] pods not ready after restart: 0
+[enforce 15:37:13Z] loadgenerator-b: Running
+[enforce 15:37:13Z] journey B running 180s under synth policy
+   drops=264 distinct_edges=1 locust_fails=140(53.85%)
+        264  frontend->ledgerwriter:8080
+[enforce 15:40:14Z] remove synth policy
+[enforce 15:40:15Z] policies left after removal: 0
+[enforce 15:40:15Z] === synth_plus_config: apply policy ===
+[enforce 15:40:21Z] policies active: 8 / expected 8
+[enforce 15:40:21Z] restart every deployment one at a time (scale 0->1) so connections re-establish under the policy
+   accounts-db ready=yes after ~5s
+   ledger-db ready=yes after ~5s
+   frontend ready=yes after ~0s
+   userservice ready=yes after ~0s
+   contacts ready=yes after ~0s
+   balancereader ready=yes after ~60s
+   ledgerwriter ready=yes after ~60s
+   transactionhistory ready=yes after ~60s
+[enforce 15:44:11Z] pods not ready after restart: 0
+[enforce 15:44:32Z] loadgenerator-b: Running
+[enforce 15:44:32Z] journey B running 180s under synth_plus_config policy
+   drops=12 distinct_edges=1 locust_fails=115(37.34%)
+         12  ?->frontend:8080
+[enforce 15:47:34Z] remove synth_plus_config policy
+[enforce 15:47:35Z] policies left after removal: 0
+[enforce 15:47:35Z] === ig_snapshot_socket: apply policy ===
+[enforce 15:47:40Z] policies active: 8 / expected 8
+[enforce 15:47:40Z] restart every deployment one at a time (scale 0->1) so connections re-establish under the policy
+   accounts-db ready=yes after ~5s
+   ledger-db ready=yes after ~5s
+   frontend ready=yes after ~0s
+   userservice ready=yes after ~0s
+   contacts ready=yes after ~0s
+   balancereader ready=yes after ~60s
+   ledgerwriter ready=yes after ~60s
+   transactionhistory ready=yes after ~60s
+[enforce 15:51:30Z] pods not ready after restart: 0
+[enforce 15:51:46Z] loadgenerator-b: Running
+[enforce 15:51:46Z] journey B running 180s under ig_snapshot_socket policy
+   drops=40 distinct_edges=1 locust_fails=197(70.86%)
+         40  frontend->userservice:8080
+[enforce 15:54:48Z] remove ig_snapshot_socket policy
+[enforce 15:54:49Z] policies left after removal: 0
+[enforce 15:54:49Z] === otterize: apply policy ===
+[enforce 15:54:55Z] policies active: 8 / expected 8
+[enforce 15:54:55Z] restart every deployment one at a time (scale 0->1) so connections re-establish under the policy
+   accounts-db ready=yes after ~5s
+   ledger-db ready=yes after ~5s
+   frontend ready=yes after ~0s
+   userservice ready=yes after ~0s
+   contacts ready=yes after ~0s
+   balancereader ready=yes after ~60s
+   ledgerwriter ready=yes after ~60s
+   transactionhistory ready=yes after ~60s
+[enforce 15:58:45Z] pods not ready after restart: 0
+[enforce 15:59:01Z] loadgenerator-b: Running
+[enforce 15:59:01Z] journey B running 180s under otterize policy
+   drops=336 distinct_edges=1 locust_fails=114(47.50%)
+        336  frontend->ledgerwriter:8080
+[enforce 16:02:02Z] remove otterize policy
+[enforce 16:02:03Z] policies left after removal: 0
+[enforce 16:02:03Z] === ig_trace_tcp: apply policy ===
+[enforce 16:02:09Z] policies active: 8 / expected 8
+[enforce 16:02:09Z] restart every deployment one at a time (scale 0->1) so connections re-establish under the policy
+   accounts-db ready=yes after ~5s
+   ledger-db ready=yes after ~5s
+   frontend ready=yes after ~0s
+   userservice ready=yes after ~0s
+   contacts ready=yes after ~0s
+   balancereader ready=yes after ~60s
+   ledgerwriter ready=yes after ~60s
+   transactionhistory ready=yes after ~60s
+[enforce 16:05:57Z] pods not ready after restart: 0
+[enforce 16:06:13Z] loadgenerator-b: Running
+[enforce 16:06:13Z] journey B running 180s under ig_trace_tcp policy
+   drops=260 distinct_edges=2 locust_fails=5(100.00%)
+        210  loadgenerator-b->frontend:8080
+         50  ?->frontend:8080
+[enforce 16:09:14Z] remove ig_trace_tcp policy
+[enforce 16:09:16Z] policies left after removal: 0
+[enforce 16:09:19Z] ENFORCEMENT EVAL DONE

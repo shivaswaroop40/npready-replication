@@ -1,0 +1,9 @@
+{
+ "drops_total": 260,
+ "drops_by_edge": {
+  "loadgenerator-b->frontend:8080": 210,
+  "?->frontend:8080": 50
+ },
+ "locust_aggregated_last": "Aggregated                                                                         5   5(100.00%) | 134897  133260  136352 135000 |    0.30        0.30",
+ "locust_fails": "5(100.00%)"
+}

@@ -1,0 +1,26 @@
+NAME                                                        READY   STATUS    RESTARTS   AGE   IP            NODE        NOMINATED NODE   READINESS GATES
+opentelemetry-demo-accountingservice-c7b5dd9b7-96249        1/1     Running   0          15m   10.42.1.85    worker-01   <none>           <none>
+opentelemetry-demo-adservice-8f7fb7c8b-6wb96                1/1     Running   0          15m   10.42.1.138   worker-01   <none>           <none>
+opentelemetry-demo-cartservice-8456cbd76d-r8ltv             1/1     Running   0          15m   10.42.0.152   cp-01       <none>           <none>
+opentelemetry-demo-checkoutservice-99688477f-vt6dg          1/1     Running   0          15m   10.42.0.251   cp-01       <none>           <none>
+opentelemetry-demo-currencyservice-647cb4db7d-qpn2p         1/1     Running   0          15m   10.42.0.200   cp-01       <none>           <none>
+opentelemetry-demo-emailservice-75db844549-zqjwp            1/1     Running   0          15m   10.42.0.172   cp-01       <none>           <none>
+opentelemetry-demo-flagd-79756789c-zfpdz                    1/1     Running   0          15m   10.42.0.207   cp-01       <none>           <none>
+opentelemetry-demo-frauddetectionservice-66ffb8c4b4-rf7k7   1/1     Running   0          15m   10.42.1.180   worker-01   <none>           <none>
+opentelemetry-demo-frontend-cb986f68d-v69kg                 1/1     Running   0          15m   10.42.0.248   cp-01       <none>           <none>
+opentelemetry-demo-frontendproxy-78f86589cc-cnkdr           1/1     Running   0          15m   10.42.0.128   cp-01       <none>           <none>
+opentelemetry-demo-grafana-77775d7778-9pgnd                 1/1     Running   0          15m   10.42.1.149   worker-01   <none>           <none>
+opentelemetry-demo-grafana-test                             0/1     Error     0          15m   10.42.0.7     cp-01       <none>           <none>
+opentelemetry-demo-imageprovider-d978f8b7b-rfdhc            1/1     Running   0          15m   10.42.0.98    cp-01       <none>           <none>
+opentelemetry-demo-jaeger-7d45c486b-rmk7b                   1/1     Running   0          15m   10.42.1.150   worker-01   <none>           <none>
+opentelemetry-demo-kafka-65c8f99864-cvft6                   1/1     Running   0          15m   10.42.1.213   worker-01   <none>           <none>
+opentelemetry-demo-loadgenerator-75f4cb95f5-2sfsb           1/1     Running   0          15m   10.42.0.196   cp-01       <none>           <none>
+opentelemetry-demo-otelcol-6b68555684-6tdqc                 1/1     Running   0          15m   10.42.1.135   worker-01   <none>           <none>
+opentelemetry-demo-paymentservice-54c49fb896-dwl8z          1/1     Running   0          15m   10.42.1.79    worker-01   <none>           <none>
+opentelemetry-demo-productcatalogservice-7956b7c7d7-zlkqw   1/1     Running   0          15m   10.42.1.37    worker-01   <none>           <none>
+opentelemetry-demo-prometheus-server-79864bdf65-zwwnl       1/1     Running   0          15m   10.42.0.165   cp-01       <none>           <none>
+opentelemetry-demo-quoteservice-645459ccff-hbqzq            1/1     Running   0          15m   10.42.1.18    worker-01   <none>           <none>
+opentelemetry-demo-recommendationservice-5bbdb8c598-6pb8x   1/1     Running   0          15m   10.42.1.60    worker-01   <none>           <none>
+opentelemetry-demo-shippingservice-6c7b578599-qfx5l         1/1     Running   0          15m   10.42.0.184   cp-01       <none>           <none>
+opentelemetry-demo-valkey-7bcbc4f894-44sn9                  1/1     Running   0          15m   10.42.0.186   cp-01       <none>           <none>
+otel-demo-opensearch-0                                      1/1     Running   0          15m   10.42.1.229   worker-01   <none>           <none>

@@ -1,0 +1,15 @@
+# dsb: fields of manifest.yaml that differ from the thesis manifest
+# source: results/DSB-SOCIAL-20260904/{manifests/dsb-social-rendered.yaml}
+# objects: 81 in thesis, 81 in manifest.yaml
+Deployment/media-frontend: spec.template.spec.initContainers[0].args[1]: git clone https://github.com/dimoibiehg/DeathStarBench.git /DeathStarBench && cp -r /DeathStarBench/socialNetwork/media-frontend/lua-scripts/* /lua-scripts/ -> test "$(cat /DeathStarBench/.perfbench-commit)" = 0d49cb4d37aa1fa204bccf1a6d4a6179312ac804 && cp -r /DeathStarBench/socialNetwork/media-frontend/lua-scripts/* /lua-scripts/
+Deployment/media-frontend: spec.template.spec.initContainers[0].volumeMounts[1]: (absent) -> {mountPath: /DeathStarBench, name: perfbench-dsb-src, readOnly: true}
+Deployment/media-frontend: spec.template.spec.volumes[2]: (absent) -> {hostPath: {path: /var/lib/perfbench/dsb-src/DeathStarBench, type: Directory}, name: perfbench-dsb-src}
+Deployment/media-mongodb: spec.template.spec.containers[0].resources.limits.memory: 128Mi -> 512Mi
+Deployment/nginx-thrift: spec.template.spec.initContainers[0].args[1]: git clone https://github.com/dimoibiehg/DeathStarBench.git /DeathStarBench && cp -r /DeathStarBench/socialNetwork/gen-lua/* /gen-lua/ && cp -r /DeathStarBench/socialNetwork/docker/openresty-thrift/lua-thrift/* /lua-thrift/ && cp -r /DeathStarBench/socialNetwork/nginx-web-server/lua-scripts/* /lua-scripts/ && cp -r /DeathStarBench/socialNetwork/nginx-web-server/pages/* /pages/ && cp /DeathStarBench ... -> test "$(cat /DeathStarBench/.perfbench-commit)" = 0d49cb4d37aa1fa204bccf1a6d4a6179312ac804 && cp -r /DeathStarBench/socialNetwork/gen-lua/* /gen-lua/ && cp -r /DeathStarBench/socialNetwork/docker/openresty-thrift/lua-thrift/* /lua-thrift/ && cp -r /DeathStarBench/socialNetwork/nginx-web-server/lua-scripts/* /lua-scripts/ && cp -r /DeathStarBench/socialNetwork/nginx-web-server/pages/* /pages/ && cp ...
+Deployment/nginx-thrift: spec.template.spec.initContainers[0].volumeMounts[5]: (absent) -> {mountPath: /DeathStarBench, name: perfbench-dsb-src, readOnly: true}
+Deployment/nginx-thrift: spec.template.spec.volumes[6]: (absent) -> {hostPath: {path: /var/lib/perfbench/dsb-src/DeathStarBench, type: Directory}, name: perfbench-dsb-src}
+Deployment/post-storage-mongodb: spec.template.spec.containers[0].resources.limits.memory: 128Mi -> 512Mi
+Deployment/social-graph-mongodb: spec.template.spec.containers[0].resources.limits.memory: 128Mi -> 512Mi
+Deployment/url-shorten-mongodb: spec.template.spec.containers[0].resources.limits.memory: 128Mi -> 512Mi
+Deployment/user-mongodb: spec.template.spec.containers[0].resources.limits.memory: 128Mi -> 512Mi
+Deployment/user-timeline-mongodb: spec.template.spec.containers[0].resources.limits.memory: 128Mi -> 512Mi

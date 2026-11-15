@@ -1,0 +1,49 @@
+PB_TP_BEGIN epoch=1790936189 app=boutique n=64 c=4 flags=[-disable-keepalive] url=http://frontend:80/product/OLJCESPC7Z
+
+Summary:
+  Total:	1.1209 secs
+  Slowest:	1.0597 secs
+  Fastest:	0.0007 secs
+  Average:	0.0363 secs
+  Requests/sec:	57.0971
+  
+  Total data:	704 bytes
+  Size/request:	11 bytes
+
+Response time histogram:
+  0.001 [1]	|■
+  0.107 [61]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.212 [0]	|
+  0.318 [0]	|
+  0.424 [0]	|
+  0.530 [0]	|
+  0.636 [0]	|
+  0.742 [0]	|
+  0.848 [0]	|
+  0.954 [0]	|
+  1.060 [2]	|■
+
+
+Latency distribution:
+  10% in 0.0009 secs
+  25% in 0.0012 secs
+  50% in 0.0016 secs
+  75% in 0.0026 secs
+  90% in 0.0381 secs
+  95% in 0.0399 secs
+  0% in 0.0000 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0342 secs, 0.0007 secs, 1.0597 secs
+  DNS-lookup:	0.0013 secs, 0.0000 secs, 0.0139 secs
+  req write:	0.0007 secs, 0.0000 secs, 0.0109 secs
+  resp wait:	0.0006 secs, 0.0001 secs, 0.0032 secs
+  resp read:	0.0004 secs, 0.0000 secs, 0.0059 secs
+
+Status code distribution:
+  [200]	64 responses
+
+
+
+PB_TP_RC=0 epoch=1790936190
+=== PB_END ===

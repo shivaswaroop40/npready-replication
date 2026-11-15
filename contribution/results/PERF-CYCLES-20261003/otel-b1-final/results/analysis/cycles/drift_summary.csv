@@ -1,0 +1,3 @@
+app,layout,mode,blocks,cv_raw_pct,cv_norm_pct,r_time_vs_inv_speed
+otel,cycle,keep-alive,10,19.653376934371405,21.288215354530053,-0.09637373466018795
+otel,cycle,new conn,10,17.29997242864879,15.539622661293132,0.5530727391099503

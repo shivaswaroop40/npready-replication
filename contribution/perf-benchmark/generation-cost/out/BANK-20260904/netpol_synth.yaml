@@ -1,0 +1,119 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-accounts-db
+  namespace: bank
+  labels: {thesis.ankra.dev/generated-from: synth, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: accounts-db}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: contacts}}
+    ports: [{port: 5432, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: userservice}}
+    ports: [{port: 5432, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-balancereader
+  namespace: bank
+  labels: {thesis.ankra.dev/generated-from: synth, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: balancereader}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 8080, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: ledgerwriter}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-contacts
+  namespace: bank
+  labels: {thesis.ankra.dev/generated-from: synth, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: contacts}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-frontend
+  namespace: bank
+  labels: {thesis.ankra.dev/generated-from: synth, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: frontend}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: loadgenerator}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-ledger-db
+  namespace: bank
+  labels: {thesis.ankra.dev/generated-from: synth, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: ledger-db}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: balancereader}}
+    ports: [{port: 5432, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: ledgerwriter}}
+    ports: [{port: 5432, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: transactionhistory}}
+    ports: [{port: 5432, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-ledgerwriter
+  namespace: bank
+  labels: {thesis.ankra.dev/generated-from: synth, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app: ledgerwriter}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-transactionhistory
+  namespace: bank
+  labels: {thesis.ankra.dev/generated-from: synth, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: transactionhistory}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-userservice
+  namespace: bank
+  labels: {thesis.ankra.dev/generated-from: synth, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: userservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 8080, protocol: TCP}]

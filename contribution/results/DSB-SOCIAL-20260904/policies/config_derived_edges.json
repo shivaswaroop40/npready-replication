@@ -1,0 +1,220 @@
+{
+  "needed": [
+    {
+      "src": "default/compose-post-service",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/home-timeline-redis",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/home-timeline-service",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/jaeger",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/media-frontend",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/media-memcached",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/media-mongodb",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/media-service",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/nginx-thrift",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/post-storage-memcached",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/post-storage-mongodb",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/post-storage-service",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/social-graph-mongodb",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/social-graph-redis",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/social-graph-service",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/text-service",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/unique-id-service",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/url-shorten-memcached",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/url-shorten-mongodb",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/url-shorten-service",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/user-memcached",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/user-mention-service",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/user-mongodb",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/user-service",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/user-timeline-mongodb",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/user-timeline-redis",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/user-timeline-service",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    }
+  ]
+}

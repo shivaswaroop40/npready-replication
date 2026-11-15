@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "Client version: v0.54.1"; echo "Server version: v0.54.1"

@@ -1,0 +1,62 @@
+=== dsb: 8 attack edges ===
+--- unprotected ---
+  [unprot] nginx-thrift->user-mongodb:27017  reachable=True
+  [unprot] nginx-thrift->social-graph-redis:6379  reachable=True
+  [unprot] media-frontend->post-storage-mongodb:27017  reachable=True
+  [unprot] compose-post-service->user-mongodb:27017  reachable=True
+  [unprot] text-service->social-graph-mongodb:27017  reachable=True
+  [unprot] home-timeline-service->user-memcached:11211  reachable=True
+  [unprot] unique-id-service->post-storage-mongodb:27017  reachable=True
+  [unprot] url-shorten-service->home-timeline-redis:6379  reachable=True
+--- synth (27 policies) ---
+  [synth] nginx-thrift->user-mongodb:27017  reachable=False
+  [synth] nginx-thrift->social-graph-redis:6379  reachable=False
+  [synth] media-frontend->post-storage-mongodb:27017  reachable=False
+  [synth] compose-post-service->user-mongodb:27017  reachable=False
+  [synth] text-service->social-graph-mongodb:27017  reachable=False
+  [synth] home-timeline-service->user-memcached:11211  reachable=False
+  [synth] unique-id-service->post-storage-mongodb:27017  reachable=False
+  [synth] url-shorten-service->home-timeline-redis:6379  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- synth_plus_config (27 policies) ---
+  [synth_plus_config] nginx-thrift->user-mongodb:27017  reachable=False
+  [synth_plus_config] nginx-thrift->social-graph-redis:6379  reachable=False
+  [synth_plus_config] media-frontend->post-storage-mongodb:27017  reachable=False
+  [synth_plus_config] compose-post-service->user-mongodb:27017  reachable=False
+  [synth_plus_config] text-service->social-graph-mongodb:27017  reachable=False
+  [synth_plus_config] home-timeline-service->user-memcached:11211  reachable=False
+  [synth_plus_config] unique-id-service->post-storage-mongodb:27017  reachable=False
+  [synth_plus_config] url-shorten-service->home-timeline-redis:6379  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- otterize (27 policies) ---
+  [otterize] nginx-thrift->user-mongodb:27017  reachable=False
+  [otterize] nginx-thrift->social-graph-redis:6379  reachable=False
+  [otterize] media-frontend->post-storage-mongodb:27017  reachable=False
+  [otterize] compose-post-service->user-mongodb:27017  reachable=False
+  [otterize] text-service->social-graph-mongodb:27017  reachable=False
+  [otterize] home-timeline-service->user-memcached:11211  reachable=False
+  [otterize] unique-id-service->post-storage-mongodb:27017  reachable=False
+  [otterize] url-shorten-service->home-timeline-redis:6379  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- ig_snapshot_socket (27 policies) ---
+  [ig_snapshot_socket] nginx-thrift->user-mongodb:27017  reachable=False
+  [ig_snapshot_socket] nginx-thrift->social-graph-redis:6379  reachable=False
+  [ig_snapshot_socket] media-frontend->post-storage-mongodb:27017  reachable=False
+  [ig_snapshot_socket] compose-post-service->user-mongodb:27017  reachable=False
+  [ig_snapshot_socket] text-service->social-graph-mongodb:27017  reachable=False
+  [ig_snapshot_socket] home-timeline-service->user-memcached:11211  reachable=False
+  [ig_snapshot_socket] unique-id-service->post-storage-mongodb:27017  reachable=False
+  [ig_snapshot_socket] url-shorten-service->home-timeline-redis:6379  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- ig_trace_tcp (27 policies) ---
+  [ig_trace_tcp] nginx-thrift->user-mongodb:27017  reachable=False
+  [ig_trace_tcp] nginx-thrift->social-graph-redis:6379  reachable=False
+  [ig_trace_tcp] media-frontend->post-storage-mongodb:27017  reachable=False
+  [ig_trace_tcp] compose-post-service->user-mongodb:27017  reachable=False
+  [ig_trace_tcp] text-service->social-graph-mongodb:27017  reachable=False
+  [ig_trace_tcp] home-timeline-service->user-memcached:11211  reachable=False
+  [ig_trace_tcp] unique-id-service->post-storage-mongodb:27017  reachable=False
+  [ig_trace_tcp] url-shorten-service->home-timeline-redis:6379  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+written /root/ae/out/dsb/dsb.json
+probe exit 0

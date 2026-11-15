@@ -1,0 +1,8 @@
+NAME                                    READY   STATUS    RESTARTS   AGE     IP            NODE        NOMINATED NODE   READINESS GATES
+teastore-auth-94f9c754b-5bwbq           1/1     Running   0          7m15s   10.42.1.212   worker-01   <none>           <none>
+teastore-db-5c9f5b96d7-g8qnb            1/1     Running   0          7m15s   10.42.1.45    worker-01   <none>           <none>
+teastore-image-54b98b8475-wcrz8         1/1     Running   0          7m15s   10.42.1.239   worker-01   <none>           <none>
+teastore-persistence-5578cf9746-qd4w4   1/1     Running   0          7m15s   10.42.1.117   worker-01   <none>           <none>
+teastore-recommender-7d87c5bcbc-68wzz   1/1     Running   0          7m15s   10.42.0.83    cp-01       <none>           <none>
+teastore-registry-7d894fbdfc-gtlrv      1/1     Running   0          7m15s   10.42.1.217   worker-01   <none>           <none>
+teastore-webui-8446759f7d-c6jrx         1/1     Running   0          7m15s   10.42.1.216   worker-01   <none>           <none>

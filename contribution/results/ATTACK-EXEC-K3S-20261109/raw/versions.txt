@@ -1,0 +1,33 @@
+## nodes
+NAME        STATUS   ROLES           AGE   VERSION        INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION    CONTAINER-RUNTIME
+cp-01       Ready    control-plane   75m   v1.36.3+k3s1   172.16.0.2    <none>        Ubuntu 24.04.5 LTS   6.1.167 (amd64)   containerd://2.3.2-k3s2
+worker-01   Ready    <none>          75m   v1.36.3+k3s1   172.16.0.3    <none>        Ubuntu 24.04.5 LTS   6.1.167 (amd64)   containerd://2.3.2-k3s2
+
+cp-01 podCIDR=10.42.0.0/24 kubelet=v1.36.3+k3s1 kernel=6.1.167 cpu=4 mem=7180704Ki
+worker-01 podCIDR=10.42.1.0/24 kubelet=v1.36.3+k3s1 kernel=6.1.167 cpu=4 mem=8212896Ki
+
+## cilium
+quay.io/cilium/cilium:v1.16.5@sha256:758ca0793f5995bb938a2fa219dcce63dc0b3fa7fc4ce5cc851125281fb7361d
+enable-hubble=true
+enable-policy=default
+ipam=kubernetes
+kube-proxy-replacement=true
+kube-proxy-replacement-healthz-bind-address=
+routing-mode=tunnel
+tunnel-protocol=vxlan
+
+## k3s config
+flannel-backend: none
+disable-network-policy: true
+disable-kube-proxy: true
+disable:
+  - traefik
+  - servicelb
+node-ip: 172.16.0.2
+advertise-address: 172.16.0.2
+write-kubeconfig-mode: "0600"
+
+cilium-cli: v0.16.22 compiled with go1.23.4 on linux/amd64
+cilium image (default): v1.16.4
+cilium image (stable): v1.20.4
+cilium image (running): 1.16.5

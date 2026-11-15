@@ -1,0 +1,26 @@
+boutique  synth                fd 0.000 (stored 0.000)  op 0.000 (stored 0.000)  OK
+boutique  synth_plus_config    fd 0.000 (stored 0.000)  op 0.000 (stored 0.000)  OK
+boutique  otterize             fd 0.000 (stored 0.000)  op 0.000 (stored 0.000)  OK
+boutique  ig_trace_tcp         fd 0.938 (stored 0.938)  op 1.000 (stored 0.000)  MISMATCH []  [non-isolated attack targets: ['cartservice', 'checkoutservice', 'emailservice', 'paymentservice', 'redis-cart']]
+boutique  ig_snapshot_socket   fd 0.000 (stored 0.000)  op 0.000 (stored 0.000)  OK
+dsb       synth                fd 0.533 (stored 0.533)  op 0.000 (stored 0.000)  OK
+dsb       synth_plus_config    fd 0.533 (stored 0.533)  op 0.000 (stored 0.000)  OK
+dsb       otterize             fd 0.833 (stored 0.833)  op 0.000 (stored 0.000)  OK
+dsb       ig_trace_tcp         fd 0.833 (stored 0.833)  op 0.000 (stored 0.000)  OK
+dsb       ig_snapshot_socket   fd 0.267 (stored 0.267)  op 0.000 (stored 0.000)  OK
+bank      synth                fd 0.083 (stored 0.083)  op 0.000 (stored 0.000)  OK
+bank      synth_plus_config    fd 0.000 (stored 0.000)  op 0.000 (stored 0.000)  OK
+bank      otterize             fd 0.083 (stored 0.083)  op 0.000 (stored 0.000)  OK
+bank      ig_trace_tcp         fd 0.333 (stored 0.333)  op 0.000 (stored 0.000)  OK
+bank      ig_snapshot_socket   fd 0.500 (stored 0.500)  op 0.000 (stored 0.000)  OK
+otel      synth                fd 0.240 (stored 0.200)  op 0.000 (stored 0.000)  MISMATCH ['loadgen->frontend']
+otel      synth_plus_config    fd 0.040 (stored 0.000)  op 0.000 (stored 0.000)  MISMATCH ['loadgen->frontend']
+otel      otterize             fd 0.120 (stored 0.080)  op 0.000 (stored 0.000)  MISMATCH ['loadgen->frontend']
+otel      ig_trace_tcp         fd 0.880 (stored 0.840)  op 0.000 (stored 0.000)  MISMATCH ['loadgen->frontend']
+otel      ig_snapshot_socket   fd 0.200 (stored 0.160)  op 0.000 (stored 0.000)  MISMATCH ['loadgen->frontend']
+teastore  synth                fd 0.000 (stored 0.000)  op 0.000 (stored 0.000)  OK
+teastore  synth_plus_config    fd 0.000 (stored 0.000)  op 0.000 (stored 0.000)  OK
+teastore  otterize             fd 0.000 (stored 0.000)  op 0.000 (stored 0.000)  OK
+teastore  ig_trace_tcp         fd 0.083 (stored 0.083)  op 0.000 (stored 0.000)  OK
+teastore  ig_snapshot_socket   fd 0.000 (stored 0.000)  op 0.000 (stored 0.000)  OK
+mismatches: 6

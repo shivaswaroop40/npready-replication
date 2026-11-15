@@ -1,0 +1,135 @@
+[otel3 08:31:28Z] === preflight ===
+[otel3 08:31:28Z] apiserver ok
+[otel3 08:31:28Z] namespace otel absent, redeploying the demo
+Warning: resource namespaces/otel is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+namespace/otel configured
+poddisruptionbudget.policy/otel-demo-opensearch-pdb created
+serviceaccount/opentelemetry-demo-grafana created
+serviceaccount/opentelemetry-demo-jaeger created
+serviceaccount/opentelemetry-demo-otelcol created
+serviceaccount/opentelemetry-demo-prometheus-server created
+serviceaccount/opentelemetry-demo created
+secret/opentelemetry-demo-grafana created
+configmap/opentelemetry-demo-grafana created
+configmap/otel-demo-opensearch-config created
+configmap/opentelemetry-demo-otelcol created
+configmap/opentelemetry-demo-prometheus-server created
+configmap/opentelemetry-demo-flagd-config created
+configmap/opentelemetry-demo-grafana-dashboards created
+clusterrole.rbac.authorization.k8s.io/opentelemetry-demo-grafana-clusterrole configured
+clusterrole.rbac.authorization.k8s.io/opentelemetry-demo-otelcol unchanged
+clusterrole.rbac.authorization.k8s.io/opentelemetry-demo-prometheus-server unchanged
+clusterrolebinding.rbac.authorization.k8s.io/opentelemetry-demo-grafana-clusterrolebinding unchanged
+clusterrolebinding.rbac.authorization.k8s.io/opentelemetry-demo-otelcol unchanged
+clusterrolebinding.rbac.authorization.k8s.io/opentelemetry-demo-prometheus-server unchanged
+role.rbac.authorization.k8s.io/opentelemetry-demo-grafana created
+rolebinding.rbac.authorization.k8s.io/opentelemetry-demo-grafana created
+service/opentelemetry-demo-grafana created
+service/opentelemetry-demo-jaeger-agent created
+service/opentelemetry-demo-jaeger-collector created
+service/opentelemetry-demo-jaeger-query created
+service/otel-demo-opensearch created
+service/otel-demo-opensearch-headless created
+service/opentelemetry-demo-otelcol created
+service/opentelemetry-demo-prometheus-server created
+service/opentelemetry-demo-adservice created
+service/opentelemetry-demo-cartservice created
+service/opentelemetry-demo-checkoutservice created
+service/opentelemetry-demo-currencyservice created
+service/opentelemetry-demo-emailservice created
+service/opentelemetry-demo-flagd created
+service/opentelemetry-demo-frontend created
+service/opentelemetry-demo-frontendproxy created
+service/opentelemetry-demo-imageprovider created
+service/opentelemetry-demo-kafka created
+service/opentelemetry-demo-loadgenerator created
+service/opentelemetry-demo-paymentservice created
+service/opentelemetry-demo-productcatalogservice created
+service/opentelemetry-demo-quoteservice created
+service/opentelemetry-demo-recommendationservice created
+service/opentelemetry-demo-shippingservice created
+service/opentelemetry-demo-valkey created
+deployment.apps/opentelemetry-demo-grafana created
+deployment.apps/opentelemetry-demo-jaeger created
+deployment.apps/opentelemetry-demo-otelcol created
+deployment.apps/opentelemetry-demo-prometheus-server created
+deployment.apps/opentelemetry-demo-accountingservice created
+deployment.apps/opentelemetry-demo-adservice created
+deployment.apps/opentelemetry-demo-cartservice created
+deployment.apps/opentelemetry-demo-checkoutservice created
+deployment.apps/opentelemetry-demo-currencyservice created
+deployment.apps/opentelemetry-demo-emailservice created
+deployment.apps/opentelemetry-demo-flagd created
+deployment.apps/opentelemetry-demo-frauddetectionservice created
+deployment.apps/opentelemetry-demo-frontend created
+deployment.apps/opentelemetry-demo-frontendproxy created
+deployment.apps/opentelemetry-demo-imageprovider created
+deployment.apps/opentelemetry-demo-kafka created
+deployment.apps/opentelemetry-demo-loadgenerator created
+deployment.apps/opentelemetry-demo-paymentservice created
+deployment.apps/opentelemetry-demo-productcatalogservice created
+deployment.apps/opentelemetry-demo-quoteservice created
+deployment.apps/opentelemetry-demo-recommendationservice created
+deployment.apps/opentelemetry-demo-shippingservice created
+deployment.apps/opentelemetry-demo-valkey created
+statefulset.apps/otel-demo-opensearch created
+serviceaccount/opentelemetry-demo-grafana-test created
+configmap/opentelemetry-demo-grafana-test created
+pod/opentelemetry-demo-grafana-test created
+[otel3 08:31:41Z] manifest applied
+[otel3 08:31:42Z] observability stack scaled to zero
+[otel3 08:31:42Z] waiting for the application to stabilise
+[otel3 08:31:43Z]   ready 0, scaled-to-zero 2, of 23
+[otel3 08:32:04Z]   ready 0, scaled-to-zero 2, of 23
+[otel3 08:32:25Z]   ready 0, scaled-to-zero 2, of 23
+[otel3 08:32:46Z]   ready 0, scaled-to-zero 2, of 23
+[otel3 08:33:07Z]   ready 0, scaled-to-zero 2, of 23
+[otel3 08:33:28Z]   ready 0, scaled-to-zero 2, of 23
+[otel3 08:33:48Z]   ready 0, scaled-to-zero 2, of 23
+[otel3 08:34:09Z]   ready 0, scaled-to-zero 2, of 23
+[otel3 08:34:30Z]   ready 0, scaled-to-zero 2, of 23
+[otel3 08:34:51Z]   ready 0, scaled-to-zero 2, of 23
+[otel3 08:35:32Z] === preflight ===
+[otel3 08:35:32Z] apiserver ok
+[otel3 08:35:33Z] namespace otel already present, reusing it
+[otel3 08:35:33Z] waiting for the application to stabilise
+[otel3 08:35:33Z]   ready 19, scaled-to-zero 4, of 23
+[otel3 08:35:34Z] application state written
+[otel3 08:35:34Z] === otterize ===
+[otel3 08:35:41Z] otterize: policies applied 17/17
+[otel3 08:35:43Z] otterize: checkout path restarted
+[otel3 08:35:55Z] otterize: journey B running for 180s
+[otel3 08:39:08Z] otterize: done, policies removed
+[otel3 08:39:08Z] === ig_snapshot_socket ===
+[otel3 08:39:17Z] ig_snapshot_socket: policies applied 17/17
+[otel3 08:39:20Z] ig_snapshot_socket: checkout path restarted
+[otel3 08:39:32Z] ig_snapshot_socket: journey B running for 180s
+[otel3 08:40:42Z] === preflight ===
+[otel3 08:40:43Z] apiserver ok
+[otel3 08:40:43Z] namespace otel already present, reusing it
+[otel3 08:40:45Z] shipped loadgenerator and frontendproxy scaled to zero
+[otel3 08:40:51Z] shipped loadgenerator pods remaining: 0
+[otel3 08:40:51Z] waiting for the application to stabilise
+[otel3 08:40:52Z]   ready 18, scaled-to-zero 5, of 23
+[otel3 08:40:52Z] application state written
+[otel3 08:40:52Z] === otterize ===
+[otel3 08:40:59Z] otterize: policies applied 17/17
+[otel3 08:41:02Z] otterize: checkout path restarted
+[otel3 08:41:14Z] otterize: journey B running for 180s
+[otel3 08:44:27Z] otterize: done, policies removed
+[otel3 08:44:27Z] === ig_snapshot_socket ===
+[otel3 08:44:34Z] ig_snapshot_socket: policies applied 17/17
+[otel3 08:44:36Z] ig_snapshot_socket: checkout path restarted
+[otel3 08:44:48Z] ig_snapshot_socket: journey B running for 180s
+[otel3 08:48:00Z] ig_snapshot_socket: done, policies removed
+[otel3 08:48:00Z] === ig_trace_tcp ===
+[otel3 08:48:07Z] ig_trace_tcp: policies applied 17/17
+[otel3 08:51:08Z] ig_trace_tcp: checkout path restarted
+[otel3 08:51:20Z] ig_trace_tcp: journey B running for 180s
+[otel3 08:54:32Z] ig_trace_tcp: done, policies removed
+[otel3 08:54:32Z] === all three complete ===
+[otel3 08:54:32Z]   otterize: 336 app-edge drops
+[otel3 08:54:32Z]   ig_snapshot_socket: 592 app-edge drops
+[otel3 08:54:32Z]   ig_trace_tcp: 716 app-edge drops
+[otel3 08:54:32Z] post-run apiserver health: ok
+[otel3 08:54:32Z] namespace otel left deployed with no policies

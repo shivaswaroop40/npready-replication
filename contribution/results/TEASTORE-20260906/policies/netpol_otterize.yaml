@@ -1,0 +1,100 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-auth
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-auth}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: teastore-webui}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-db
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-db}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: teastore-persistence}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-image
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-image}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: teastore-webui}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-persistence
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-persistence}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: teastore-auth}}
+  - from:
+    - podSelector: {matchLabels: {run: teastore-webui}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-recommender
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-recommender}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: teastore-webui}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-registry
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-registry}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: teastore-auth}}
+  - from:
+    - podSelector: {matchLabels: {run: teastore-image}}
+  - from:
+    - podSelector: {matchLabels: {run: teastore-persistence}}
+  - from:
+    - podSelector: {matchLabels: {run: teastore-recommender}}
+  - from:
+    - podSelector: {matchLabels: {run: teastore-webui}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-webui
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-webui}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: load-test}}

@@ -1,0 +1,18 @@
+namespace: {name: bank-attacks, create: true, labels: {npready.dev/purpose: attack-validation, npready.dev/disposable: "true"}}
+compromisedIdentity: {labels: {app: compromised-workload}, serviceAccountName: ""}
+families:
+  - id: "06-internal-recon"
+    enabled: true
+    technique: T1046
+    edgeClass: in_cluster
+    kind: tcp
+    targets:
+      - {host: accounts-db.bank.svc, port: 5432}
+      - {host: ledger-db.bank.svc, port: 5432}
+      - {host: userservice.bank.svc, port: 8080}
+      - {host: ledgerwriter.bank.svc, port: 8080}
+      - {host: balancereader.bank.svc, port: 8080}
+      - {host: transactionhistory.bank.svc, port: 8080}
+      - {host: contacts.bank.svc, port: 8080}
+      - {host: frontend.bank.svc, port: 80}
+    expect: blocked

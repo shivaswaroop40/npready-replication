@@ -1,0 +1,51 @@
+# versions.lock - generated 2026-10-02T10:32:42Z by cluster/lock.sh on cp-01
+# format: <component> <version> [digest/notes]
+
+## nodes
+node cp-01 kubelet=v1.36.3+k3s1 runtime=containerd://2.3.2-k3s2 kernel=6.12.80 os="Ubuntu 24.04.4 LTS" cpu=2 mem=3052924Ki podCIDR=10.42.0.0/24 taints=node-role.kubernetes.io/control-plane:NoSchedule
+node worker-01 kubelet=v1.36.3+k3s1 runtime=containerd://2.3.2-k3s2 kernel=6.12.80 os="Ubuntu 24.04.4 LTS" cpu=4 mem=6658992Ki podCIDR=10.42.1.0/24 taints=
+node worker-02 kubelet=v1.36.3+k3s1 runtime=containerd://2.3.2-k3s2 kernel=6.12.80 os="Ubuntu 24.04.4 LTS" cpu=4 mem=6658992Ki podCIDR=10.42.2.0/24 taints=
+k3s-binary cp-01 k3s version v1.36.3+k3s1 (5aed4d7b)
+k3s-binary worker-01 k3s version v1.36.3+k3s1 (5aed4d7b)
+k3s-binary worker-02 k3s version v1.36.3+k3s1 (5aed4d7b)
+k3s-server-config cluster-init: true flannel-backend: none disable-network-policy: true disable:   - traefik   - servicelb node-ip: 172.16.0.2 advertise-address: 172.16.0.2 tls-san:   - 172.16.0.2   - cp-01 node-taint:   - node-role.kubernetes.io/control-plane:NoSchedule write-kubeconfig-mode: "0600" kubelet-arg:   - cgroup-driver=systemd 
+
+## helm releases
+helm cilium ns=kube-system chart=cilium-1.19.5 app=1.19.5 rev=1
+helm network-mapper ns=otterize-system chart=network-mapper-3.0.47 app=v3.0.19 rev=1
+
+## controller images (deploy/ds/sts pod templates; digest from the image store on cp-01,
+## filled by install.sh prepull, so observers that are switched off are included)
+image gadget DaemonSet/gadget ghcr.io/inspektor-gadget/inspektor-gadget:v0.54.1 ghcr.io/inspektor-gadget/inspektor-gadget@sha256:7b33d72c70f3eceff69cf867172337b7487fde199ba706e697195648fdf27d3d
+image kube-system DaemonSet/cilium quay.io/cilium/cilium:v1.19.5@sha256:20fbbc14ac20b55a292c0dcda5571bf31cde30a7dbc68c29db3e709390ab0732 quay.io/cilium/cilium@sha256:20fbbc14ac20b55a292c0dcda5571bf31cde30a7dbc68c29db3e709390ab0732
+image kube-system DaemonSet/cilium-envoy quay.io/cilium/cilium-envoy:v1.36.8-1781157951-a7f42a3390781539911b5b9107881b35ecc4e752@sha256:326f872e19ce8aa45170efbf583b3f301586ba3feead14b864676d4baf3b45ed quay.io/cilium/cilium-envoy@sha256:326f872e19ce8aa45170efbf583b3f301586ba3feead14b864676d4baf3b45ed
+image kube-system Deployment/cilium-operator quay.io/cilium/operator-generic:v1.19.5@sha256:be848a365776e07d0c5a895eda7aec928ddc52a5a1fa2f432fd7a286609e1db4 quay.io/cilium/operator-generic@sha256:be848a365776e07d0c5a895eda7aec928ddc52a5a1fa2f432fd7a286609e1db4
+image kube-system Deployment/coredns rancher/mirrored-coredns-coredns:1.14.6 docker.io/rancher/mirrored-coredns-coredns@sha256:900f9c109f7a33545d3c811516e8376df9019147b750f5ce3e254468769176ea
+image kube-system Deployment/hubble-relay quay.io/cilium/hubble-relay:v1.19.5@sha256:24409bfa1bca075c92acb26ba4b49cd573d99d68d5370f7cc825078185222a0c quay.io/cilium/hubble-relay@sha256:24409bfa1bca075c92acb26ba4b49cd573d99d68d5370f7cc825078185222a0c
+image kube-system Deployment/local-path-provisioner rancher/local-path-provisioner:v0.0.36 docker.io/rancher/local-path-provisioner@sha256:1eba82e9c386038b4af6d69cca7519fac738c28c42735ed48ce70c882ad0d80f
+image kube-system Deployment/metrics-server rancher/mirrored-metrics-server:v0.9.0 docker.io/rancher/mirrored-metrics-server@sha256:d9862115e7c7881280d3d75ca26bda8ffc0fc213315979575bf23ce9826205c0
+image otterize-system DaemonSet/otterize-network-sniffer otterize/network-mapper-sniffer:v3.0.19 docker.io/otterize/network-mapper-sniffer@sha256:e8f4b8489890c1054b374ebb9e0989c4a9565b7e0829695e0c3a71789581cad3
+image otterize-system Deployment/otterize-network-mapper otterize/network-mapper:v3.0.19 docker.io/otterize/network-mapper@sha256:381050d0306dc76fa4f42f71bbceda18e8b3c9b85ed865c19169b80f1cee3ca0
+
+## gadget images (OCI artifacts pulled by the gadget pods, not by containerd;
+## digest = Docker-Content-Digest of the tag on ghcr.io at lock time)
+gadget-image ghcr.io/inspektor-gadget/gadget/trace_tcp:v0.54.1 sha256:912498b1fcc45635b16b63ed94d88ab4e477187f7e95a5c81ed5084b0f668d34
+gadget-image ghcr.io/inspektor-gadget/gadget/snapshot_socket:v0.54.1 sha256:85d76e100f8124d806eeebab043f0f2e4d9d116ff9683cc6b1f1b0018cc1d566
+
+## clients on cp-01
+kubectl v1.36.3+k3s1
+helm v4.3.0+gbec5b06
+cilium-cli cilium-cli: v0.20.1 compiled with go1.27.1 on linux/amd64
+hubble hubble v1.19.4@HEAD-39037bd compiled with go1.26.4 on linux/amd64
+kubectl-gadget v0.54.1
+sha256 2f98a9f8fe5782479ee2d54e70a1b10a7f6fd4cae8d38ed3098452dc6eed76b5  /usr/local/bin/k3s
+sha256 57ce7fc4ea77b28ee6fa91ae071abcade74d3f524e80c9decff5877a5ac8eda4  /usr/local/bin/helm
+sha256 1409138d78f4215fb342949233ea91dde4847a4923910255e78ac52a0bdf54aa  /usr/local/bin/cilium
+sha256 cd048f437e5e92799ba388567d9629e0da78bc9c2f61e6a6dbd44c2da5d8b002  /usr/local/bin/hubble
+sha256 84e4d8d4a9a6b8eb9ccb063b8d3b64323adc2d254ea8906386e4422bad4d60a8  /usr/local/bin/kubectl-gadget
+hey 0.1.4-2ubuntu0.24.04.3
+conntrack conntrack v1.4.8 (conntrack-tools)
+jq jq-1.8.2
+python3 Python 3.12.3
+conntrack@worker-01 conntrack v1.4.8 (conntrack-tools)
+conntrack@worker-02 conntrack v1.4.8 (conntrack-tools)

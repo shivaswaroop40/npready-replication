@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: locustfile-b, namespace: teastore}
+data:
+  locustfile.py: |
+    import random
+    from locust import HttpUser, TaskSet, task, between
+    P="/tools.descartes.teastore.webui"
+    def login(l):
+        l.client.get(P+"/", name="/")
+        l.client.post(P+"/loginAction", data={"username":"user"+str(random.randint(1,90)),"password":"password"}, name="/loginAction")
+    def browse(l):
+        cat=random.randint(2,6); l.client.get(P+"/category?category=%d&page=1"%cat, name="/category")
+        pid=random.randint(1,100); l.client.get(P+"/product?id=%d"%pid, name="/product")
+        l.client.post(P+"/cartAction", data={"addToCart":"","productid":str(pid)}, name="/cartAction-add")
+
+    class BuyTasks(TaskSet):
+        def on_start(self): login(self)
+        @task(5)
+        def t(self): browse(self)
+        @task(4)
+        def buy(self):
+            browse(self)
+            self.client.get(P+"/order", name="/order")
+            self.client.post(P+"/cartAction", data={"firstname":"U","lastname":"U","address1":"R","address2":"C","cardtype":"visa","cardnumber":"314159265359","expirydate":"12/2050","confirm":"Confirm"}, name="/confirm")
+    class JourneyBUser(HttpUser):
+        tasks=[BuyTasks]; wait_time=between(1,3)
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loadgen-b
+  namespace: teastore
+  labels: {run: load-test, journey: B}
+spec:
+  replicas: 1
+  selector: {matchLabels: {run: load-test, journey: B}}
+  template:
+    metadata: {labels: {run: load-test, journey: B}}
+    spec:
+      containers:
+      - name: locust
+        image: locustio/locust:2.31.5
+        args: ["-f","/mnt/locustfile.py","--host","http://teastore-webui:8080","--headless","-u","8","-r","2","--only-summary"]
+        resources: {requests: {cpu: 100m, memory: 128Mi}, limits: {cpu: 500m, memory: 256Mi}}
+        volumeMounts: [{name: lf, mountPath: /mnt/locustfile.py, subPath: locustfile.py, readOnly: true}]
+      volumes: [{name: lf, configMap: {name: locustfile-b}}]

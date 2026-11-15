@@ -1,0 +1,247 @@
+{
+ "BOUTIQUE-20260903": {
+  "input": {
+   "hubble_flow_records": 60903,
+   "hubble_bytes": 107506663,
+   "manifest_objects": 35,
+   "manifest_files": 1,
+   "manifest_input": "manifests",
+   "manifest_bytes": 22638
+  },
+  "step1": {
+   "synth_triples": 18,
+   "synth_pairs": 18,
+   "stored_admit": 18,
+   "pairs_match": true,
+   "yaml": {
+    "equal": true,
+    "policies_mine": 11,
+    "policies_stored": 11,
+    "rules": 16,
+    "only_mine": [],
+    "only_stored": [],
+    "targets_differ": [],
+    "byte_identical": true
+   }
+  },
+  "step2": {
+   "declared_edges": 28,
+   "stored_edges": 28,
+   "same_records": true,
+   "same_order": true
+  },
+  "step3": {
+   "fused_triples": 28,
+   "fused_pairs": 28,
+   "stored_admit": 28,
+   "pairs_match": true,
+   "config_only_pairs_added": 10,
+   "yaml": {
+    "equal": true,
+    "policies_mine": 11,
+    "policies_stored": 11,
+    "rules": 16,
+    "only_mine": [],
+    "only_stored": [],
+    "targets_differ": [],
+    "byte_identical": true
+   }
+  }
+ },
+ "DSB-SOCIAL-20260904": {
+  "input": {
+   "hubble_flow_records": 443091,
+   "hubble_bytes": 1033745281,
+   "manifest_objects": 81,
+   "manifest_files": 1,
+   "manifest_input": "manifests",
+   "manifest_bytes": 198709
+  },
+  "step1": {
+   "synth_triples": 18,
+   "synth_pairs": 18,
+   "stored_admit": 18,
+   "pairs_match": true,
+   "yaml": {
+    "equal": true,
+    "policies_mine": 27,
+    "policies_stored": 27,
+    "rules": 14,
+    "only_mine": [],
+    "only_stored": [],
+    "targets_differ": [],
+    "byte_identical": true
+   }
+  },
+  "step2": {
+   "declared_edges": 27,
+   "stored_edges": 27,
+   "same_records": true,
+   "same_order": true
+  },
+  "step3": {
+   "fused_triples": 42,
+   "fused_pairs": 42,
+   "stored_admit": 42,
+   "pairs_match": true,
+   "config_only_pairs_added": 24,
+   "yaml": {
+    "equal": true,
+    "policies_mine": 27,
+    "policies_stored": 27,
+    "rules": 14,
+    "only_mine": [],
+    "only_stored": [],
+    "targets_differ": [],
+    "byte_identical": true
+   }
+  }
+ },
+ "BANK-20260904": {
+  "input": {
+   "hubble_flow_records": 125787,
+   "hubble_bytes": 284232826,
+   "manifest_objects": 23,
+   "manifest_files": 1,
+   "manifest_input": "bank-all.yaml",
+   "manifest_bytes": 39788
+  },
+  "step1": {
+   "synth_triples": 16,
+   "synth_pairs": 16,
+   "stored_admit": 16,
+   "pairs_match": true,
+   "yaml": {
+    "equal": true,
+    "policies_mine": 8,
+    "policies_stored": 8,
+    "rules": 11,
+    "only_mine": [],
+    "only_stored": [],
+    "targets_differ": [],
+    "byte_identical": true
+   }
+  },
+  "step2": {
+   "declared_edges": 24,
+   "stored_edges": 24,
+   "same_records": true,
+   "same_order": true
+  },
+  "step3": {
+   "fused_triples": 24,
+   "fused_pairs": 24,
+   "stored_admit": 24,
+   "pairs_match": true,
+   "config_only_pairs_added": 8,
+   "yaml": {
+    "equal": true,
+    "policies_mine": 8,
+    "policies_stored": 8,
+    "rules": 15,
+    "only_mine": [],
+    "only_stored": [],
+    "targets_differ": [],
+    "byte_identical": true
+   }
+  }
+ },
+ "OTEL-20260906": {
+  "input": {
+   "hubble_flow_records": 89926,
+   "hubble_bytes": 230199405,
+   "manifest_objects": 74,
+   "manifest_files": 1,
+   "manifest_input": "manifests",
+   "manifest_bytes": 335498
+  },
+  "step1": {
+   "synth_triples": 26,
+   "synth_pairs": 26,
+   "stored_admit": 26,
+   "pairs_match": true,
+   "yaml": {
+    "equal": true,
+    "policies_mine": 17,
+    "policies_stored": 17,
+    "rules": 19,
+    "only_mine": [],
+    "only_stored": [],
+    "targets_differ": [],
+    "byte_identical": false
+   }
+  },
+  "step2": {
+   "declared_edges": 66,
+   "stored_edges": 66,
+   "same_records": true,
+   "same_order": true
+  },
+  "step3": {
+   "fused_triples": 51,
+   "fused_pairs": 51,
+   "stored_admit": 51,
+   "pairs_match": true,
+   "config_only_pairs_added": 25,
+   "yaml": {
+    "equal": true,
+    "policies_mine": 17,
+    "policies_stored": 17,
+    "rules": 29,
+    "only_mine": [],
+    "only_stored": [],
+    "targets_differ": [],
+    "byte_identical": false
+   }
+  }
+ },
+ "TEASTORE-20260906": {
+  "input": {
+   "hubble_flow_records": 55785,
+   "hubble_bytes": 140284865,
+   "manifest_objects": 10,
+   "manifest_files": 1,
+   "manifest_input": "manifests",
+   "manifest_bytes": 4656
+  },
+  "step1": {
+   "synth_triples": 18,
+   "synth_pairs": 18,
+   "stored_admit": 18,
+   "pairs_match": true,
+   "yaml": {
+    "equal": true,
+    "policies_mine": 7,
+    "policies_stored": 7,
+    "rules": 12,
+    "only_mine": [],
+    "only_stored": [],
+    "targets_differ": [],
+    "byte_identical": true
+   }
+  },
+  "step2": {
+   "declared_edges": 13,
+   "stored_edges": 13,
+   "same_records": true,
+   "same_order": true
+  },
+  "step3": {
+   "fused_triples": 20,
+   "fused_pairs": 20,
+   "stored_admit": 20,
+   "pairs_match": true,
+   "config_only_pairs_added": 2,
+   "yaml": {
+    "equal": true,
+    "policies_mine": 7,
+    "policies_stored": 7,
+    "rules": 12,
+    "only_mine": [],
+    "only_stored": [],
+    "targets_differ": [],
+    "byte_identical": true
+   }
+  }
+ }
+}

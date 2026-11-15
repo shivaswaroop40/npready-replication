@@ -1,0 +1,10 @@
+{
+ "drops_total": 19,
+ "drops_by_edge": {
+  "teastore-webui->?:8080": 11,
+  "?->teastore-webui:None": 4,
+  "teastore-auth->?:8080": 4
+ },
+ "locust_aggregated_last": null,
+ "locust_fails": "n/a"
+}

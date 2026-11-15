@@ -1,0 +1,3 @@
+{"note":"Compromised legitimate identity reaching a datastore/bus or service it never uses; none declared for that source.",
+ "edges":[["frontend","valkey",6379],["frontend","kafka",9092],["adservice","paymentservice",8080],["recommendationservice","checkoutservice",8080],
+          ["currencyservice","valkey",6379],["productcatalogservice","kafka",9092],["emailservice","cartservice",8080],["paymentservice","productcatalogservice",8080]]}

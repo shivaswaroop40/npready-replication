@@ -1,0 +1,196 @@
+{
+  "needed": [
+    {
+      "src": "default/balancereader",
+      "dst": "default/ledger-db",
+      "port": 5432,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/ledger-db-config:SPRING_DATASOURCE_URL=ledger-db:5432"
+    },
+    {
+      "src": "default/contacts",
+      "dst": "default/accounts-db",
+      "port": 5432,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/accounts-db-config:ACCOUNTS_DB_URI=accounts-db:5432"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "default/ledgerwriter",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/service-api-config:TRANSACTIONS_API_ADDR=ledgerwriter:8080"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "default/balancereader",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/service-api-config:BALANCES_API_ADDR=balancereader:8080"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "default/transactionhistory",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/service-api-config:HISTORY_API_ADDR=transactionhistory:8080"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "default/contacts",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/service-api-config:CONTACTS_API_ADDR=contacts:8080"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "default/userservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/service-api-config:USERSERVICE_API_ADDR=userservice:8080"
+    },
+    {
+      "src": "default/ledgerwriter",
+      "dst": "default/ledger-db",
+      "port": 5432,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/ledger-db-config:SPRING_DATASOURCE_URL=ledger-db:5432"
+    },
+    {
+      "src": "default/ledgerwriter",
+      "dst": "default/balancereader",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/service-api-config:BALANCES_API_ADDR=balancereader:8080"
+    },
+    {
+      "src": "default/ledgerwriter",
+      "dst": "default/transactionhistory",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/service-api-config:HISTORY_API_ADDR=transactionhistory:8080"
+    },
+    {
+      "src": "default/ledgerwriter",
+      "dst": "default/contacts",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/service-api-config:CONTACTS_API_ADDR=contacts:8080"
+    },
+    {
+      "src": "default/ledgerwriter",
+      "dst": "default/userservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/service-api-config:USERSERVICE_API_ADDR=userservice:8080"
+    },
+    {
+      "src": "default/loadgenerator",
+      "dst": "default/frontend",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FRONTEND_ADDR=frontend:8080"
+    },
+    {
+      "src": "default/transactionhistory",
+      "dst": "default/ledger-db",
+      "port": 5432,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/ledger-db-config:SPRING_DATASOURCE_URL=ledger-db:5432"
+    },
+    {
+      "src": "default/userservice",
+      "dst": "default/accounts-db",
+      "port": 5432,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/accounts-db-config:ACCOUNTS_DB_URI=accounts-db:5432"
+    },
+    {
+      "src": "default/balancereader",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/contacts",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/frontend",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/ledgerwriter",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/loadgenerator",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/transactionhistory",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/userservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/accounts-db",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/ledger-db",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    }
+  ]
+}

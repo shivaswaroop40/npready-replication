@@ -1,0 +1,15 @@
+# boutique: images.txt resolved 2026-10-02 (thesis run 2026-09-03)
+# ref	digest the tag points at now	amd64	note
+redis:alpine	sha256:3811787313eba226a2ef38658c6ccb91cd5e110edc89c37767de373120a0e5a0	yes	tag last pushed 2026-09-24, AFTER the thesis run
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/adservice:v0.10.6	sha256:f580c4853e896dd2083f0c270c4b7aa5feda6dd56058a93b87d0c88334a4c07d	yes	
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/cartservice:v0.10.6	sha256:b5c29ddb3238474ea8d1842f07004fedeeae47f660627ab111a613a681cd0356	yes	
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/checkoutservice:v0.10.6	sha256:ab40699b6d9e45c9a93b5427008f327fbe912465361e2ff7a1a1be7111e36134	yes	
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/currencyservice:v0.10.6	sha256:7b2f3f804555c926861d67cd22c1b7c9e32d46b81cf1a64dd3089ae424d73be9	yes	
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/emailservice:v0.10.6	sha256:77fd45d411b3550cbd39e30bda83ed6ea23d87fd6e58e69cf9fa2808e003984d	yes	
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/frontend:v0.10.6	sha256:c06df08eccd78568a37292cfbe889df42fac48691b7fb05f2deeba0ae8d669ef	yes	
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/loadgenerator:v0.10.6	sha256:9bed9dec88ae439b9c10e3689dee57201aad47c9abb9faf04add562481482421	yes	
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/paymentservice:v0.10.6	sha256:735b6d3255e2c74b0135a95cfc2337987e492f24e163c0bb9a853635876993c4	yes	
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/productcatalogservice:v0.10.6	sha256:fb8568ecfc948717eb07746a6ce360fb8e5f906ae8a874cbad666891f0d21790	yes	
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/recommendationservice:v0.10.6	sha256:5d8321f2d24132889f654f75308e541b0626e6ae0cbacf81b170e5eb0921b415	yes	
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/shippingservice:v0.10.6	sha256:8527bafff8c8776e345f2dca0641f6e8595b053ce67f9a5af66f5a85d9eaca9d	yes	
+williamyeh/hey@sha256:6e63ae9c5801204cf7abe22c9ddf82d1bcbc7140ffd206a9bd83a8a643dcd6f2	sha256:6e63ae9c5801204cf7abe22c9ddf82d1bcbc7140ffd206a9bd83a8a643dcd6f2	yes	

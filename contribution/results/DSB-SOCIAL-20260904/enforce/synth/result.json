@@ -1,0 +1,19 @@
+{
+ "drops_total": 1942,
+ "drops_by_edge": {
+  "nginx-thrift->compose-post-service:9090": 1918,
+  "nginx-thrift->jaeger:None": 20,
+  "?->user-timeline-service:None": 2,
+  "user-timeline-service->?:34110": 1,
+  "user-timeline-service->?:34096": 1
+ },
+ "wrk2_requests_last_run": "n/a",
+ "wrk2_non2xx_last_run": "0",
+ "wrk2_socket_errors_last_run": [
+  "0",
+  "0",
+  "0",
+  "0"
+ ],
+ "locust_fails": "non2xx=0/n/a sockerr=('0', '0', '0', '0')"
+}

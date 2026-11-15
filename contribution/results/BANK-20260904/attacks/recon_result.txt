@@ -1,0 +1,10 @@
+=== npready probe family=06-internal-recon technique=T1046 expect=blocked ===
+RESULT 06-internal-recon accounts-db.bank.svc:5432 OPEN (reachable)
+RESULT 06-internal-recon ledger-db.bank.svc:5432 OPEN (reachable)
+RESULT 06-internal-recon userservice.bank.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon ledgerwriter.bank.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon balancereader.bank.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon transactionhistory.bank.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon contacts.bank.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon frontend.bank.svc:80 OPEN (reachable)
+=== npready probe done family=06-internal-recon any_open=0 ===

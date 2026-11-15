@@ -1,0 +1,18 @@
+namespace: {name: otel-attacks, create: true, labels: {npready.dev/purpose: attack-validation, npready.dev/disposable: "true"}}
+compromisedIdentity: {labels: {app: compromised-workload}, serviceAccountName: ""}
+families:
+  - id: "06-internal-recon"
+    enabled: true
+    technique: T1046
+    edgeClass: in_cluster
+    kind: tcp
+    targets:
+      - {host: opentelemetry-demo-valkey.otel.svc, port: 6379}
+      - {host: opentelemetry-demo-kafka.otel.svc, port: 9092}
+      - {host: opentelemetry-demo-paymentservice.otel.svc, port: 8080}
+      - {host: opentelemetry-demo-checkoutservice.otel.svc, port: 8080}
+      - {host: opentelemetry-demo-cartservice.otel.svc, port: 8080}
+      - {host: opentelemetry-demo-shippingservice.otel.svc, port: 8080}
+      - {host: opentelemetry-demo-emailservice.otel.svc, port: 8080}
+      - {host: opentelemetry-demo-frontend.otel.svc, port: 8080}
+    expect: blocked

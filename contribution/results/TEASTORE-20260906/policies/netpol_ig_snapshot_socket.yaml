@@ -1,0 +1,112 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-auth
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-auth}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: teastore-webui}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-db
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-db}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: teastore-persistence}}
+    ports: [{port: 3306, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-image
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-image}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: teastore-webui}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-persistence
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-persistence}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: teastore-auth}}
+    ports: [{port: 8080, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {run: teastore-webui}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-recommender
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-recommender}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: teastore-webui}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-registry
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-registry}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: teastore-auth}}
+    ports: [{port: 8080, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {run: teastore-image}}
+    ports: [{port: 8080, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {run: teastore-persistence}}
+    ports: [{port: 8080, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {run: teastore-recommender}}
+    ports: [{port: 8080, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {run: teastore-webui}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-webui
+  namespace: teastore
+  labels: {thesis.ankra.dev/generated-from: ig_snapshot_socket, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {run: teastore-webui}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {run: load-test}}
+    ports: [{port: 8080, protocol: TCP}]

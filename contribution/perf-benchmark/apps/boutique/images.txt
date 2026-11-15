@@ -1,0 +1,13 @@
+redis:alpine
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/adservice:v0.10.6
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/cartservice:v0.10.6
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/checkoutservice:v0.10.6
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/currencyservice:v0.10.6
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/emailservice:v0.10.6
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/frontend:v0.10.6
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/loadgenerator:v0.10.6
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/paymentservice:v0.10.6
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/productcatalogservice:v0.10.6
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/recommendationservice:v0.10.6
+us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/shippingservice:v0.10.6
+williamyeh/hey@sha256:6e63ae9c5801204cf7abe22c9ddf82d1bcbc7140ffd206a9bd83a8a643dcd6f2

@@ -1,0 +1,49 @@
+PB_TP_BEGIN epoch=1790936188 app=otel n=64 c=4 flags=[-disable-keepalive] url=http://opentelemetry-demo-frontend:8080/api/recommendations?productIds=0PUK6V6EV0&currencyCode=EUR
+
+Summary:
+  Total:	0.1139 secs
+  Slowest:	0.0495 secs
+  Fastest:	0.0005 secs
+  Average:	0.0069 secs
+  Requests/sec:	561.7682
+  
+  Total data:	704 bytes
+  Size/request:	11 bytes
+
+Response time histogram:
+  0.001 [1]	|■
+  0.005 [44]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.010 [15]	|■■■■■■■■■■■■■■
+  0.015 [0]	|
+  0.020 [0]	|
+  0.025 [0]	|
+  0.030 [0]	|
+  0.035 [0]	|
+  0.040 [0]	|
+  0.045 [0]	|
+  0.049 [4]	|■■■■
+
+
+Latency distribution:
+  10% in 0.0021 secs
+  25% in 0.0030 secs
+  50% in 0.0038 secs
+  75% in 0.0065 secs
+  90% in 0.0083 secs
+  95% in 0.0472 secs
+  0% in 0.0000 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0031 secs, 0.0005 secs, 0.0495 secs
+  DNS-lookup:	0.0019 secs, 0.0000 secs, 0.0110 secs
+  req write:	0.0010 secs, 0.0000 secs, 0.0154 secs
+  resp wait:	0.0021 secs, 0.0002 secs, 0.0073 secs
+  resp read:	0.0005 secs, 0.0000 secs, 0.0079 secs
+
+Status code distribution:
+  [200]	64 responses
+
+
+
+PB_TP_RC=0 epoch=1790936188
+=== PB_END ===

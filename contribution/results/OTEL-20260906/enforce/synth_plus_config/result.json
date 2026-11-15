@@ -1,0 +1,6 @@
+{
+ "drops_total": 336,
+ "drops_by_edge": {
+  "loadgen-b->frontend:8080": 336
+ }
+}

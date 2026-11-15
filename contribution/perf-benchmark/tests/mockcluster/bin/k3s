@@ -1,0 +1,2 @@
+#!/bin/bash
+[ "$1" = --version ] && echo "k3s version v1.36.3+k3s1 (mock)"; exit 0

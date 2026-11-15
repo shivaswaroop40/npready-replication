@@ -1,0 +1,271 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-adservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: adservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-cartservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: cartservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+    ports: [{port: 8080, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-checkoutservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-currencyservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: currencyservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+    ports: [{port: 8080, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-emailservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: emailservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-flagd
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: flagd}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: adservice}}
+    ports: [{port: 8013, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: cartservice}}
+    ports: [{port: 8013, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+    ports: [{port: 8013, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frauddetectionservice}}
+    ports: [{port: 8013, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+    ports: [{port: 8013, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: paymentservice}}
+    ports: [{port: 8013, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: productcatalogservice}}
+    ports: [{port: 8013, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: recommendationservice}}
+    ports: [{port: 8013, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-frauddetectionservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: frauddetectionservice}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-frontend
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-imageprovider
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: imageprovider}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+    ports: [{port: 8081, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-kafka
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: kafka}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: accountingservice}}
+    ports: [{port: 9092, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+    ports: [{port: 9092, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frauddetectionservice}}
+    ports: [{port: 9092, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-paymentservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: paymentservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-productcatalogservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: productcatalogservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+    ports: [{port: 8080, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+    ports: [{port: 8080, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: recommendationservice}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-quoteservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: quoteservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: shippingservice}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-recommendationservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: recommendationservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-shippingservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: shippingservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+    ports: [{port: 8080, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-valkey
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: valkey}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: cartservice}}
+    ports: [{port: 6379, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-accountingservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: accountingservice}}
+  policyTypes: [Ingress]

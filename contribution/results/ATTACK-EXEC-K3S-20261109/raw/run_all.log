@@ -1,0 +1,41 @@
+[2026-11-09T08:27:12Z] namespace boutique
+namespace/boutique created
+[2026-11-09T08:27:12Z] apply BOUTIQUE-20260903/manifests/online-boutique-v0.10.6.yaml
+[2026-11-09T08:27:12Z] waiting for pods
+[2026-11-09T08:28:14Z] not ready after wait: 0
+[2026-11-09T08:28:14Z] probe
+[2026-11-09T08:33:44Z] delete namespace
+[2026-11-09T08:34:03Z] DONE boutique
+[2026-11-09T08:34:03Z] namespace teastore
+namespace/teastore created
+[2026-11-09T08:34:04Z] apply TEASTORE-20260906/manifests/teastore-ribbon.yaml
+[2026-11-09T08:34:04Z] waiting for pods
+[2026-11-09T08:34:44Z] not ready after wait: 0
+[2026-11-09T08:34:44Z] probe
+[2026-11-09T08:39:49Z] delete namespace
+[2026-11-09T08:40:39Z] DONE teastore
+[2026-11-09T08:40:39Z] namespace bank
+namespace/bank created
+[2026-11-09T08:40:39Z] apply BANK-20260904/manifests/_all.yaml
+[2026-11-09T08:40:39Z] waiting for pods
+[2026-11-09T08:55:57Z] not ready after wait: 5
+[2026-11-09T08:55:58Z] probe
+[2026-11-09T09:01:40Z] delete namespace
+[2026-11-09T09:02:01Z] DONE bank
+[2026-11-09T09:02:01Z] namespace dsb
+namespace/dsb created
+[2026-11-09T09:02:01Z] apply DSB-SOCIAL-20260904/manifests/dsb-social-rendered.yaml
+[2026-11-09T09:02:01Z] waiting for pods
+[2026-11-09T09:03:43Z] not ready after wait: 0
+[2026-11-09T09:03:43Z] probe
+[2026-11-09T09:09:58Z] delete namespace
+[2026-11-09T09:10:42Z] DONE dsb
+[2026-11-09T09:10:42Z] namespace otel
+namespace/otel created
+[2026-11-09T09:10:42Z] apply OTEL-20260906/manifests/otel-demo-1.12.0.yaml
+[2026-11-09T09:10:42Z] waiting for pods
+[2026-11-09T09:26:02Z] not ready after wait: 1
+[2026-11-09T09:26:02Z] probe
+[2026-11-09T09:32:07Z] delete namespace
+[2026-11-09T09:33:01Z] DONE otel
+ALLDONE

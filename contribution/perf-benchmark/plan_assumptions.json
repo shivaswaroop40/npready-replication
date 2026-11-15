@@ -1,0 +1,7 @@
+{
+ "_comment": "Apps with no short run on the v2 validation play. Used by bin/plan.py --assume. Fixed part of a run = boutique's measured 26.9 min (v2, includes the 60 s idle segment and the 20 s stability wait) + 2 min for slower restarts (Java services); fixed-count rates = the smoke-test rates at c8 (results/PERF-PILOT-20261002/results/_smoke/<app>/summary.json, 200 requests) x 0.7 as a margin for c16 and 10000 requests; 26 s per test of overhead (measured on boutique v2). Replace with a measured short run when one exists.",
+ "teastore": {"full_s": 2562, "deploy_s": 120,
+              "basis": "assumed from smoke rates: keep-alive 117.8 and new conn 139.0 req/s at c8 (x0.7 = 82.5 / 97.3 req/s) -> 6 x 10000 requests = 11.2 min; fixed part 28.9 min; 6 x 26 s test overhead; deploy 26 s in the smoke test (2 min assumed)"},
+ "otel": {"full_s": 2872, "deploy_s": 120,
+          "basis": "assumed from smoke rates: keep-alive 99.5 and new conn 77.8 req/s at c8 (x0.7 = 69.6 / 54.4 req/s) -> 6 x 10000 requests = 16.4 min; fixed part 28.9 min; 6 x 26 s test overhead; deploy 13-25 s in the smoke test (2 min assumed)"}
+}

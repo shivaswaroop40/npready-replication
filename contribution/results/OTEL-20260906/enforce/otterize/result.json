@@ -1,0 +1,17 @@
+{
+  "drops_by_edge": {
+    "flagd->?:55346": 9,
+    "?->flagd:None": 16,
+    "loadgen-b->frontend:8080": 336,
+    "flagd->?:45052": 2,
+    "flagd->?:45118": 2
+  },
+  "app_edge_drops": 336,
+  "total_drops": 365,
+  "top": [
+    [
+      "loadgen-b->frontend:8080",
+      336
+    ]
+  ]
+}

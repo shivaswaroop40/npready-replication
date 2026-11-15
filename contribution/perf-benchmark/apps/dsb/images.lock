@@ -1,0 +1,13 @@
+# dsb: images.txt resolved 2026-10-02 (thesis run 2026-09-04)
+# ref	digest the tag points at now	amd64	note
+deathstarbench/wrk2-client:latest	sha256:05b0dff60baa11a1775d827b710cb9d4ee8c083b1e99d2e049eccca68e20a7cd	yes	tag last pushed 2024-04-09, before the thesis run
+docker.io/alpine/git:latest	sha256:832b1cd1a271509f3d5272a1a62d4cb2ab1a53426ebde1f6c2cb7349f907dc6f	yes	tag last pushed 2026-09-27, AFTER the thesis run
+docker.io/deathstarbench/social-network-microservices:latest	sha256:a845266e98ce15d204ee7b98d41a2a95820af525013ce70f14104f5b9b5e92b6	yes	tag last pushed 2024-06-27, before the thesis run
+docker.io/jaegertracing/all-in-one:latest	sha256:ab6f1a1f0fb49ea08bcd19f6b84f6081d0d44b364b6de148e1798eb5816bacac	yes	tag last pushed 2025-12-03, before the thesis run
+docker.io/library/memcached:1.6.7	sha256:007b9ca55759c6ef3dcc9a08be6b45b31147bdd1db28358280fd62360387b9dd	yes	tag last pushed 2020-10-13, before the thesis run
+docker.io/library/mongo:4.4.6	sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b	yes	tag last pushed 2021-07-14, before the thesis run
+docker.io/library/redis:6.2.4	sha256:6bc98f513258e0c17bd150a7a26f38a8ce3e7d584f0c451cf31df70d461a200a	yes	tag last pushed 2021-07-22, before the thesis run
+docker.io/yg397/media-frontend:xenial	sha256:272049995f2929435b91da34f20fc16216a7f974d1b8f9afa0ccbb529f1a9840	yes	tag last pushed 2019-05-06, before the thesis run
+docker.io/yg397/openresty-thrift:xenial	sha256:6c295fda3c2f6b941d85ebf16421bafac0dcf72450c96f53a2d031b29d8c81ef	yes	tag last pushed 2021-04-26, before the thesis run
+python:3.12-slim	sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016	yes	tag last pushed 2026-10-02, AFTER the thesis run
+williamyeh/hey@sha256:6e63ae9c5801204cf7abe22c9ddf82d1bcbc7140ffd206a9bd83a8a643dcd6f2	sha256:6e63ae9c5801204cf7abe22c9ddf82d1bcbc7140ffd206a9bd83a8a643dcd6f2	yes	

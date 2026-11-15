@@ -1,0 +1,16 @@
+{
+ "drops_total": 2052,
+ "drops_by_edge": {
+  "nginx-thrift->compose-post-service:9090": 2016,
+  "nginx-thrift->jaeger:None": 36
+ },
+ "wrk2_requests_last_run": "112",
+ "wrk2_non2xx_last_run": "112",
+ "wrk2_socket_errors_last_run": [
+  "0",
+  "0",
+  "0",
+  "4"
+ ],
+ "locust_fails": "non2xx=112/112 sockerr=('0', '0', '0', '4')"
+}

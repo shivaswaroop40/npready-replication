@@ -1,0 +1,11 @@
+deployment.apps/teastore-db created
+service/teastore-db created
+deployment.apps/teastore-registry created
+service/teastore-registry created
+deployment.apps/teastore-persistence created
+deployment.apps/teastore-auth created
+deployment.apps/teastore-image created
+deployment.apps/teastore-recommender created
+deployment.apps/teastore-webui created
+service/teastore-webui created
+apply exit 0

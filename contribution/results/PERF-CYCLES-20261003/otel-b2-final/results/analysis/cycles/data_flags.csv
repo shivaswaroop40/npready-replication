@@ -1,0 +1,12 @@
+app,rep,cond,flag
+otel,11,hubble,"Hubble lost 67 events during the run (ring buffer), 0 of them in the steady window"
+otel,12,hubble,"Hubble lost 63 events during the run (ring buffer), 0 of them in the steady window"
+otel,13,hubble,"Hubble lost 66 events during the run (ring buffer), 0 of them in the steady window"
+otel,14,hubble,"Hubble lost 69 events during the run (ring buffer), 0 of them in the steady window"
+otel,15,hubble,"Hubble lost 68 events during the run (ring buffer), 0 of them in the steady window"
+otel,16,hubble,"Hubble lost 65 events during the run (ring buffer), 0 of them in the steady window"
+otel,17,hubble,"Hubble lost 67 events during the run (ring buffer), 0 of them in the steady window"
+otel,18,hubble,"Hubble lost 66 events during the run (ring buffer), 0 of them in the steady window"
+otel,19,hubble,"Hubble lost 67 events during the run (ring buffer), 0 of them in the steady window"
+otel,20,hubble,"Hubble lost 67 events during the run (ring buffer), 0 of them in the steady window"
+otel,-,ig_tcp,capture events/s 1.3 is outside 0.5-2x the thesis journey-A rate 3.8

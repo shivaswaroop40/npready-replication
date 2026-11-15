@@ -1,0 +1,7 @@
+{"note": "Compromised legitimate identity reaching a datastore or service it never uses. None is a real DSB dependency of that source.",
+ "edges": [
+  ["nginx-thrift","user-mongodb",27017], ["nginx-thrift","social-graph-redis",6379],
+  ["media-frontend","post-storage-mongodb",27017], ["compose-post-service","user-mongodb",27017],
+  ["text-service","social-graph-mongodb",27017], ["home-timeline-service","user-memcached",11211],
+  ["unique-id-service","post-storage-mongodb",27017], ["url-shorten-service","home-timeline-redis",6379]
+ ]}

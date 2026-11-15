@@ -1,0 +1,9 @@
+=== npready probe family=06-internal-recon technique=T1046 expect=blocked ===
+RESULT 06-internal-recon teastore-db.teastore.svc:3306 OPEN (reachable)
+RESULT 06-internal-recon teastore-persistence.teastore.svc:8080 BLOCKED (denied or unreachable)
+RESULT 06-internal-recon teastore-auth.teastore.svc:8080 BLOCKED (denied or unreachable)
+RESULT 06-internal-recon teastore-image.teastore.svc:8080 BLOCKED (denied or unreachable)
+RESULT 06-internal-recon teastore-recommender.teastore.svc:8080 BLOCKED (denied or unreachable)
+RESULT 06-internal-recon teastore-registry.teastore.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon teastore-webui.teastore.svc:8080 OPEN (reachable)
+=== npready probe done family=06-internal-recon any_open=0 ===

@@ -1,0 +1,8 @@
+{
+ "drops_total": 32,
+ "drops_by_edge": {
+  "?->frontend:8080": 32
+ },
+ "locust_aggregated_last": "Aggregated                                                                       647     0(0.00%) |     16       6    1010     12 |    3.40        0.00",
+ "locust_fails": "0(0.00%)"
+}

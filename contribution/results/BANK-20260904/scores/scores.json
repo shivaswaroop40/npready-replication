@@ -1,0 +1,151 @@
+{
+ "evaluation": "journey B traffic only; policies generated from journey A",
+ "L_B_pairs": 18,
+ "L_B_ingress_pairs": 12,
+ "A_size": 8,
+ "attack_edges_seen_in_A_traffic": [],
+ "L_B": [
+  "balancereader->kube-dns",
+  "balancereader->ledger-db",
+  "contacts->accounts-db",
+  "frontend->balancereader",
+  "frontend->contacts",
+  "frontend->kube-dns",
+  "frontend->ledgerwriter",
+  "frontend->transactionhistory",
+  "frontend->userservice",
+  "frontend->world",
+  "ledgerwriter->balancereader",
+  "ledgerwriter->kube-dns",
+  "ledgerwriter->ledger-db",
+  "loadgenerator->frontend",
+  "loadgenerator->kube-dns",
+  "transactionhistory->kube-dns",
+  "transactionhistory->ledger-db",
+  "userservice->accounts-db"
+ ],
+ "analytical": {
+  "synth (ours, traffic A)": {
+   "admit": 16,
+   "false_deny": 0.083,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "frontend->ledgerwriter"
+   ],
+   "admitted_attacks": []
+  },
+  "synth_plus_config (ours, traffic A + config)": {
+   "admit": 24,
+   "false_deny": 0.0,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [],
+   "admitted_attacks": []
+  },
+  "otterize": {
+   "admit": 11,
+   "false_deny": 0.083,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "frontend->ledgerwriter"
+   ],
+   "admitted_attacks": []
+  },
+  "ig_trace_tcp": {
+   "admit": 8,
+   "false_deny": 0.333,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "contacts->accounts-db",
+    "frontend->ledgerwriter",
+    "ledgerwriter->balancereader",
+    "userservice->accounts-db"
+   ],
+   "admitted_attacks": []
+  },
+  "ig_snapshot_socket": {
+   "admit": 6,
+   "false_deny": 0.5,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "frontend->balancereader",
+    "frontend->contacts",
+    "frontend->ledgerwriter",
+    "frontend->transactionhistory",
+    "frontend->userservice",
+    "ledgerwriter->balancereader"
+   ],
+   "admitted_attacks": []
+  }
+ },
+ "live_enforcement": {
+  "synth (ours, traffic A)": {
+   "drops": 264,
+   "distinct_dropped_edges": 1,
+   "locust_fails": "140(53.85%)",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": [
+    [
+     "frontend->ledgerwriter:8080",
+     264
+    ]
+   ]
+  },
+  "synth_plus_config (ours, traffic A + config)": {
+   "drops": 12,
+   "distinct_dropped_edges": 1,
+   "locust_fails": "115(37.34%)",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": [
+    [
+     "?->frontend:8080",
+     12
+    ]
+   ]
+  },
+  "otterize": {
+   "drops": 336,
+   "distinct_dropped_edges": 1,
+   "locust_fails": "114(47.50%)",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": [
+    [
+     "frontend->ledgerwriter:8080",
+     336
+    ]
+   ]
+  },
+  "ig_trace_tcp": {
+   "drops": 260,
+   "distinct_dropped_edges": 2,
+   "locust_fails": "5(100.00%)",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": [
+    [
+     "loadgenerator-b->frontend:8080",
+     210
+    ],
+    [
+     "?->frontend:8080",
+     50
+    ]
+   ]
+  },
+  "ig_snapshot_socket": {
+   "drops": 40,
+   "distinct_dropped_edges": 1,
+   "locust_fails": "197(70.86%)",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": [
+    [
+     "frontend->userservice:8080",
+     40
+    ]
+   ]
+  }
+ }
+}

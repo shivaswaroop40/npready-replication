@@ -1,0 +1,152 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-adservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: adservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-cartservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: cartservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-checkoutservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: checkoutservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-currencyservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: currencyservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-emailservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: emailservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-frontend
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: frontend}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: loadgenerator}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-paymentservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: paymentservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-productcatalogservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: productcatalogservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+  - from:
+    - podSelector: {matchLabels: {app: recommendationservice}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-recommendationservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: recommendationservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-redis-cart
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: redis-cart}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: cartservice}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-shippingservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: shippingservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}

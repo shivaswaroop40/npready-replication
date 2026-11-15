@@ -1,0 +1,56 @@
+=== teastore: 7 attack edges ===
+--- unprotected ---
+  [unprot] webui->db:3306  reachable=False
+  [unprot] image->db:3306  reachable=False
+  [unprot] recommender->db:3306  reachable=True
+  [unprot] auth->image:8080  reachable=True
+  [unprot] recommender->auth:8080  reachable=True
+  [unprot] image->persistence:8080  reachable=True
+  [unprot] registry->db:3306  reachable=True
+--- synth (7 policies) ---
+  [synth] webui->db:3306  reachable=False
+  [synth] image->db:3306  reachable=False
+  [synth] recommender->db:3306  reachable=False
+  [synth] auth->image:8080  reachable=False
+  [synth] recommender->auth:8080  reachable=False
+  [synth] image->persistence:8080  reachable=False
+  [synth] registry->db:3306  reachable=False
+    => over_privilege(executed) = 0/7 = 0.0
+--- synth_plus_config (7 policies) ---
+  [synth_plus_config] webui->db:3306  reachable=False
+  [synth_plus_config] image->db:3306  reachable=False
+  [synth_plus_config] recommender->db:3306  reachable=False
+  [synth_plus_config] auth->image:8080  reachable=False
+  [synth_plus_config] recommender->auth:8080  reachable=False
+  [synth_plus_config] image->persistence:8080  reachable=False
+  [synth_plus_config] registry->db:3306  reachable=False
+    => over_privilege(executed) = 0/7 = 0.0
+--- otterize (7 policies) ---
+  [otterize] webui->db:3306  reachable=False
+  [otterize] image->db:3306  reachable=False
+  [otterize] recommender->db:3306  reachable=False
+  [otterize] auth->image:8080  reachable=False
+  [otterize] recommender->auth:8080  reachable=False
+  [otterize] image->persistence:8080  reachable=False
+  [otterize] registry->db:3306  reachable=False
+    => over_privilege(executed) = 0/7 = 0.0
+--- ig_snapshot_socket (7 policies) ---
+  [ig_snapshot_socket] webui->db:3306  reachable=False
+  [ig_snapshot_socket] image->db:3306  reachable=False
+  [ig_snapshot_socket] recommender->db:3306  reachable=False
+  [ig_snapshot_socket] auth->image:8080  reachable=False
+  [ig_snapshot_socket] recommender->auth:8080  reachable=False
+  [ig_snapshot_socket] image->persistence:8080  reachable=False
+  [ig_snapshot_socket] registry->db:3306  reachable=False
+    => over_privilege(executed) = 0/7 = 0.0
+--- ig_trace_tcp (7 policies) ---
+  [ig_trace_tcp] webui->db:3306  reachable=False
+  [ig_trace_tcp] image->db:3306  reachable=False
+  [ig_trace_tcp] recommender->db:3306  reachable=False
+  [ig_trace_tcp] auth->image:8080  reachable=False
+  [ig_trace_tcp] recommender->auth:8080  reachable=False
+  [ig_trace_tcp] image->persistence:8080  reachable=False
+  [ig_trace_tcp] registry->db:3306  reachable=False
+    => over_privilege(executed) = 0/7 = 0.0
+written /root/ae/out/teastore/teastore.json
+probe exit 0

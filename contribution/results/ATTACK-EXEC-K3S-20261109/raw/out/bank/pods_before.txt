@@ -1,0 +1,10 @@
+NAME                                 READY   STATUS             RESTARTS        AGE   IP            NODE        NOMINATED NODE   READINESS GATES
+accounts-db-0                        1/1     Running            0               15m   10.42.1.77    worker-01   <none>           <none>
+balancereader-7857576d65-72js5       0/1     CrashLoopBackOff   7 (3m7s ago)    15m   10.42.0.177   cp-01       <none>           <none>
+contacts-8bd4fdf5b-fz29f             0/1     CrashLoopBackOff   7 (108s ago)    15m   10.42.1.20    worker-01   <none>           <none>
+frontend-6694f5858-npvb5             0/1     CrashLoopBackOff   7 (116s ago)    15m   10.42.1.220   worker-01   <none>           <none>
+ledger-db-0                          1/1     Running            0               15m   10.42.1.83    worker-01   <none>           <none>
+ledgerwriter-5976bd5847-5gd5m        0/1     CrashLoopBackOff   7 (2m41s ago)   15m   10.42.1.125   worker-01   <none>           <none>
+loadgenerator-75658bd578-q6xmh       1/1     Running            0               15m   10.42.0.31    cp-01       <none>           <none>
+transactionhistory-89d9dd798-xn8n4   0/1     CrashLoopBackOff   7 (2m27s ago)   15m   10.42.1.225   worker-01   <none>           <none>
+userservice-5c847674bc-jp4sl         1/1     Running            0               15m   10.42.0.125   cp-01       <none>           <none>

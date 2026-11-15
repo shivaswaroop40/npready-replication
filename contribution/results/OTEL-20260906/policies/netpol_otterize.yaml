@@ -1,0 +1,225 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-adservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: adservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-cartservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: cartservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-checkoutservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-currencyservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: currencyservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-emailservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: emailservice}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-flagd
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: flagd}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: adservice}}
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: cartservice}}
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frauddetectionservice}}
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: paymentservice}}
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: productcatalogservice}}
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: recommendationservice}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-frauddetectionservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: frauddetectionservice}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-frontend
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+  policyTypes: [Ingress]
+  ingress:
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-imageprovider
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: imageprovider}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-kafka
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: kafka}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: accountingservice}}
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frauddetectionservice}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-paymentservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: paymentservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-productcatalogservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: productcatalogservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: recommendationservice}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-quoteservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: quoteservice}}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-recommendationservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: recommendationservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: frontend}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-shippingservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: shippingservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: checkoutservice}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-valkey
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: valkey}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app.kubernetes.io/component: cartservice}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-accountingservice
+  namespace: otel
+  labels: {thesis.ankra.dev/generated-from: otterize, thesis.ankra.dev/baseline: deny-all-ingress}
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/component: accountingservice}}
+  policyTypes: [Ingress]

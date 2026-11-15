@@ -1,0 +1,21 @@
+namespace: {name: boutique-attacks, create: true, labels: {npready.dev/purpose: attack-validation, npready.dev/disposable: "true"}}
+compromisedIdentity: {labels: {app: compromised-workload}, serviceAccountName: ""}
+families:
+  - id: "06-internal-recon"
+    enabled: true
+    technique: T1046
+    edgeClass: in_cluster
+    kind: tcp
+    targets:
+      - {host: redis-cart.boutique.svc, port: 6379}
+      - {host: paymentservice.boutique.svc, port: 50051}
+      - {host: emailservice.boutique.svc, port: 8080}
+      - {host: checkoutservice.boutique.svc, port: 5050}
+      - {host: cartservice.boutique.svc, port: 7070}
+      - {host: currencyservice.boutique.svc, port: 7000}
+      - {host: productcatalogservice.boutique.svc, port: 3550}
+      - {host: shippingservice.boutique.svc, port: 50051}
+      - {host: adservice.boutique.svc, port: 9555}
+      - {host: recommendationservice.boutique.svc, port: 8080}
+      - {host: frontend.boutique.svc, port: 80}
+    expect: blocked

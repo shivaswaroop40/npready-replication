@@ -1,0 +1,10 @@
+# teastore: fields of manifest.yaml that differ from the thesis manifest
+# source: results/TEASTORE-20260906/{manifests/teastore-ribbon.yaml}
+# objects: 10 in thesis, 10 in manifest.yaml
+Deployment/teastore-db: spec.template.spec.containers[0].imagePullPolicy: (absent) -> IfNotPresent
+Deployment/teastore-registry: spec.template.spec.containers[0].imagePullPolicy: (absent) -> IfNotPresent
+Deployment/teastore-persistence: spec.template.spec.containers[0].imagePullPolicy: (absent) -> IfNotPresent
+Deployment/teastore-auth: spec.template.spec.containers[0].imagePullPolicy: (absent) -> IfNotPresent
+Deployment/teastore-image: spec.template.spec.containers[0].imagePullPolicy: (absent) -> IfNotPresent
+Deployment/teastore-recommender: spec.template.spec.containers[0].imagePullPolicy: (absent) -> IfNotPresent
+Deployment/teastore-webui: spec.template.spec.containers[0].imagePullPolicy: (absent) -> IfNotPresent

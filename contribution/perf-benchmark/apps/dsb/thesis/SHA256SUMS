@@ -1,0 +1,7 @@
+# sha256 of the thesis files this bundle was built from, relative to results/DSB-SOCIAL-20260904/
+01a28414fe0d7e2a224b73f6662e6f000916dcac42152a666965710c1d9a7332  dsb_capture.sh
+d5bf5a4159f9a8b33750c2c72c295ed2ab7e35aa4f7810c1680f43957ef749d5  manifests/dsb-social-rendered.yaml
+894a9f622a0551600bf80ec21d58f359c03c8fd21894817a348666ca5fefb44a  workloads/dsb-init-job.yaml
+6daf8264ba8cfe11a6c3ecf48d8cb3ad187cb01cae505255ff41a547d1de4e55  workloads/read-home-timeline.lua
+98e95dfa6ad1e3249b0c43943f9a98f520f6c928e7deb6c41fc714cbd67f1a03  workloads/wrk2-A.yaml
+206452607a9945a762f0e5439ca3c744e58ad6b1e9daa063d0727e2d0f23a7f0  workloads/wrk2-scripts-configmap.yaml

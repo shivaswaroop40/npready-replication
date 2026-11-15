@@ -1,0 +1,28 @@
+{
+  "drops_by_edge": {
+    "checkoutservice->productcatalogservice:8080": 128,
+    "checkoutservice->cartservice:8080": 128,
+    "loadgen-b->frontend:8080": 336,
+    "?->productcatalogservice:None": 2,
+    "productcatalogservice->?:37582": 1,
+    "flagd->?:45052": 2,
+    "flagd->?:45118": 2,
+    "?->flagd:None": 8
+  },
+  "app_edge_drops": 592,
+  "total_drops": 607,
+  "top": [
+    [
+      "loadgen-b->frontend:8080",
+      336
+    ],
+    [
+      "checkoutservice->productcatalogservice:8080",
+      128
+    ],
+    [
+      "checkoutservice->cartservice:8080",
+      128
+    ]
+  ]
+}

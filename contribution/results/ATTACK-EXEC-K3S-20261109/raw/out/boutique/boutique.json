@@ -1,0 +1,326 @@
+{
+  "app": "boutique",
+  "attack_edges": 8,
+  "rounds": {
+    "unprotected": [
+      {
+        "edge": "frontend->redis-cart:6379",
+        "dst_ip": "10.42.1.61",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "frontend->paymentservice:50051",
+        "dst_ip": "10.42.1.173",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "frontend->emailservice:8080",
+        "dst_ip": "10.42.0.225",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "adservice->paymentservice:50051",
+        "dst_ip": "10.42.1.173",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "productcatalogservice->redis-cart:6379",
+        "dst_ip": "10.42.1.61",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "recommendationservice->checkoutservice:5050",
+        "dst_ip": "10.42.1.160",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "currencyservice->cartservice:7070",
+        "dst_ip": "10.42.1.42",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "loadgenerator->redis-cart:6379",
+        "dst_ip": "10.42.1.61",
+        "reachable": true,
+        "log": "RC=0"
+      }
+    ],
+    "synth": {
+      "edges": [
+        {
+          "edge": "frontend->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->paymentservice:50051",
+          "dst_ip": "10.42.1.173",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->emailservice:8080",
+          "dst_ip": "10.42.0.225",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "adservice->paymentservice:50051",
+          "dst_ip": "10.42.1.173",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "productcatalogservice->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommendationservice->checkoutservice:5050",
+          "dst_ip": "10.42.1.160",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "currencyservice->cartservice:7070",
+          "dst_ip": "10.42.1.42",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "loadgenerator->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "synth_plus_config": {
+      "edges": [
+        {
+          "edge": "frontend->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->paymentservice:50051",
+          "dst_ip": "10.42.1.173",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->emailservice:8080",
+          "dst_ip": "10.42.0.225",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "adservice->paymentservice:50051",
+          "dst_ip": "10.42.1.173",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "productcatalogservice->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommendationservice->checkoutservice:5050",
+          "dst_ip": "10.42.1.160",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "currencyservice->cartservice:7070",
+          "dst_ip": "10.42.1.42",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "loadgenerator->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "otterize": {
+      "edges": [
+        {
+          "edge": "frontend->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->paymentservice:50051",
+          "dst_ip": "10.42.1.173",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->emailservice:8080",
+          "dst_ip": "10.42.0.225",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "adservice->paymentservice:50051",
+          "dst_ip": "10.42.1.173",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "productcatalogservice->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommendationservice->checkoutservice:5050",
+          "dst_ip": "10.42.1.160",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "currencyservice->cartservice:7070",
+          "dst_ip": "10.42.1.42",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "loadgenerator->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "ig_snapshot_socket": {
+      "edges": [
+        {
+          "edge": "frontend->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->paymentservice:50051",
+          "dst_ip": "10.42.1.173",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->emailservice:8080",
+          "dst_ip": "10.42.0.225",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "adservice->paymentservice:50051",
+          "dst_ip": "10.42.1.173",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "productcatalogservice->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommendationservice->checkoutservice:5050",
+          "dst_ip": "10.42.1.160",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "currencyservice->cartservice:7070",
+          "dst_ip": "10.42.1.42",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "loadgenerator->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "ig_trace_tcp": {
+      "edges": [
+        {
+          "edge": "frontend->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": true,
+          "log": "RC=0"
+        },
+        {
+          "edge": "frontend->paymentservice:50051",
+          "dst_ip": "10.42.1.173",
+          "reachable": true,
+          "log": "RC=0"
+        },
+        {
+          "edge": "frontend->emailservice:8080",
+          "dst_ip": "10.42.0.225",
+          "reachable": true,
+          "log": "RC=0"
+        },
+        {
+          "edge": "adservice->paymentservice:50051",
+          "dst_ip": "10.42.1.173",
+          "reachable": true,
+          "log": "RC=0"
+        },
+        {
+          "edge": "productcatalogservice->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": true,
+          "log": "RC=0"
+        },
+        {
+          "edge": "recommendationservice->checkoutservice:5050",
+          "dst_ip": "10.42.1.160",
+          "reachable": true,
+          "log": "RC=0"
+        },
+        {
+          "edge": "currencyservice->cartservice:7070",
+          "dst_ip": "10.42.1.42",
+          "reachable": true,
+          "log": "RC=0"
+        },
+        {
+          "edge": "loadgenerator->redis-cart:6379",
+          "dst_ip": "10.42.1.61",
+          "reachable": true,
+          "log": "RC=0"
+        }
+      ],
+      "attack_reachable": 8,
+      "over_privilege": 1.0
+    }
+  }
+}

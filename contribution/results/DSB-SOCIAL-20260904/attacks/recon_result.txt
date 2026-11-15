@@ -1,0 +1,13 @@
+=== npready probe family=06-internal-recon technique=T1046 expect=blocked ===
+RESULT 06-internal-recon user-mongodb.dsb.svc:27017 OPEN (reachable)
+RESULT 06-internal-recon social-graph-mongodb.dsb.svc:27017 OPEN (reachable)
+RESULT 06-internal-recon post-storage-mongodb.dsb.svc:27017 OPEN (reachable)
+RESULT 06-internal-recon social-graph-redis.dsb.svc:6379 OPEN (reachable)
+RESULT 06-internal-recon home-timeline-redis.dsb.svc:6379 OPEN (reachable)
+RESULT 06-internal-recon user-memcached.dsb.svc:11211 OPEN (reachable)
+RESULT 06-internal-recon compose-post-service.dsb.svc:9090 OPEN (reachable)
+RESULT 06-internal-recon user-service.dsb.svc:9090 OPEN (reachable)
+RESULT 06-internal-recon text-service.dsb.svc:9090 OPEN (reachable)
+RESULT 06-internal-recon nginx-thrift.dsb.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon jaeger.dsb.svc:16686 OPEN (reachable)
+=== npready probe done family=06-internal-recon any_open=0 ===

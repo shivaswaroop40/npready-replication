@@ -1,0 +1,123 @@
+{
+ "evaluation": "journey B traffic only; policies generated from journey A",
+ "L_B_pairs": 35,
+ "L_B_ingress_pairs": 25,
+ "A_size": 8,
+ "attack_edges_seen_in_A_traffic": [],
+ "L_B": [
+  "accountingservice->kafka",
+  "accountingservice->kube-dns",
+  "adservice->flagd",
+  "cartservice->flagd",
+  "cartservice->valkey",
+  "checkoutservice->cartservice",
+  "checkoutservice->currencyservice",
+  "checkoutservice->emailservice",
+  "checkoutservice->flagd",
+  "checkoutservice->kafka",
+  "checkoutservice->kube-dns",
+  "checkoutservice->paymentservice",
+  "checkoutservice->productcatalogservice",
+  "checkoutservice->shippingservice",
+  "emailservice->kube-dns",
+  "frauddetectionservice->flagd",
+  "frauddetectionservice->kafka",
+  "frauddetectionservice->kube-dns",
+  "frontend->adservice",
+  "frontend->cartservice",
+  "frontend->checkoutservice",
+  "frontend->kube-dns",
+  "frontend->productcatalogservice",
+  "frontend->recommendationservice",
+  "loadgen->frontend",
+  "loadgen->kube-dns",
+  "paymentservice->flagd",
+  "productcatalogservice->flagd",
+  "productcatalogservice->kube-dns",
+  "quoteservice->kube-dns",
+  "recommendationservice->flagd",
+  "recommendationservice->kube-dns",
+  "recommendationservice->productcatalogservice",
+  "shippingservice->kube-dns",
+  "shippingservice->quoteservice"
+ ],
+ "analytical": {
+  "synth (ours, traffic A)": {
+   "admit": 26,
+   "false_deny": 0.2,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "checkoutservice->currencyservice",
+    "checkoutservice->emailservice",
+    "checkoutservice->paymentservice",
+    "checkoutservice->shippingservice",
+    "shippingservice->quoteservice"
+   ],
+   "admitted_attacks": []
+  },
+  "synth_plus_config (ours, traffic A + config)": {
+   "admit": 51,
+   "false_deny": 0.0,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [],
+   "admitted_attacks": []
+  },
+  "otterize": {
+   "admit": 23,
+   "false_deny": 0.08,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "checkoutservice->emailservice",
+    "shippingservice->quoteservice"
+   ],
+   "admitted_attacks": []
+  },
+  "ig_trace_tcp": {
+   "admit": 4,
+   "false_deny": 0.84,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "accountingservice->kafka",
+    "adservice->flagd",
+    "cartservice->flagd",
+    "cartservice->valkey",
+    "checkoutservice->cartservice",
+    "checkoutservice->currencyservice",
+    "checkoutservice->emailservice",
+    "checkoutservice->flagd",
+    "checkoutservice->kafka",
+    "checkoutservice->paymentservice",
+    "checkoutservice->productcatalogservice",
+    "checkoutservice->shippingservice",
+    "frauddetectionservice->flagd",
+    "frauddetectionservice->kafka",
+    "frontend->adservice",
+    "frontend->cartservice",
+    "frontend->checkoutservice",
+    "frontend->recommendationservice",
+    "paymentservice->flagd",
+    "recommendationservice->flagd",
+    "shippingservice->quoteservice"
+   ],
+   "admitted_attacks": []
+  },
+  "ig_snapshot_socket": {
+   "admit": 21,
+   "false_deny": 0.16,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "checkoutservice->cartservice",
+    "checkoutservice->emailservice",
+    "checkoutservice->productcatalogservice",
+    "shippingservice->quoteservice"
+   ],
+   "admitted_attacks": []
+  }
+ },
+ "live_enforcement": {}
+}

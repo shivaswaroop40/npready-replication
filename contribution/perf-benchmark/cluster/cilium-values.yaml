@@ -1,0 +1,73 @@
+# Cilium 1.19.5 Helm values for the perf-benchmark cluster.
+# Goal: reproduce the live test-cluster cilium-config (155 keys, dump 2026-09-10).
+# Every key the chart defaults already produce is left at the default; only the
+# keys that differ from the 1.19.5 defaults, or that matter for the benchmark, are set.
+# The remaining differences against the dump are listed in NOTES.md.
+
+cluster:
+  name: default            # cluster-name: default
+  id: 0                    # cluster-id: 0
+
+# Datapath: vxlan tunnel, no kube-proxy replacement (k3s keeps its kube-proxy)
+routingMode: tunnel        # routing-mode: tunnel
+tunnelProtocol: vxlan      # tunnel-protocol: vxlan
+kubeProxyReplacement: "false"
+ipam:
+  mode: kubernetes         # ipam: kubernetes (k3s allocates the node podCIDRs from 10.42.0.0/16)
+ipv4:
+  enabled: true
+ipv6:
+  enabled: false
+enableIPv4Masquerade: true
+socketLB:
+  enabled: false           # bpf-lb-sock: false
+identityAllocationMode: crd
+policyEnforcementMode: default
+l7Proxy: true
+envoy:
+  enabled: true            # external-envoy-proxy: true (cilium-envoy DaemonSet)
+
+# With --flannel-backend=none k3s writes no CNI section into its containerd config, so
+# containerd uses the stock /etc/cni/net.d and /opt/cni/bin, which are the chart defaults.
+cni:
+  exclusive: true
+
+# The test-cluster install values set these three keys to empty values (the dump carries
+# debug-verbose='', nodeport-addresses='', policy-cidr-match-mode=''). The chart renders a key
+# only when the value key exists, so they are set explicitly to get the same 155 keys.
+debug:
+  verbose: ""
+nodePort:
+  addresses: []
+policyCIDRMatchMode: []
+
+# Metrics as patched on test-cluster on 2026-07-27 (agent :9962, operator :9963).
+# controllerGroupMetrics is empty on test-cluster (no controller-group-metrics key).
+prometheus:
+  enabled: true
+  port: 9962
+  controllerGroupMetrics: []
+operator:
+  prometheus:
+    enabled: true
+    port: 9963
+
+hubble:
+  enabled: true                  # enable-hubble: true (cond.sh flips this key per condition)
+  listenAddress: ":4244"
+  tls:
+    enabled: true                # hubble-disable-tls: false
+  metrics:
+    port: 9965                   # hubble-metrics-server: :9965
+    enabled:
+      - "drop:sourceContext=identity;destinationContext=identity"
+      - "flow:sourceContext=identity;destinationContext=identity"
+      - tcp
+      - dns
+  # The thesis deployed Relay from the platform's own manifests (hubble-relay.yaml + hubble-certgen.yaml),
+  # not from the chart. Here the chart's Relay is used so cond.sh can scale it; image and
+  # listen port (:4245, Service :80) are the same.
+  relay:
+    enabled: true
+  ui:
+    enabled: false

@@ -1,0 +1,4 @@
+# sha256 of the thesis files this bundle was built from, relative to results/BOUTIQUE-20260903/
+0f80e27a2ae7febee9cc19d0f09c44b75c31bfd04505310a285332f8b35dea53  boutique_capture.sh
+41a4736597543ee562c673c0c0446e2cc4bddf2b816c294690e83b38cfcc66a2  manifests/online-boutique-v0.10.6.yaml
+476beb8b4e8ab5fe46d511515cd915b27ef3c7e1d818d482c2301ac2813dd9f3  workloads/locustfile_A_shipped.py

@@ -1,0 +1,14 @@
+# otel: fields of manifest.yaml that differ from the thesis manifest
+# source: results/OTEL-20260906/{manifests/otel-demo-1.12.0.yaml}
+# objects: 74 in thesis, 74 in manifest.yaml
+Deployment/opentelemetry-demo-grafana: spec.replicas: 1 -> 0
+Deployment/opentelemetry-demo-jaeger: spec.replicas: 1 -> 0
+Deployment/opentelemetry-demo-prometheus-server: spec.replicas: 1 -> 0
+Deployment/opentelemetry-demo-accountingservice: spec.template.spec.initContainers[0].imagePullPolicy: (absent) -> IfNotPresent
+Deployment/opentelemetry-demo-cartservice: spec.template.spec.initContainers[0].imagePullPolicy: (absent) -> IfNotPresent
+Deployment/opentelemetry-demo-checkoutservice: spec.template.spec.initContainers[0].imagePullPolicy: (absent) -> IfNotPresent
+Deployment/opentelemetry-demo-frauddetectionservice: spec.template.spec.initContainers[0].imagePullPolicy: (absent) -> IfNotPresent
+Deployment/opentelemetry-demo-frontendproxy: spec.replicas: 1 -> 0
+Deployment/opentelemetry-demo-loadgenerator: spec.replicas: 1 -> 0
+Deployment/opentelemetry-demo-productcatalogservice: spec.template.spec.containers[0].resources.limits.memory: 20Mi -> 128Mi
+StatefulSet/otel-demo-opensearch: spec.replicas: 1 -> 0

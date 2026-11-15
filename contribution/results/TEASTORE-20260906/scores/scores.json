@@ -1,0 +1,177 @@
+{
+ "evaluation": "journey B traffic only; policies generated from journey A",
+ "L_B_pairs": 18,
+ "L_B_ingress_pairs": 12,
+ "A_size": 7,
+ "attack_edges_seen_in_A_traffic": [],
+ "L_B": [
+  "auth->kube-dns",
+  "auth->persistence",
+  "auth->registry",
+  "image->kube-dns",
+  "image->registry",
+  "load-test->kube-dns",
+  "load-test->webui",
+  "persistence->db",
+  "persistence->kube-dns",
+  "persistence->registry",
+  "recommender->kube-dns",
+  "recommender->registry",
+  "webui->auth",
+  "webui->image",
+  "webui->kube-dns",
+  "webui->persistence",
+  "webui->recommender",
+  "webui->registry"
+ ],
+ "analytical": {
+  "synth (ours, traffic A)": {
+   "admit": 18,
+   "false_deny": 0.0,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [],
+   "admitted_attacks": []
+  },
+  "synth_plus_config (ours, traffic A + config)": {
+   "admit": 20,
+   "false_deny": 0.0,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [],
+   "admitted_attacks": []
+  },
+  "otterize": {
+   "admit": 12,
+   "false_deny": 0.0,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [],
+   "admitted_attacks": []
+  },
+  "ig_trace_tcp": {
+   "admit": 11,
+   "false_deny": 0.083,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "persistence->db"
+   ],
+   "admitted_attacks": []
+  },
+  "ig_snapshot_socket": {
+   "admit": 12,
+   "false_deny": 0.0,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [],
+   "admitted_attacks": []
+  }
+ },
+ "live_enforcement": {
+  "synth (ours, traffic A)": {
+   "drops": 76,
+   "distinct_dropped_edges": 6,
+   "locust_fails": "n/a",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": [
+    [
+     "teastore-webui->?:8080",
+     27
+    ],
+    [
+     "teastore-auth->?:8080",
+     25
+    ],
+    [
+     "teastore-image->?:8080",
+     9
+    ],
+    [
+     "teastore-recommender->?:8080",
+     9
+    ],
+    [
+     "teastore-recommender->teastore-persistence:8080",
+     4
+    ]
+   ]
+  },
+  "synth_plus_config (ours, traffic A + config)": {
+   "drops": 50,
+   "distinct_dropped_edges": 7,
+   "locust_fails": "n/a",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": [
+    [
+     "teastore-webui->?:8080",
+     17
+    ],
+    [
+     "teastore-recommender->?:8080",
+     10
+    ],
+    [
+     "teastore-image->?:8080",
+     9
+    ],
+    [
+     "teastore-auth->?:8080",
+     8
+    ],
+    [
+     "teastore-recommender->teastore-persistence:8080",
+     2
+    ]
+   ]
+  },
+  "otterize": {
+   "drops": 19,
+   "distinct_dropped_edges": 3,
+   "locust_fails": "n/a",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": [
+    [
+     "teastore-webui->?:8080",
+     11
+    ],
+    [
+     "?->teastore-webui:None",
+     4
+    ],
+    [
+     "teastore-auth->?:8080",
+     4
+    ]
+   ]
+  },
+  "ig_snapshot_socket": {
+   "drops": 69,
+   "distinct_dropped_edges": 6,
+   "locust_fails": "n/a",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": [
+    [
+     "teastore-webui->?:8080",
+     40
+    ],
+    [
+     "teastore-image->?:8080",
+     10
+    ],
+    [
+     "teastore-recommender->?:8080",
+     9
+    ],
+    [
+     "teastore-auth->?:8080",
+     6
+    ],
+    [
+     "teastore-recommender->teastore-persistence:8080",
+     2
+    ]
+   ]
+  }
+ }
+}

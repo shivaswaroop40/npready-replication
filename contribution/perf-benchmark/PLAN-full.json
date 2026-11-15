@@ -1,0 +1,161 @@
+[
+ {
+  "name": "bank-a",
+  "app": "bank",
+  "rep_list": [
+   1
+  ],
+  "runs": 5,
+  "est_hours": 11.42,
+  "est_run_min": 118.9,
+  "run_timeout_s": 10800,
+  "command": "run_matrix.sh bank --rep-list '1'",
+  "basis": "2 measured runs (conds ['baseline', 'hubble']); fixed part of a full run 28.4 min (condition switch 42 s, app restart 106 s, idle 60 s, warm-up 180 s, window 1200 s, snapshots); fixed-count at c16: keep-alive 11.7 req/s, new conn 11.3 req/s -> 6 x 10000 requests = 87.3 min, plus 32 s per test (pause, job start, pre-hook); full run 118.9 min; deploy 1.3 min; setup 1.0 h; x1.05 slack on run time",
+  "basis_detail": {
+   "full_run_min": 118.9,
+   "rate": {
+    "keepalive": 11.651571093652304,
+    "newconn": 11.269183572027963
+   },
+   "ovh_s": 31.669908533668547,
+   "deploy_s": 76.0,
+   "fixed_full_min": 28.4
+  }
+ },
+ {
+  "name": "bank-b",
+  "app": "bank",
+  "rep_list": [
+   2
+  ],
+  "runs": 5,
+  "est_hours": 11.42,
+  "est_run_min": 118.9,
+  "run_timeout_s": 10800,
+  "command": "run_matrix.sh bank --rep-list '2'",
+  "basis": "2 measured runs (conds ['baseline', 'hubble']); fixed part of a full run 28.4 min (condition switch 42 s, app restart 106 s, idle 60 s, warm-up 180 s, window 1200 s, snapshots); fixed-count at c16: keep-alive 11.7 req/s, new conn 11.3 req/s -> 6 x 10000 requests = 87.3 min, plus 32 s per test (pause, job start, pre-hook); full run 118.9 min; deploy 1.3 min; setup 1.0 h; x1.05 slack on run time",
+  "basis_detail": {
+   "full_run_min": 118.9,
+   "rate": {
+    "keepalive": 11.651571093652304,
+    "newconn": 11.269183572027963
+   },
+   "ovh_s": 31.669908533668547,
+   "deploy_s": 76.0,
+   "fixed_full_min": 28.4
+  }
+ },
+ {
+  "name": "bank-c",
+  "app": "bank",
+  "rep_list": [
+   3
+  ],
+  "runs": 5,
+  "est_hours": 11.42,
+  "est_run_min": 118.9,
+  "run_timeout_s": 10800,
+  "command": "run_matrix.sh bank --rep-list '3'",
+  "basis": "2 measured runs (conds ['baseline', 'hubble']); fixed part of a full run 28.4 min (condition switch 42 s, app restart 106 s, idle 60 s, warm-up 180 s, window 1200 s, snapshots); fixed-count at c16: keep-alive 11.7 req/s, new conn 11.3 req/s -> 6 x 10000 requests = 87.3 min, plus 32 s per test (pause, job start, pre-hook); full run 118.9 min; deploy 1.3 min; setup 1.0 h; x1.05 slack on run time",
+  "basis_detail": {
+   "full_run_min": 118.9,
+   "rate": {
+    "keepalive": 11.651571093652304,
+    "newconn": 11.269183572027963
+   },
+   "ovh_s": 31.669908533668547,
+   "deploy_s": 76.0,
+   "fixed_full_min": 28.4
+  }
+ },
+ {
+  "name": "boutique",
+  "app": "boutique",
+  "rep_list": [
+   1,
+   2,
+   3
+  ],
+  "runs": 15,
+  "est_hours": 14.71,
+  "est_run_min": 52.2,
+  "run_timeout_s": 5400,
+  "command": "run_matrix.sh boutique --rep-list '1 2 3'",
+  "basis": "5 measured runs (conds ['baseline', 'hubble', 'ig_snap', 'ig_tcp', 'otterize']); fixed part of a full run 26.9 min (condition switch 50 s, app restart 57 s, idle 60 s, warm-up 180 s, window 1200 s, snapshots); fixed-count at c16: keep-alive 45.2 req/s, new conn 43.1 req/s -> 6 x 10000 requests = 22.7 min, plus 26 s per test (pause, job start, pre-hook); full run 52.2 min; deploy 0.9 min; setup 1.0 h; x1.05 slack on run time",
+  "basis_detail": {
+   "full_run_min": 52.2,
+   "rate": {
+    "keepalive": 45.20006585770096,
+    "newconn": 43.14321565739222
+   },
+   "ovh_s": 25.826663423080447,
+   "deploy_s": 54.0,
+   "fixed_full_min": 26.9
+  }
+ },
+ {
+  "name": "dsb",
+  "app": "dsb",
+  "rep_list": [
+   1,
+   2,
+   3
+  ],
+  "runs": 15,
+  "est_hours": 19.37,
+  "est_run_min": 68.8,
+  "run_timeout_s": 7200,
+  "command": "run_matrix.sh dsb --rep-list '1 2 3'",
+  "basis": "5 measured runs (conds ['baseline', 'hubble', 'ig_snap', 'ig_tcp', 'otterize']); fixed part of a full run 26.9 min (condition switch 50 s, app restart 62 s, idle 60 s, warm-up 180 s, window 1200 s, snapshots); fixed-count at c16: keep-alive 26.5 req/s, new conn 24.5 req/s -> 6 x 10000 requests = 39.3 min, plus 26 s per test (pause, job start, pre-hook); full run 68.8 min; deploy 19.2 min; setup 1.0 h; x1.05 slack on run time",
+  "basis_detail": {
+   "full_run_min": 68.8,
+   "rate": {
+    "keepalive": 26.519875774354794,
+    "newconn": 24.497474357166016
+   },
+   "ovh_s": 26.002181287879942,
+   "deploy_s": 1150.0,
+   "fixed_full_min": 26.9
+  }
+ },
+ {
+  "name": "otel",
+  "app": "otel",
+  "rep_list": [
+   1,
+   2,
+   3
+  ],
+  "runs": 15,
+  "est_hours": 13.6,
+  "est_run_min": 47.9,
+  "run_timeout_s": 5400,
+  "command": "run_matrix.sh otel --rep-list '1 2 3'",
+  "basis": "assumed from smoke rates: keep-alive 99.5 and new conn 77.8 req/s at c8 (x0.7 = 69.6 / 54.4 req/s) -> 6 x 10000 requests = 16.4 min; fixed part 28.9 min; 6 x 26 s test overhead; deploy 13-25 s in the smoke test (2 min assumed); full run 47.9 min; deploy 2.0 min; setup 1.0 h; x1.05 slack on run time",
+  "basis_detail": {
+   "full_run_min": 47.9,
+   "deploy_s": 120.0,
+   "assumed": true
+  }
+ },
+ {
+  "name": "teastore",
+  "app": "teastore",
+  "rep_list": [
+   1,
+   2,
+   3
+  ],
+  "runs": 15,
+  "est_hours": 12.24,
+  "est_run_min": 42.7,
+  "run_timeout_s": 5400,
+  "command": "run_matrix.sh teastore --rep-list '1 2 3'",
+  "basis": "assumed from smoke rates: keep-alive 117.8 and new conn 139.0 req/s at c8 (x0.7 = 82.5 / 97.3 req/s) -> 6 x 10000 requests = 11.2 min; fixed part 28.9 min; 6 x 26 s test overhead; deploy 26 s in the smoke test (2 min assumed); full run 42.7 min; deploy 2.0 min; setup 1.0 h; x1.05 slack on run time",
+  "basis_detail": {
+   "full_run_min": 42.7,
+   "deploy_s": 120.0,
+   "assumed": true
+  }
+ }
+]

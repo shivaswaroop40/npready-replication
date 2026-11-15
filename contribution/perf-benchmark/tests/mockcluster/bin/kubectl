@@ -1,0 +1,135 @@
+#!/usr/bin/env python3
+"""mock kubectl: just enough of the API for run_one.sh / run_matrix.sh / drift_probe.sh"""
+import datetime, json, os, sys, time
+ST = "/run/mock/k8s"
+os.makedirs(ST + "/jobs", exist_ok=True)
+NODES = [("cp-01", "127.0.0.1"), ("worker-01", "127.0.0.2"), ("worker-02", "127.0.0.3")]
+RATE = float(os.environ.get("MOCK_RPS", "400"))
+args = [a for a in sys.argv[1:] if not a.startswith("--request-timeout")]
+opt, pos = {}, []
+VAL = {"-n", "--namespace", "-l", "-o", "-f", "-c", "--field-selector", "--timeout", "--tail"}
+i = 0
+while i < len(args):
+    a = args[i]
+    if a in VAL:
+        opt[a] = args[i + 1]
+        i += 2
+        continue
+    if a.startswith("--") and "=" in a:
+        k, v = a.split("=", 1)
+        opt[k] = v
+    elif a.startswith("-") and a != "-":
+        opt[a] = True
+    else:
+        pos.append(a)
+    i += 1
+ns = opt.get("-n") or opt.get("--namespace") or "default"
+cmd = pos[0] if pos else ""
+
+
+def iso(t):
+    return datetime.datetime.fromtimestamp(t, datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def jpath(name):
+    return f"{ST}/jobs/{ns}__{name}.json"
+
+
+def job_pod(name):
+    try:
+        j = json.load(open(jpath(name)))
+    except OSError:
+        return None
+    now, t1 = time.time(), j["t"] + 1.0
+    st = {"name": "c", "image": "x", "imageID": "x", "restartCount": 0, "ready": False}
+    if now < t1:
+        phase, cs = "Pending", []
+    elif now < t1 + j["dur"]:
+        phase = "Running"
+        st.update(ready=True, state={"running": {"startedAt": iso(t1)}})
+        cs = [st]
+    else:
+        phase = "Succeeded"
+        st.update(state={"terminated": {"exitCode": 0, "startedAt": iso(t1)}})
+        cs = [st]
+    return {"metadata": {"name": f"{name}-abcde", "creationTimestamp": iso(j["t"]),
+                         "labels": {"job-name": name, "perfbench": "1"}},
+            "spec": {"nodeName": "cp-01"}, "status": {"phase": phase, "containerStatuses": cs}}
+
+
+res = pos[1] if len(pos) > 1 else ""
+if cmd == "version":
+    print("{}")
+elif cmd == "get" and res in ("ns", "namespace"):
+    sys.exit(0)
+elif cmd == "get" and res == "nodes":
+    o = opt.get("-o", "")
+    if o.startswith("jsonpath"):
+        print("\n".join(f"{n} {ip}" for n, ip in NODES))
+    elif o == "json":
+        print(json.dumps({"items": [{"metadata": {"name": n}, "spec": {}, "status": {
+            "nodeInfo": {"kernelVersion": "6.12", "kubeletVersion": "v1.36.3", "osImage": "mock",
+                         "containerRuntimeVersion": "containerd"},
+            "capacity": {"cpu": "4", "memory": "6Gi"}, "allocatable": {"cpu": "4"}}} for n, _ in NODES]}))
+elif cmd == "get" and res in ("pods", "pod"):
+    o = opt.get("-o", "")
+    if "-l" in opt and opt["-l"].startswith("job-name="):
+        p = job_pod(opt["-l"].split("=", 1)[1])
+        print(json.dumps({"items": [p] if p else []}))
+    elif "-l" in opt or "--field-selector" in opt:
+        pass                                        # cilium / relay lookups: none
+    elif o == "json":
+        print(json.dumps({"items": [{"metadata": {"name": "mock-app-1", "labels": {"app": "x"}},
+                                     "spec": {"nodeName": "worker-01"},
+                                     "status": {"phase": "Running", "containerStatuses": [
+                                         {"name": "s", "image": "x", "imageID": "x", "restartCount": 0,
+                                          "ready": True}]}}]}))
+    else:
+        print("NAMESPACE NAME READY")
+elif cmd == "get" and res == "svc":
+    print("127.0.0.1", end="")
+elif cmd == "get" and res in ("cm", "configmap"):
+    print("false", end="")
+elif cmd == "create" and opt.get("--dry-run") == "client":
+    sys.stdout.write(json.dumps(json.load(sys.stdin)))
+elif cmd == "apply":
+    j = json.load(open(opt["-f"]))
+    md = j["metadata"]
+    an = md.get("annotations", {})
+    kind = an.get("mock/kind", "steady")
+    dur = float(an["mock/duration"]) if kind == "steady" else int(an["mock/n"]) / RATE
+    with open(f"{ST}/jobs/{md.get('namespace', ns)}__{md['name']}.json", "w") as fh:
+        json.dump({"t": time.time(), "dur": dur, "kind": kind, "n": int(an.get("mock/n") or 0)}, fh)
+elif cmd == "delete":
+    if len(pos) > 2 and pos[1] == "job":
+        try:
+            os.remove(jpath(pos[2]))
+        except OSError:
+            pass
+elif cmd == "logs":
+    name = pos[1].split("/", 1)[1]
+    try:
+        j = json.load(open(jpath(name)))
+    except OSError:
+        sys.exit(1)
+    if j["kind"] == "tp":
+        n, tot = j["n"], j["dur"]
+        print(f"\nSummary:\n  Total:\t{tot:.4f} secs\n  Requests/sec:\t{n / tot:.4f}\n\nLatency distribution:\n"
+              f"  50% in 0.0100 secs\n  95% in 0.0250 secs\n  99% in 0.0400 secs\n\n"
+              f"Status code distribution:\n  [200]\t{n} responses\n")
+    else:
+        n = int(j["dur"] * 2)
+        print("Type,Name,Request Count,Failure Count,Median Response Time,Average Response Time,Min Response Time,"
+              "Max Response Time,Average Content Size,Requests/s,Failures/s,50%,66%,75%,80%,90%,95%,98%,99%,99.9%,"
+              "99.99%,100%")
+        print(f",Aggregated,{n},0,40,55.2,3,900,1200,2.0,0.0,40,50,60,65,80,95,120,150,400,800,900")
+elif cmd == "port-forward":
+    port = pos[-1].split(":")[0]
+    os.execvp("python3", ["python3", "-m", "http.server", port, "--bind", "127.0.0.1"])
+elif cmd == "gadget":
+    if any("snapshot_socket" in p for p in pos):
+        print('[{"src":"10.0.0.1:80"}]')
+    else:
+        while True:
+            time.sleep(5)
+sys.exit(0)

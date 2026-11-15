@@ -1,0 +1,22 @@
+# bank: fields of manifest.yaml that differ from the thesis manifest
+# source: results/BANK-20260904/{manifests/accounts-db.yaml, manifests/balance-reader.yaml, manifests/config.yaml, manifests/contacts.yaml, manifests/frontend.yaml, manifests/ledger-db.yaml, manifests/ledger-writer.yaml, manifests/loadgenerator.yaml, manifests/transaction-history.yaml, manifests/userservice.yaml}
+# objects: 23 in thesis, 23 in manifest.yaml
+# not used: results/BANK-20260904/manifests/jwt-secret.yaml (see NOTES.md)
+# not used: results/BANK-20260904/bank-all.yaml (see NOTES.md)
+Deployment/balancereader: spec.template.spec.containers[0].env[2].value: 'true' -> 'false'
+Deployment/balancereader: spec.template.spec.containers[0].env[3].value: 'true' -> 'false'
+Deployment/balancereader: spec.template.spec.containers[0].env[9]: (absent) -> {name: JAVA_TOOL_OPTIONS, value: '-XX:-UseContainerSupport -XX:ActiveProcessorCount=1 -XX:MaxRAM=536870912'}
+Deployment/contacts: spec.template.spec.containers[0].env[2].value: 'true' -> 'false'
+Deployment/contacts: spec.template.spec.containers[0].env[4]: (absent) -> {name: ENABLE_METRICS, value: 'false'}
+Service/frontend: spec.type: LoadBalancer -> ClusterIP
+Deployment/frontend: spec.template.spec.containers[0].env[2].value: 'true' -> 'false'
+Deployment/frontend: spec.template.spec.containers[0].env[9]: (absent) -> {name: ENABLE_METRICS, value: 'false'}
+Deployment/ledgerwriter: spec.template.spec.containers[0].env[2].value: 'true' -> 'false'
+Deployment/ledgerwriter: spec.template.spec.containers[0].env[3].value: 'true' -> 'false'
+Deployment/ledgerwriter: spec.template.spec.containers[0].env[7]: (absent) -> {name: JAVA_TOOL_OPTIONS, value: '-XX:-UseContainerSupport -XX:ActiveProcessorCount=1 -XX:MaxRAM=536870912'}
+Deployment/loadgenerator: spec.replicas: 1 -> 0
+Deployment/transactionhistory: spec.template.spec.containers[0].env[2].value: 'true' -> 'false'
+Deployment/transactionhistory: spec.template.spec.containers[0].env[3].value: 'true' -> 'false'
+Deployment/transactionhistory: spec.template.spec.containers[0].env[11]: (absent) -> {name: JAVA_TOOL_OPTIONS, value: '-XX:-UseContainerSupport -XX:ActiveProcessorCount=1 -XX:MaxRAM=536870912'}
+Deployment/userservice: spec.template.spec.containers[0].env[2].value: 'true' -> 'false'
+Deployment/userservice: spec.template.spec.containers[0].env[6]: (absent) -> {name: ENABLE_METRICS, value: 'false'}

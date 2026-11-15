@@ -1,0 +1,532 @@
+{
+  "needed": [
+    {
+      "src": "otel/opentelemetry-demo-grafana",
+      "dst": "otel/opentelemetry-demo-prometheus-server",
+      "port": 9090,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/opentelemetry-demo-grafana:datasources.yaml=opentelemetry-demo-prometheus-server:9090"
+    },
+    {
+      "src": "otel/opentelemetry-demo-otelcol",
+      "dst": "otel/opentelemetry-demo-prometheus-server",
+      "port": 9090,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "configmap/opentelemetry-demo-otelcol:relay=opentelemetry-demo-prometheus-server:9090"
+    },
+    {
+      "src": "default/opentelemetry-demo-accountingservice",
+      "dst": "default/opentelemetry-demo-kafka",
+      "port": 9092,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:KAFKA_SERVICE_ADDR=opentelemetry-demo-kafka:9092"
+    },
+    {
+      "src": "default/opentelemetry-demo-adservice",
+      "dst": "default/opentelemetry-demo-flagd",
+      "port": 8013,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FLAGD_HOST=opentelemetry-demo-flagd:8013"
+    },
+    {
+      "src": "default/opentelemetry-demo-cartservice",
+      "dst": "default/opentelemetry-demo-valkey",
+      "port": 6379,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:VALKEY_ADDR=opentelemetry-demo-valkey:6379"
+    },
+    {
+      "src": "default/opentelemetry-demo-cartservice",
+      "dst": "default/opentelemetry-demo-flagd",
+      "port": 8013,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FLAGD_HOST=opentelemetry-demo-flagd:8013"
+    },
+    {
+      "src": "default/opentelemetry-demo-checkoutservice",
+      "dst": "default/opentelemetry-demo-cartservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:CART_SERVICE_ADDR=opentelemetry-demo-cartservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-checkoutservice",
+      "dst": "default/opentelemetry-demo-currencyservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:CURRENCY_SERVICE_ADDR=opentelemetry-demo-currencyservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-checkoutservice",
+      "dst": "default/opentelemetry-demo-emailservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:EMAIL_SERVICE_ADDR=opentelemetry-demo-emailservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-checkoutservice",
+      "dst": "default/opentelemetry-demo-paymentservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:PAYMENT_SERVICE_ADDR=opentelemetry-demo-paymentservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-checkoutservice",
+      "dst": "default/opentelemetry-demo-productcatalogservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:PRODUCT_CATALOG_SERVICE_ADDR=opentelemetry-demo-productcatalogservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-checkoutservice",
+      "dst": "default/opentelemetry-demo-shippingservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:SHIPPING_SERVICE_ADDR=opentelemetry-demo-shippingservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-checkoutservice",
+      "dst": "default/opentelemetry-demo-kafka",
+      "port": 9092,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:KAFKA_SERVICE_ADDR=opentelemetry-demo-kafka:9092"
+    },
+    {
+      "src": "default/opentelemetry-demo-checkoutservice",
+      "dst": "default/opentelemetry-demo-flagd",
+      "port": 8013,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FLAGD_HOST=opentelemetry-demo-flagd:8013"
+    },
+    {
+      "src": "default/opentelemetry-demo-frauddetectionservice",
+      "dst": "default/opentelemetry-demo-kafka",
+      "port": 9092,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:KAFKA_SERVICE_ADDR=opentelemetry-demo-kafka:9092"
+    },
+    {
+      "src": "default/opentelemetry-demo-frauddetectionservice",
+      "dst": "default/opentelemetry-demo-flagd",
+      "port": 8013,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FLAGD_HOST=opentelemetry-demo-flagd:8013"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontend",
+      "dst": "default/opentelemetry-demo-adservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:AD_SERVICE_ADDR=opentelemetry-demo-adservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontend",
+      "dst": "default/opentelemetry-demo-cartservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:CART_SERVICE_ADDR=opentelemetry-demo-cartservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontend",
+      "dst": "default/opentelemetry-demo-checkoutservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:CHECKOUT_SERVICE_ADDR=opentelemetry-demo-checkoutservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontend",
+      "dst": "default/opentelemetry-demo-currencyservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:CURRENCY_SERVICE_ADDR=opentelemetry-demo-currencyservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontend",
+      "dst": "default/opentelemetry-demo-productcatalogservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:PRODUCT_CATALOG_SERVICE_ADDR=opentelemetry-demo-productcatalogservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontend",
+      "dst": "default/opentelemetry-demo-recommendationservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:RECOMMENDATION_SERVICE_ADDR=opentelemetry-demo-recommendationservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontend",
+      "dst": "default/opentelemetry-demo-shippingservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:SHIPPING_SERVICE_ADDR=opentelemetry-demo-shippingservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontend",
+      "dst": "default/opentelemetry-demo-flagd",
+      "port": 8013,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FLAGD_HOST=opentelemetry-demo-flagd:8013"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontendproxy",
+      "dst": "default/opentelemetry-demo-flagd",
+      "port": 8013,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FLAGD_HOST=opentelemetry-demo-flagd:8013"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontendproxy",
+      "dst": "default/opentelemetry-demo-frontend",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FRONTEND_HOST=opentelemetry-demo-frontend:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontendproxy",
+      "dst": "default/opentelemetry-demo-imageprovider",
+      "port": 8081,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:IMAGE_PROVIDER_HOST=opentelemetry-demo-imageprovider:8081"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontendproxy",
+      "dst": "default/opentelemetry-demo-jaeger",
+      "port": 16686,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:JAEGER_SERVICE_HOST=opentelemetry-demo-jaeger-query:16686"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontendproxy",
+      "dst": "default/opentelemetry-demo-loadgenerator",
+      "port": 8089,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:LOCUST_WEB_HOST=opentelemetry-demo-loadgenerator:8089"
+    },
+    {
+      "src": "default/opentelemetry-demo-loadgenerator",
+      "dst": "default/opentelemetry-demo-frontendproxy",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:LOCUST_HOST=opentelemetry-demo-frontendproxy:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-loadgenerator",
+      "dst": "default/opentelemetry-demo-flagd",
+      "port": 8013,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FLAGD_HOST=opentelemetry-demo-flagd:8013"
+    },
+    {
+      "src": "default/opentelemetry-demo-paymentservice",
+      "dst": "default/opentelemetry-demo-flagd",
+      "port": 8013,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FLAGD_HOST=opentelemetry-demo-flagd:8013"
+    },
+    {
+      "src": "default/opentelemetry-demo-productcatalogservice",
+      "dst": "default/opentelemetry-demo-flagd",
+      "port": 8013,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FLAGD_HOST=opentelemetry-demo-flagd:8013"
+    },
+    {
+      "src": "default/opentelemetry-demo-recommendationservice",
+      "dst": "default/opentelemetry-demo-productcatalogservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:PRODUCT_CATALOG_SERVICE_ADDR=opentelemetry-demo-productcatalogservice:8080"
+    },
+    {
+      "src": "default/opentelemetry-demo-recommendationservice",
+      "dst": "default/opentelemetry-demo-flagd",
+      "port": 8013,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:FLAGD_HOST=opentelemetry-demo-flagd:8013"
+    },
+    {
+      "src": "default/opentelemetry-demo-shippingservice",
+      "dst": "default/opentelemetry-demo-quoteservice",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:QUOTE_SERVICE_ADDR=opentelemetry-demo-quoteservice:8080"
+    },
+    {
+      "src": "otel/opentelemetry-demo-grafana",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-jaeger",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "otel/opentelemetry-demo-otelcol",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "otel/opentelemetry-demo-prometheus-server",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-accountingservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-adservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-cartservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-checkoutservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-currencyservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-emailservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-flagd",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-frauddetectionservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontend",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-frontendproxy",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-imageprovider",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-kafka",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-loadgenerator",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-paymentservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-productcatalogservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-quoteservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-recommendationservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-shippingservice",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/opentelemetry-demo-valkey",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/otel-demo-opensearch",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "otel/opentelemetry-demo-grafana",
+      "dst": "kube-apiserver",
+      "port": 443,
+      "class": "in_cluster",
+      "provenance": "s5_apiserver",
+      "evidence": "sa=opentelemetry-demo-grafana"
+    },
+    {
+      "src": "otel/opentelemetry-demo-otelcol",
+      "dst": "kube-apiserver",
+      "port": 443,
+      "class": "in_cluster",
+      "provenance": "s5_apiserver",
+      "evidence": "sa=opentelemetry-demo-otelcol"
+    },
+    {
+      "src": "otel/opentelemetry-demo-prometheus-server",
+      "dst": "kube-apiserver",
+      "port": 443,
+      "class": "in_cluster",
+      "provenance": "s5_apiserver",
+      "evidence": "sa=opentelemetry-demo-prometheus-server"
+    },
+    {
+      "src": "default/otel-demo-opensearch",
+      "dst": "default/otel-demo-opensearch",
+      "port": 9200,
+      "class": "peer",
+      "provenance": "s6_peer",
+      "evidence": "headless/otel-demo-opensearch-headless"
+    },
+    {
+      "src": "default/otel-demo-opensearch",
+      "dst": "default/otel-demo-opensearch",
+      "port": 9300,
+      "class": "peer",
+      "provenance": "s6_peer",
+      "evidence": "headless/otel-demo-opensearch-headless"
+    },
+    {
+      "src": "default/otel-demo-opensearch",
+      "dst": "default/otel-demo-opensearch",
+      "port": 9600,
+      "class": "peer",
+      "provenance": "s6_peer",
+      "evidence": "headless/otel-demo-opensearch-headless"
+    }
+  ]
+}

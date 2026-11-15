@@ -1,0 +1,326 @@
+{
+  "app": "bank",
+  "attack_edges": 8,
+  "rounds": {
+    "unprotected": [
+      {
+        "edge": "frontend->accounts-db:5432",
+        "dst_ip": "10.42.1.77",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "frontend->ledger-db:5432",
+        "dst_ip": "10.42.1.83",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "contacts->ledger-db:5432",
+        "dst_ip": "10.42.1.83",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "balancereader->accounts-db:5432",
+        "dst_ip": "10.42.1.77",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "transactionhistory->accounts-db:5432",
+        "dst_ip": "10.42.1.77",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "userservice->ledger-db:5432",
+        "dst_ip": "10.42.1.83",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "loadgenerator->accounts-db:5432",
+        "dst_ip": "10.42.1.77",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "contacts->userservice:8080",
+        "dst_ip": "10.42.0.125",
+        "reachable": true,
+        "log": "RC=0"
+      }
+    ],
+    "synth": {
+      "edges": [
+        {
+          "edge": "frontend->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "contacts->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "balancereader->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "transactionhistory->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "userservice->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "loadgenerator->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "contacts->userservice:8080",
+          "dst_ip": "10.42.0.125",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "synth_plus_config": {
+      "edges": [
+        {
+          "edge": "frontend->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "contacts->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "balancereader->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "transactionhistory->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "userservice->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "loadgenerator->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "contacts->userservice:8080",
+          "dst_ip": "10.42.0.125",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "otterize": {
+      "edges": [
+        {
+          "edge": "frontend->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "contacts->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "balancereader->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "transactionhistory->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "userservice->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "loadgenerator->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "contacts->userservice:8080",
+          "dst_ip": "10.42.0.125",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "ig_snapshot_socket": {
+      "edges": [
+        {
+          "edge": "frontend->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "contacts->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "balancereader->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "transactionhistory->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "userservice->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "loadgenerator->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "contacts->userservice:8080",
+          "dst_ip": "10.42.0.125",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "ig_trace_tcp": {
+      "edges": [
+        {
+          "edge": "frontend->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "contacts->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "balancereader->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "transactionhistory->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "userservice->ledger-db:5432",
+          "dst_ip": "10.42.1.83",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "loadgenerator->accounts-db:5432",
+          "dst_ip": "10.42.1.77",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "contacts->userservice:8080",
+          "dst_ip": "10.42.0.125",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    }
+  }
+}

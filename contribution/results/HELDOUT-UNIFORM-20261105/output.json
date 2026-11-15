@@ -1,0 +1,5139 @@
+{
+ "apps": {
+  "bank": {
+   "A_size": 8,
+   "L_B": {
+    "stored": {
+     "ingress_pairs": 12,
+     "ingress_triples": 12,
+     "pairs": 18
+    },
+    "uniform": {
+     "gained_ingress_pairs": [],
+     "ingress_pairs": 12,
+     "ingress_triples": 12,
+     "lost_ingress_pairs": [],
+     "pairs": 18
+    }
+   },
+   "diagnostics": {
+    "hubble_A_stored_dropped_sources": {
+     "stored_drop_src_reserved:host": 10124,
+     "stored_drop_src_reserved:world": 22
+    },
+    "hubble_B_stored_dropped_sources": {
+     "stored_drop_src_reserved:host": 9985,
+     "stored_drop_src_reserved:remote-node": 4,
+     "stored_drop_src_reserved:world": 8
+    },
+    "otterize_intents": {
+     "intents": 58
+    },
+    "snapshot_listen_ports": {
+     "accounts-db": [
+      5432
+     ],
+     "balancereader": [
+      8080
+     ],
+     "contacts": [
+      8080
+     ],
+     "frontend": [
+      8080
+     ],
+     "ledger-db": [
+      5432
+     ],
+     "ledgerwriter": [
+      8080
+     ],
+     "transactionhistory": [
+      8080
+     ],
+     "userservice": [
+      8080
+     ]
+    }
+   },
+   "dir": "BANK-20260904",
+   "isolation_rule_stored_policies": {
+    "ig_snapshot_socket": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "accounts-db",
+      "balancereader",
+      "contacts",
+      "frontend",
+      "ledger-db",
+      "ledgerwriter",
+      "transactionhistory",
+      "userservice"
+     ]
+    },
+    "ig_trace_tcp": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "accounts-db",
+      "balancereader",
+      "contacts",
+      "frontend",
+      "ledger-db",
+      "ledgerwriter",
+      "transactionhistory",
+      "userservice"
+     ]
+    },
+    "otterize": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "accounts-db",
+      "balancereader",
+      "contacts",
+      "frontend",
+      "ledger-db",
+      "ledgerwriter",
+      "transactionhistory",
+      "userservice"
+     ]
+    },
+    "synth": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "accounts-db",
+      "balancereader",
+      "contacts",
+      "frontend",
+      "ledger-db",
+      "ledgerwriter",
+      "transactionhistory",
+      "userservice"
+     ]
+    },
+    "synth_plus_config": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "accounts-db",
+      "balancereader",
+      "contacts",
+      "frontend",
+      "ledger-db",
+      "ledgerwriter",
+      "transactionhistory",
+      "userservice"
+     ]
+    }
+   },
+   "live_entries_not_in_stored_scores": [],
+   "render_check": {
+    "ig_snapshot_socket": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 7,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 6,
+     "policy_triples": 7,
+     "targets": [
+      "accounts-db",
+      "balancereader",
+      "contacts",
+      "frontend",
+      "ledger-db",
+      "ledgerwriter",
+      "transactionhistory",
+      "userservice"
+     ]
+    },
+    "ig_trace_tcp": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 8,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 8,
+     "policy_triples": 8,
+     "targets": [
+      "accounts-db",
+      "balancereader",
+      "contacts",
+      "frontend",
+      "ledger-db",
+      "ledgerwriter",
+      "transactionhistory",
+      "userservice"
+     ]
+    },
+    "otterize": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 11,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 11,
+     "policy_triples": 11,
+     "targets": [
+      "accounts-db",
+      "balancereader",
+      "contacts",
+      "frontend",
+      "ledger-db",
+      "ledgerwriter",
+      "transactionhistory",
+      "userservice"
+     ]
+    },
+    "synth": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 11,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 11,
+     "policy_triples": 11,
+     "targets": [
+      "accounts-db",
+      "balancereader",
+      "contacts",
+      "frontend",
+      "ledger-db",
+      "ledgerwriter",
+      "transactionhistory",
+      "userservice"
+     ]
+    },
+    "synth_plus_config": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 15,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 15,
+     "policy_triples": 15,
+     "targets": [
+      "accounts-db",
+      "balancereader",
+      "contacts",
+      "frontend",
+      "ledger-db",
+      "ledgerwriter",
+      "transactionhistory",
+      "userservice"
+     ]
+    }
+   },
+   "sensitivity": {
+    "snapshot_all_tcp_states": {
+     "P": 10,
+     "beyond_L_B": 0,
+     "false_deny": 0.167,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [
+      "frontend->balancereader",
+      "frontend->contacts",
+      "frontend->transactionhistory",
+      "frontend->userservice"
+     ],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_snapshot_socket"
+    },
+    "snapshot_eph_direction": {
+     "P": 6,
+     "beyond_L_B": 0,
+     "false_deny": 0.5,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_snapshot_socket"
+    },
+    "trace_tcp_plus_close": {
+     "P": 9,
+     "beyond_L_B": 0,
+     "false_deny": 0.25,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [
+      "ledgerwriter->balancereader"
+     ],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_trace_tcp"
+    }
+   },
+   "title": "Bank of Anthos",
+   "tools": {
+    "ig_snapshot_socket": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 12,
+      "P": 6,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.5,
+      "false_deny_n": 6,
+      "false_deny_port": 0.5,
+      "false_deny_port_n": 6,
+      "missed": [
+       "frontend->balancereader",
+       "frontend->contacts",
+       "frontend->ledgerwriter",
+       "frontend->transactionhistory",
+       "frontend->userservice",
+       "ledgerwriter->balancereader"
+      ],
+      "missed_triples": [
+       "frontend->balancereader:8080",
+       "frontend->contacts:8080",
+       "frontend->ledgerwriter:8080",
+       "frontend->transactionhistory:8080",
+       "frontend->userservice:8080",
+       "ledgerwriter->balancereader:8080"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 12,
+      "P": 6,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.5,
+      "false_deny_n": 6,
+      "false_deny_port": 0.5,
+      "false_deny_port_n": 6,
+      "missed": [
+       "frontend->balancereader",
+       "frontend->contacts",
+       "frontend->ledgerwriter",
+       "frontend->transactionhistory",
+       "frontend->userservice",
+       "ledgerwriter->balancereader"
+      ],
+      "missed_triples": [
+       "frontend->balancereader:8080",
+       "frontend->contacts:8080",
+       "frontend->ledgerwriter:8080",
+       "frontend->transactionhistory:8080",
+       "frontend->userservice:8080",
+       "ledgerwriter->balancereader:8080"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "ig_trace_tcp": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 12,
+      "P": 8,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.333,
+      "false_deny_n": 4,
+      "false_deny_port": 0.417,
+      "false_deny_port_n": 5,
+      "missed": [
+       "contacts->accounts-db",
+       "frontend->ledgerwriter",
+       "ledgerwriter->balancereader",
+       "userservice->accounts-db"
+      ],
+      "missed_triples": [
+       "contacts->accounts-db:5432",
+       "frontend->ledgerwriter:8080",
+       "ledgerwriter->balancereader:8080",
+       "loadgenerator->frontend:8080",
+       "userservice->accounts-db:5432"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 12,
+      "P": 8,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.333,
+      "false_deny_n": 4,
+      "false_deny_port": 0.333,
+      "false_deny_port_n": 4,
+      "missed": [
+       "contacts->accounts-db",
+       "frontend->ledgerwriter",
+       "ledgerwriter->balancereader",
+       "userservice->accounts-db"
+      ],
+      "missed_triples": [
+       "contacts->accounts-db:5432",
+       "frontend->ledgerwriter:8080",
+       "ledgerwriter->balancereader:8080",
+       "userservice->accounts-db:5432"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "otterize": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "stored": {
+      "P": 11,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.083,
+      "false_deny_n": 1,
+      "missed": [
+       "frontend->ledgerwriter"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "P": 11,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.083,
+      "false_deny_n": 1,
+      "missed": [
+       "frontend->ledgerwriter"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "synth": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 12,
+      "P": 16,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.083,
+      "false_deny_n": 1,
+      "false_deny_port": 0.083,
+      "false_deny_port_n": 1,
+      "missed": [
+       "frontend->ledgerwriter"
+      ],
+      "missed_triples": [
+       "frontend->ledgerwriter:8080"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 12,
+      "P": 16,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.083,
+      "false_deny_n": 1,
+      "false_deny_port": 0.083,
+      "false_deny_port_n": 1,
+      "missed": [
+       "frontend->ledgerwriter"
+      ],
+      "missed_triples": [
+       "frontend->ledgerwriter:8080"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "synth_plus_config": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 12,
+      "P": 24,
+      "admitted_attacks": [],
+      "beyond_L_B": 3,
+      "beyond_L_B_pairs": [
+       "ledgerwriter->contacts",
+       "ledgerwriter->transactionhistory",
+       "ledgerwriter->userservice"
+      ],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 12,
+      "P": 24,
+      "admitted_attacks": [],
+      "beyond_L_B": 3,
+      "beyond_L_B_pairs": [
+       "ledgerwriter->contacts",
+       "ledgerwriter->transactionhistory",
+       "ledgerwriter->userservice"
+      ],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    }
+   }
+  },
+  "boutique": {
+   "A_size": 8,
+   "L_B": {
+    "stored": {
+     "ingress_pairs": 16,
+     "ingress_triples": 16,
+     "pairs": 18
+    },
+    "uniform": {
+     "gained_ingress_pairs": [],
+     "ingress_pairs": 16,
+     "ingress_triples": 16,
+     "lost_ingress_pairs": [],
+     "pairs": 18
+    }
+   },
+   "diagnostics": {
+    "hubble_A_stored_dropped_sources": {
+     "stored_drop_src_reserved:host": 24430,
+     "stored_drop_src_reserved:world": 264
+    },
+    "hubble_B_stored_dropped_sources": {
+     "stored_drop_src_reserved:host": 16492,
+     "stored_drop_src_reserved:world": 326
+    },
+    "otterize_intents": {
+     "intents": 81
+    },
+    "snapshot_listen_ports": {
+     "adservice": [
+      9555
+     ],
+     "cartservice": [
+      7070
+     ],
+     "checkoutservice": [
+      5050
+     ],
+     "currencyservice": [
+      7000
+     ],
+     "emailservice": [
+      8080
+     ],
+     "frontend": [
+      8080
+     ],
+     "paymentservice": [
+      50051
+     ],
+     "productcatalogservice": [
+      3550
+     ],
+     "recommendationservice": [
+      8080
+     ],
+     "redis-cart": [
+      6379
+     ],
+     "shippingservice": [
+      50051
+     ]
+    }
+   },
+   "dir": "BOUTIQUE-20260903",
+   "isolation_rule": {
+    "ig_snapshot_socket": {
+     "stored": {
+      "admitted": [],
+      "over_privilege_isolation": 0.0,
+      "targets": [
+       "adservice",
+       "cartservice",
+       "checkoutservice",
+       "currencyservice",
+       "emailservice",
+       "frontend",
+       "paymentservice",
+       "productcatalogservice",
+       "recommendationservice",
+       "redis-cart",
+       "shippingservice"
+      ]
+     },
+     "stored_policy_targets_equal_adapter_ingress_destinations": true,
+     "uniform": {
+      "admitted": [],
+      "over_privilege_isolation": 0.0,
+      "targets": [
+       "adservice",
+       "cartservice",
+       "checkoutservice",
+       "currencyservice",
+       "emailservice",
+       "frontend",
+       "paymentservice",
+       "productcatalogservice",
+       "recommendationservice",
+       "redis-cart",
+       "shippingservice"
+      ]
+     }
+    },
+    "ig_trace_tcp": {
+     "stored": {
+      "admitted": [
+       "adservice->paymentservice",
+       "currencyservice->cartservice",
+       "frontend->emailservice",
+       "frontend->paymentservice",
+       "frontend->redis-cart",
+       "loadgenerator->redis-cart",
+       "productcatalogservice->redis-cart",
+       "recommendationservice->checkoutservice"
+      ],
+      "over_privilege_isolation": 1.0,
+      "targets": [
+       "frontend"
+      ]
+     },
+     "stored_policy_targets_equal_adapter_ingress_destinations": true,
+     "uniform": {
+      "admitted": [
+       "adservice->paymentservice",
+       "currencyservice->cartservice",
+       "frontend->emailservice",
+       "frontend->paymentservice",
+       "frontend->redis-cart",
+       "loadgenerator->redis-cart",
+       "productcatalogservice->redis-cart",
+       "recommendationservice->checkoutservice"
+      ],
+      "over_privilege_isolation": 1.0,
+      "targets": [
+       "frontend"
+      ]
+     }
+    },
+    "otterize": {
+     "stored": {
+      "admitted": [],
+      "over_privilege_isolation": 0.0,
+      "targets": [
+       "adservice",
+       "cartservice",
+       "checkoutservice",
+       "currencyservice",
+       "emailservice",
+       "frontend",
+       "paymentservice",
+       "productcatalogservice",
+       "recommendationservice",
+       "redis-cart",
+       "shippingservice"
+      ]
+     },
+     "stored_policy_targets_equal_adapter_ingress_destinations": true,
+     "uniform": {
+      "admitted": [],
+      "over_privilege_isolation": 0.0,
+      "targets": [
+       "adservice",
+       "cartservice",
+       "checkoutservice",
+       "currencyservice",
+       "emailservice",
+       "frontend",
+       "paymentservice",
+       "productcatalogservice",
+       "recommendationservice",
+       "redis-cart",
+       "shippingservice"
+      ]
+     }
+    },
+    "synth": {
+     "stored": {
+      "admitted": [],
+      "over_privilege_isolation": 0.0,
+      "targets": [
+       "adservice",
+       "cartservice",
+       "checkoutservice",
+       "currencyservice",
+       "emailservice",
+       "frontend",
+       "paymentservice",
+       "productcatalogservice",
+       "recommendationservice",
+       "redis-cart",
+       "shippingservice"
+      ]
+     },
+     "stored_policy_targets_equal_adapter_ingress_destinations": true,
+     "uniform": {
+      "admitted": [],
+      "over_privilege_isolation": 0.0,
+      "targets": [
+       "adservice",
+       "cartservice",
+       "checkoutservice",
+       "currencyservice",
+       "emailservice",
+       "frontend",
+       "paymentservice",
+       "productcatalogservice",
+       "recommendationservice",
+       "redis-cart",
+       "shippingservice"
+      ]
+     }
+    },
+    "synth_plus_config": {
+     "stored": {
+      "admitted": [],
+      "over_privilege_isolation": 0.0,
+      "targets": [
+       "adservice",
+       "cartservice",
+       "checkoutservice",
+       "currencyservice",
+       "emailservice",
+       "frontend",
+       "paymentservice",
+       "productcatalogservice",
+       "recommendationservice",
+       "redis-cart",
+       "shippingservice"
+      ]
+     },
+     "stored_policy_targets_equal_adapter_ingress_destinations": true,
+     "uniform": {
+      "admitted": [],
+      "over_privilege_isolation": 0.0,
+      "targets": [
+       "adservice",
+       "cartservice",
+       "checkoutservice",
+       "currencyservice",
+       "emailservice",
+       "frontend",
+       "paymentservice",
+       "productcatalogservice",
+       "recommendationservice",
+       "redis-cart",
+       "shippingservice"
+      ]
+     }
+    }
+   },
+   "isolation_rule_stored_policies": {
+    "ig_snapshot_socket": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis-cart",
+      "shippingservice"
+     ]
+    },
+    "ig_trace_tcp": {
+     "admitted": [
+      "adservice->paymentservice",
+      "currencyservice->cartservice",
+      "frontend->emailservice",
+      "frontend->paymentservice",
+      "frontend->redis-cart",
+      "loadgenerator->redis-cart",
+      "productcatalogservice->redis-cart",
+      "recommendationservice->checkoutservice"
+     ],
+     "attack_targets_not_selected": [
+      "cartservice",
+      "checkoutservice",
+      "emailservice",
+      "paymentservice",
+      "redis-cart"
+     ],
+     "over_privilege_isolation": 1.0,
+     "targets": [
+      "frontend"
+     ]
+    },
+    "otterize": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis-cart",
+      "shippingservice"
+     ]
+    },
+    "synth": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis-cart",
+      "shippingservice"
+     ]
+    },
+    "synth_plus_config": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis-cart",
+      "shippingservice"
+     ]
+    }
+   },
+   "live_entries_not_in_stored_scores": [],
+   "render_check": {
+    "ig_snapshot_socket": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 17,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 16,
+     "policy_triples": 17,
+     "targets": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis-cart",
+      "shippingservice"
+     ]
+    },
+    "ig_trace_tcp": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 1,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 1,
+     "policy_triples": 1,
+     "targets": [
+      "frontend"
+     ]
+    },
+    "otterize": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 16,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 16,
+     "policy_triples": 16,
+     "targets": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis-cart",
+      "shippingservice"
+     ]
+    },
+    "synth": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 16,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 16,
+     "policy_triples": 16,
+     "targets": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis-cart",
+      "shippingservice"
+     ]
+    },
+    "synth_plus_config": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 16,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 16,
+     "policy_triples": 16,
+     "targets": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis-cart",
+      "shippingservice"
+     ]
+    }
+   },
+   "sensitivity": {
+    "snapshot_all_tcp_states": {
+     "P": 16,
+     "beyond_L_B": 0,
+     "false_deny": 0.0,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_snapshot_socket"
+    },
+    "snapshot_eph_direction": {
+     "P": 19,
+     "beyond_L_B": 3,
+     "false_deny": 0.0,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [
+      "paymentservice->checkoutservice",
+      "shippingservice->checkoutservice",
+      "shippingservice->frontend"
+     ],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_snapshot_socket"
+    },
+    "trace_tcp_plus_close": {
+     "P": 1,
+     "beyond_L_B": 0,
+     "false_deny": 0.938,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_trace_tcp"
+    }
+   },
+   "title": "Online Boutique",
+   "tools": {
+    "ig_snapshot_socket": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 16,
+      "P": 16,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 16,
+      "P": 16,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "ig_trace_tcp": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 16,
+      "P": 1,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.938,
+      "false_deny_n": 15,
+      "false_deny_port": 1.0,
+      "false_deny_port_n": 16,
+      "missed": [
+       "cartservice->redis-cart",
+       "checkoutservice->cartservice",
+       "checkoutservice->currencyservice",
+       "checkoutservice->emailservice",
+       "checkoutservice->paymentservice",
+       "checkoutservice->productcatalogservice",
+       "checkoutservice->shippingservice",
+       "frontend->adservice",
+       "frontend->cartservice",
+       "frontend->checkoutservice",
+       "frontend->currencyservice",
+       "frontend->productcatalogservice",
+       "frontend->recommendationservice",
+       "frontend->shippingservice",
+       "recommendationservice->productcatalogservice"
+      ],
+      "missed_triples": [
+       "cartservice->redis-cart:6379",
+       "checkoutservice->cartservice:7070",
+       "checkoutservice->currencyservice:7000",
+       "checkoutservice->emailservice:8080",
+       "checkoutservice->paymentservice:50051",
+       "checkoutservice->productcatalogservice:3550",
+       "checkoutservice->shippingservice:50051",
+       "frontend->adservice:9555",
+       "frontend->cartservice:7070",
+       "frontend->checkoutservice:5050",
+       "frontend->currencyservice:7000",
+       "frontend->productcatalogservice:3550",
+       "frontend->recommendationservice:8080",
+       "frontend->shippingservice:50051",
+       "loadgenerator->frontend:8080",
+       "recommendationservice->productcatalogservice:3550"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 16,
+      "P": 1,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.938,
+      "false_deny_n": 15,
+      "false_deny_port": 0.938,
+      "false_deny_port_n": 15,
+      "missed": [
+       "cartservice->redis-cart",
+       "checkoutservice->cartservice",
+       "checkoutservice->currencyservice",
+       "checkoutservice->emailservice",
+       "checkoutservice->paymentservice",
+       "checkoutservice->productcatalogservice",
+       "checkoutservice->shippingservice",
+       "frontend->adservice",
+       "frontend->cartservice",
+       "frontend->checkoutservice",
+       "frontend->currencyservice",
+       "frontend->productcatalogservice",
+       "frontend->recommendationservice",
+       "frontend->shippingservice",
+       "recommendationservice->productcatalogservice"
+      ],
+      "missed_triples": [
+       "cartservice->redis-cart:6379",
+       "checkoutservice->cartservice:7070",
+       "checkoutservice->currencyservice:7000",
+       "checkoutservice->emailservice:8080",
+       "checkoutservice->paymentservice:50051",
+       "checkoutservice->productcatalogservice:3550",
+       "checkoutservice->shippingservice:50051",
+       "frontend->adservice:9555",
+       "frontend->cartservice:7070",
+       "frontend->checkoutservice:5050",
+       "frontend->currencyservice:7000",
+       "frontend->productcatalogservice:3550",
+       "frontend->recommendationservice:8080",
+       "frontend->shippingservice:50051",
+       "recommendationservice->productcatalogservice:3550"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "otterize": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "stored": {
+      "P": 16,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "missed": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "P": 16,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "missed": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "synth": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 16,
+      "P": 18,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 16,
+      "P": 18,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "synth_plus_config": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 16,
+      "P": 28,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 16,
+      "P": 28,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    }
+   }
+  },
+  "dsb": {
+   "A_size": 8,
+   "L_B": {
+    "stored": {
+     "ingress_pairs": 30,
+     "ingress_triples": 30,
+     "pairs": 38
+    },
+    "uniform": {
+     "gained_ingress_pairs": [],
+     "ingress_pairs": 30,
+     "ingress_triples": 30,
+     "lost_ingress_pairs": [],
+     "pairs": 38
+    }
+   },
+   "diagnostics": {
+    "hubble_A_stored_dropped_sources": {},
+    "hubble_B_stored_dropped_sources": {},
+    "otterize_intents": {
+     "intents": 55
+    },
+    "snapshot_listen_ports": {
+     "compose-post-service": [
+      9090
+     ],
+     "home-timeline-redis": [
+      6379
+     ],
+     "home-timeline-service": [
+      9090
+     ],
+     "jaeger": [
+      4317,
+      4318,
+      14250,
+      14268,
+      14269,
+      16685,
+      16686
+     ],
+     "media-frontend": [
+      8080
+     ],
+     "media-memcached": [
+      11211
+     ],
+     "media-mongodb": [
+      27017
+     ],
+     "media-service": [
+      9090
+     ],
+     "nginx-thrift": [
+      8080
+     ],
+     "post-storage-memcached": [
+      11211
+     ],
+     "post-storage-mongodb": [
+      27017
+     ],
+     "post-storage-service": [
+      9090
+     ],
+     "social-graph-mongodb": [
+      27017
+     ],
+     "social-graph-redis": [
+      6379
+     ],
+     "social-graph-service": [
+      9090
+     ],
+     "text-service": [
+      9090
+     ],
+     "unique-id-service": [
+      9090
+     ],
+     "url-shorten-memcached": [
+      11211
+     ],
+     "url-shorten-mongodb": [
+      27017
+     ],
+     "url-shorten-service": [
+      9090
+     ],
+     "user-memcached": [
+      11211
+     ],
+     "user-mention-service": [
+      9090
+     ],
+     "user-mongodb": [
+      27017
+     ],
+     "user-service": [
+      9090
+     ],
+     "user-timeline-mongodb": [
+      27017
+     ],
+     "user-timeline-redis": [
+      6379
+     ],
+     "user-timeline-service": [
+      9090
+     ]
+    }
+   },
+   "dir": "DSB-SOCIAL-20260904",
+   "isolation_rule_stored_policies": {
+    "ig_snapshot_socket": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "compose-post-service",
+      "home-timeline-redis",
+      "home-timeline-service",
+      "jaeger",
+      "media-frontend",
+      "media-memcached",
+      "media-mongodb",
+      "media-service",
+      "nginx-thrift",
+      "post-storage-memcached",
+      "post-storage-mongodb",
+      "post-storage-service",
+      "social-graph-mongodb",
+      "social-graph-redis",
+      "social-graph-service",
+      "text-service",
+      "unique-id-service",
+      "url-shorten-memcached",
+      "url-shorten-mongodb",
+      "url-shorten-service",
+      "user-memcached",
+      "user-mention-service",
+      "user-mongodb",
+      "user-service",
+      "user-timeline-mongodb",
+      "user-timeline-redis",
+      "user-timeline-service"
+     ]
+    },
+    "ig_trace_tcp": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "compose-post-service",
+      "home-timeline-redis",
+      "home-timeline-service",
+      "jaeger",
+      "media-frontend",
+      "media-memcached",
+      "media-mongodb",
+      "media-service",
+      "nginx-thrift",
+      "post-storage-memcached",
+      "post-storage-mongodb",
+      "post-storage-service",
+      "social-graph-mongodb",
+      "social-graph-redis",
+      "social-graph-service",
+      "text-service",
+      "unique-id-service",
+      "url-shorten-memcached",
+      "url-shorten-mongodb",
+      "url-shorten-service",
+      "user-memcached",
+      "user-mention-service",
+      "user-mongodb",
+      "user-service",
+      "user-timeline-mongodb",
+      "user-timeline-redis",
+      "user-timeline-service"
+     ]
+    },
+    "otterize": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "compose-post-service",
+      "home-timeline-redis",
+      "home-timeline-service",
+      "jaeger",
+      "media-frontend",
+      "media-memcached",
+      "media-mongodb",
+      "media-service",
+      "nginx-thrift",
+      "post-storage-memcached",
+      "post-storage-mongodb",
+      "post-storage-service",
+      "social-graph-mongodb",
+      "social-graph-redis",
+      "social-graph-service",
+      "text-service",
+      "unique-id-service",
+      "url-shorten-memcached",
+      "url-shorten-mongodb",
+      "url-shorten-service",
+      "user-memcached",
+      "user-mention-service",
+      "user-mongodb",
+      "user-service",
+      "user-timeline-mongodb",
+      "user-timeline-redis",
+      "user-timeline-service"
+     ]
+    },
+    "synth": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "compose-post-service",
+      "home-timeline-redis",
+      "home-timeline-service",
+      "jaeger",
+      "media-frontend",
+      "media-memcached",
+      "media-mongodb",
+      "media-service",
+      "nginx-thrift",
+      "post-storage-memcached",
+      "post-storage-mongodb",
+      "post-storage-service",
+      "social-graph-mongodb",
+      "social-graph-redis",
+      "social-graph-service",
+      "text-service",
+      "unique-id-service",
+      "url-shorten-memcached",
+      "url-shorten-mongodb",
+      "url-shorten-service",
+      "user-memcached",
+      "user-mention-service",
+      "user-mongodb",
+      "user-service",
+      "user-timeline-mongodb",
+      "user-timeline-redis",
+      "user-timeline-service"
+     ]
+    },
+    "synth_plus_config": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "compose-post-service",
+      "home-timeline-redis",
+      "home-timeline-service",
+      "jaeger",
+      "media-frontend",
+      "media-memcached",
+      "media-mongodb",
+      "media-service",
+      "nginx-thrift",
+      "post-storage-memcached",
+      "post-storage-mongodb",
+      "post-storage-service",
+      "social-graph-mongodb",
+      "social-graph-redis",
+      "social-graph-service",
+      "text-service",
+      "unique-id-service",
+      "url-shorten-memcached",
+      "url-shorten-mongodb",
+      "url-shorten-service",
+      "user-memcached",
+      "user-mention-service",
+      "user-mongodb",
+      "user-service",
+      "user-timeline-mongodb",
+      "user-timeline-redis",
+      "user-timeline-service"
+     ]
+    }
+   },
+   "live_entries_not_in_stored_scores": [],
+   "render_check": {
+    "ig_snapshot_socket": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 25,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 25,
+     "policy_triples": 25,
+     "targets": [
+      "compose-post-service",
+      "home-timeline-redis",
+      "home-timeline-service",
+      "jaeger",
+      "media-frontend",
+      "media-memcached",
+      "media-mongodb",
+      "media-service",
+      "nginx-thrift",
+      "post-storage-memcached",
+      "post-storage-mongodb",
+      "post-storage-service",
+      "social-graph-mongodb",
+      "social-graph-redis",
+      "social-graph-service",
+      "text-service",
+      "unique-id-service",
+      "url-shorten-memcached",
+      "url-shorten-mongodb",
+      "url-shorten-service",
+      "user-memcached",
+      "user-mention-service",
+      "user-mongodb",
+      "user-service",
+      "user-timeline-mongodb",
+      "user-timeline-redis",
+      "user-timeline-service"
+     ]
+    },
+    "ig_trace_tcp": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 5,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 5,
+     "policy_triples": 5,
+     "targets": [
+      "compose-post-service",
+      "home-timeline-redis",
+      "home-timeline-service",
+      "jaeger",
+      "media-frontend",
+      "media-memcached",
+      "media-mongodb",
+      "media-service",
+      "nginx-thrift",
+      "post-storage-memcached",
+      "post-storage-mongodb",
+      "post-storage-service",
+      "social-graph-mongodb",
+      "social-graph-redis",
+      "social-graph-service",
+      "text-service",
+      "unique-id-service",
+      "url-shorten-memcached",
+      "url-shorten-mongodb",
+      "url-shorten-service",
+      "user-memcached",
+      "user-mention-service",
+      "user-mongodb",
+      "user-service",
+      "user-timeline-mongodb",
+      "user-timeline-redis",
+      "user-timeline-service"
+     ]
+    },
+    "otterize": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 5,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 5,
+     "policy_triples": 5,
+     "targets": [
+      "compose-post-service",
+      "home-timeline-redis",
+      "home-timeline-service",
+      "jaeger",
+      "media-frontend",
+      "media-memcached",
+      "media-mongodb",
+      "media-service",
+      "nginx-thrift",
+      "post-storage-memcached",
+      "post-storage-mongodb",
+      "post-storage-service",
+      "social-graph-mongodb",
+      "social-graph-redis",
+      "social-graph-service",
+      "text-service",
+      "unique-id-service",
+      "url-shorten-memcached",
+      "url-shorten-mongodb",
+      "url-shorten-service",
+      "user-memcached",
+      "user-mention-service",
+      "user-mongodb",
+      "user-service",
+      "user-timeline-mongodb",
+      "user-timeline-redis",
+      "user-timeline-service"
+     ]
+    },
+    "synth": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 14,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 14,
+     "policy_triples": 14,
+     "targets": [
+      "compose-post-service",
+      "home-timeline-redis",
+      "home-timeline-service",
+      "jaeger",
+      "media-frontend",
+      "media-memcached",
+      "media-mongodb",
+      "media-service",
+      "nginx-thrift",
+      "post-storage-memcached",
+      "post-storage-mongodb",
+      "post-storage-service",
+      "social-graph-mongodb",
+      "social-graph-redis",
+      "social-graph-service",
+      "text-service",
+      "unique-id-service",
+      "url-shorten-memcached",
+      "url-shorten-mongodb",
+      "url-shorten-service",
+      "user-memcached",
+      "user-mention-service",
+      "user-mongodb",
+      "user-service",
+      "user-timeline-mongodb",
+      "user-timeline-redis",
+      "user-timeline-service"
+     ]
+    },
+    "synth_plus_config": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 14,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "app"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 14,
+     "policy_triples": 14,
+     "targets": [
+      "compose-post-service",
+      "home-timeline-redis",
+      "home-timeline-service",
+      "jaeger",
+      "media-frontend",
+      "media-memcached",
+      "media-mongodb",
+      "media-service",
+      "nginx-thrift",
+      "post-storage-memcached",
+      "post-storage-mongodb",
+      "post-storage-service",
+      "social-graph-mongodb",
+      "social-graph-redis",
+      "social-graph-service",
+      "text-service",
+      "unique-id-service",
+      "url-shorten-memcached",
+      "url-shorten-mongodb",
+      "url-shorten-service",
+      "user-memcached",
+      "user-mention-service",
+      "user-mongodb",
+      "user-service",
+      "user-timeline-mongodb",
+      "user-timeline-redis",
+      "user-timeline-service"
+     ]
+    }
+   },
+   "sensitivity": {
+    "snapshot_all_tcp_states": {
+     "P": 39,
+     "beyond_L_B": 10,
+     "false_deny": 0.067,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [
+      "post-storage-service->post-storage-memcached"
+     ],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_snapshot_socket"
+    },
+    "snapshot_eph_direction": {
+     "P": 38,
+     "beyond_L_B": 10,
+     "false_deny": 0.1,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_snapshot_socket"
+    },
+    "trace_tcp_plus_close": {
+     "P": 5,
+     "beyond_L_B": 0,
+     "false_deny": 0.833,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_trace_tcp"
+    }
+   },
+   "title": "DSB social network",
+   "tools": {
+    "ig_snapshot_socket": {
+     "any_change": true,
+     "changed": {
+      "P": true,
+      "beyond_L_B": true,
+      "false_deny": true,
+      "over_privilege": false
+     },
+     "gained_pairs": [
+      {
+       "in_A": false,
+       "in_L_B_ingress": false,
+       "pair": "compose-post-service->jaeger",
+       "relaxations": [
+        "udp"
+       ]
+      },
+      {
+       "in_A": false,
+       "in_L_B_ingress": false,
+       "pair": "home-timeline-service->jaeger",
+       "relaxations": [
+        "udp"
+       ]
+      },
+      {
+       "in_A": false,
+       "in_L_B_ingress": true,
+       "pair": "media-service->jaeger",
+       "relaxations": [
+        "udp"
+       ]
+      },
+      {
+       "in_A": false,
+       "in_L_B_ingress": true,
+       "pair": "nginx-thrift->jaeger",
+       "relaxations": [
+        "udp"
+       ]
+      },
+      {
+       "in_A": false,
+       "in_L_B_ingress": false,
+       "pair": "nginx-thrift->kube-dns",
+       "relaxations": [
+        "udp"
+       ]
+      },
+      {
+       "in_A": false,
+       "in_L_B_ingress": false,
+       "pair": "post-storage-service->jaeger",
+       "relaxations": [
+        "udp"
+       ]
+      },
+      {
+       "in_A": false,
+       "in_L_B_ingress": true,
+       "pair": "social-graph-service->jaeger",
+       "relaxations": [
+        "udp"
+       ]
+      },
+      {
+       "in_A": false,
+       "in_L_B_ingress": false,
+       "pair": "text-service->jaeger",
+       "relaxations": [
+        "udp"
+       ]
+      },
+      {
+       "in_A": false,
+       "in_L_B_ingress": true,
+       "pair": "unique-id-service->jaeger",
+       "relaxations": [
+        "udp"
+       ]
+      },
+      {
+       "in_A": false,
+       "in_L_B_ingress": false,
+       "pair": "url-shorten-service->jaeger",
+       "relaxations": [
+        "udp"
+       ]
+      },
+      {
+       "in_A": false,
+       "in_L_B_ingress": false,
+       "pair": "user-mention-service->jaeger",
+       "relaxations": [
+        "udp"
+       ]
+      },
+      {
+       "in_A": false,
+       "in_L_B_ingress": true,
+       "pair": "user-service->jaeger",
+       "relaxations": [
+        "udp"
+       ]
+      },
+      {
+       "in_A": false,
+       "in_L_B_ingress": false,
+       "pair": "user-timeline-service->jaeger",
+       "relaxations": [
+        "udp"
+       ]
+      }
+     ],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 30,
+      "P": 25,
+      "admitted_attacks": [],
+      "beyond_L_B": 3,
+      "beyond_L_B_pairs": [
+       "social-graph-service->user-service",
+       "user-service->social-graph-service",
+       "user-service->user-memcached"
+      ],
+      "false_deny": 0.267,
+      "false_deny_n": 8,
+      "false_deny_port": 0.267,
+      "false_deny_port_n": 8,
+      "missed": [
+       "media-service->jaeger",
+       "nginx-thrift->compose-post-service",
+       "nginx-thrift->jaeger",
+       "post-storage-service->post-storage-memcached",
+       "social-graph-service->jaeger",
+       "unique-id-service->jaeger",
+       "user-mention-service->user-memcached",
+       "user-service->jaeger"
+      ],
+      "missed_triples": [
+       "media-service->jaeger:6831",
+       "nginx-thrift->compose-post-service:9090",
+       "nginx-thrift->jaeger:6831",
+       "post-storage-service->post-storage-memcached:11211",
+       "social-graph-service->jaeger:6831",
+       "unique-id-service->jaeger:6831",
+       "user-mention-service->user-memcached:11211",
+       "user-service->jaeger:6831"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 30,
+      "P": 38,
+      "admitted_attacks": [],
+      "beyond_L_B": 10,
+      "beyond_L_B_pairs": [
+       "compose-post-service->jaeger",
+       "home-timeline-service->jaeger",
+       "post-storage-service->jaeger",
+       "social-graph-service->user-service",
+       "text-service->jaeger",
+       "url-shorten-service->jaeger",
+       "user-mention-service->jaeger",
+       "user-service->social-graph-service",
+       "user-service->user-memcached",
+       "user-timeline-service->jaeger"
+      ],
+      "false_deny": 0.1,
+      "false_deny_n": 3,
+      "false_deny_port": 0.1,
+      "false_deny_port_n": 3,
+      "missed": [
+       "nginx-thrift->compose-post-service",
+       "post-storage-service->post-storage-memcached",
+       "user-mention-service->user-memcached"
+      ],
+      "missed_triples": [
+       "nginx-thrift->compose-post-service:9090",
+       "post-storage-service->post-storage-memcached:11211",
+       "user-mention-service->user-memcached:11211"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "ig_trace_tcp": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 30,
+      "P": 5,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.833,
+      "false_deny_n": 25,
+      "false_deny_port": 0.833,
+      "false_deny_port_n": 25,
+      "missed": [
+       "compose-post-service->home-timeline-service",
+       "compose-post-service->media-service",
+       "compose-post-service->post-storage-service",
+       "compose-post-service->text-service",
+       "compose-post-service->unique-id-service",
+       "compose-post-service->user-service",
+       "compose-post-service->user-timeline-service",
+       "home-timeline-service->social-graph-service",
+       "media-service->jaeger",
+       "nginx-thrift->compose-post-service",
+       "nginx-thrift->jaeger",
+       "post-storage-service->post-storage-mongodb",
+       "social-graph-service->jaeger",
+       "social-graph-service->social-graph-mongodb",
+       "social-graph-service->social-graph-redis",
+       "text-service->url-shorten-service",
+       "text-service->user-mention-service",
+       "unique-id-service->jaeger",
+       "url-shorten-service->url-shorten-mongodb",
+       "user-mention-service->user-memcached",
+       "user-mention-service->user-mongodb",
+       "user-service->jaeger",
+       "user-service->user-mongodb",
+       "user-timeline-service->user-timeline-mongodb",
+       "user-timeline-service->user-timeline-redis"
+      ],
+      "missed_triples": [
+       "compose-post-service->home-timeline-service:9090",
+       "compose-post-service->media-service:9090",
+       "compose-post-service->post-storage-service:9090",
+       "compose-post-service->text-service:9090",
+       "compose-post-service->unique-id-service:9090",
+       "compose-post-service->user-service:9090",
+       "compose-post-service->user-timeline-service:9090",
+       "home-timeline-service->social-graph-service:9090",
+       "media-service->jaeger:6831",
+       "nginx-thrift->compose-post-service:9090",
+       "nginx-thrift->jaeger:6831",
+       "post-storage-service->post-storage-mongodb:27017",
+       "social-graph-service->jaeger:6831",
+       "social-graph-service->social-graph-mongodb:27017",
+       "social-graph-service->social-graph-redis:6379",
+       "text-service->url-shorten-service:9090",
+       "text-service->user-mention-service:9090",
+       "unique-id-service->jaeger:6831",
+       "url-shorten-service->url-shorten-mongodb:27017",
+       "user-mention-service->user-memcached:11211",
+       "user-mention-service->user-mongodb:27017",
+       "user-service->jaeger:6831",
+       "user-service->user-mongodb:27017",
+       "user-timeline-service->user-timeline-mongodb:27017",
+       "user-timeline-service->user-timeline-redis:6379"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 30,
+      "P": 5,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.833,
+      "false_deny_n": 25,
+      "false_deny_port": 0.833,
+      "false_deny_port_n": 25,
+      "missed": [
+       "compose-post-service->home-timeline-service",
+       "compose-post-service->media-service",
+       "compose-post-service->post-storage-service",
+       "compose-post-service->text-service",
+       "compose-post-service->unique-id-service",
+       "compose-post-service->user-service",
+       "compose-post-service->user-timeline-service",
+       "home-timeline-service->social-graph-service",
+       "media-service->jaeger",
+       "nginx-thrift->compose-post-service",
+       "nginx-thrift->jaeger",
+       "post-storage-service->post-storage-mongodb",
+       "social-graph-service->jaeger",
+       "social-graph-service->social-graph-mongodb",
+       "social-graph-service->social-graph-redis",
+       "text-service->url-shorten-service",
+       "text-service->user-mention-service",
+       "unique-id-service->jaeger",
+       "url-shorten-service->url-shorten-mongodb",
+       "user-mention-service->user-memcached",
+       "user-mention-service->user-mongodb",
+       "user-service->jaeger",
+       "user-service->user-mongodb",
+       "user-timeline-service->user-timeline-mongodb",
+       "user-timeline-service->user-timeline-redis"
+      ],
+      "missed_triples": [
+       "compose-post-service->home-timeline-service:9090",
+       "compose-post-service->media-service:9090",
+       "compose-post-service->post-storage-service:9090",
+       "compose-post-service->text-service:9090",
+       "compose-post-service->unique-id-service:9090",
+       "compose-post-service->user-service:9090",
+       "compose-post-service->user-timeline-service:9090",
+       "home-timeline-service->social-graph-service:9090",
+       "media-service->jaeger:6831",
+       "nginx-thrift->compose-post-service:9090",
+       "nginx-thrift->jaeger:6831",
+       "post-storage-service->post-storage-mongodb:27017",
+       "social-graph-service->jaeger:6831",
+       "social-graph-service->social-graph-mongodb:27017",
+       "social-graph-service->social-graph-redis:6379",
+       "text-service->url-shorten-service:9090",
+       "text-service->user-mention-service:9090",
+       "unique-id-service->jaeger:6831",
+       "url-shorten-service->url-shorten-mongodb:27017",
+       "user-mention-service->user-memcached:11211",
+       "user-mention-service->user-mongodb:27017",
+       "user-service->jaeger:6831",
+       "user-service->user-mongodb:27017",
+       "user-timeline-service->user-timeline-mongodb:27017",
+       "user-timeline-service->user-timeline-redis:6379"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "otterize": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "stored": {
+      "P": 5,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.833,
+      "false_deny_n": 25,
+      "missed": [
+       "compose-post-service->home-timeline-service",
+       "compose-post-service->media-service",
+       "compose-post-service->post-storage-service",
+       "compose-post-service->text-service",
+       "compose-post-service->unique-id-service",
+       "compose-post-service->user-service",
+       "compose-post-service->user-timeline-service",
+       "home-timeline-service->social-graph-service",
+       "media-service->jaeger",
+       "nginx-thrift->compose-post-service",
+       "nginx-thrift->jaeger",
+       "post-storage-service->post-storage-mongodb",
+       "social-graph-service->jaeger",
+       "social-graph-service->social-graph-mongodb",
+       "social-graph-service->social-graph-redis",
+       "text-service->url-shorten-service",
+       "text-service->user-mention-service",
+       "unique-id-service->jaeger",
+       "url-shorten-service->url-shorten-mongodb",
+       "user-mention-service->user-memcached",
+       "user-mention-service->user-mongodb",
+       "user-service->jaeger",
+       "user-service->user-mongodb",
+       "user-timeline-service->user-timeline-mongodb",
+       "user-timeline-service->user-timeline-redis"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "P": 5,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.833,
+      "false_deny_n": 25,
+      "missed": [
+       "compose-post-service->home-timeline-service",
+       "compose-post-service->media-service",
+       "compose-post-service->post-storage-service",
+       "compose-post-service->text-service",
+       "compose-post-service->unique-id-service",
+       "compose-post-service->user-service",
+       "compose-post-service->user-timeline-service",
+       "home-timeline-service->social-graph-service",
+       "media-service->jaeger",
+       "nginx-thrift->compose-post-service",
+       "nginx-thrift->jaeger",
+       "post-storage-service->post-storage-mongodb",
+       "social-graph-service->jaeger",
+       "social-graph-service->social-graph-mongodb",
+       "social-graph-service->social-graph-redis",
+       "text-service->url-shorten-service",
+       "text-service->user-mention-service",
+       "unique-id-service->jaeger",
+       "url-shorten-service->url-shorten-mongodb",
+       "user-mention-service->user-memcached",
+       "user-mention-service->user-mongodb",
+       "user-service->jaeger",
+       "user-service->user-mongodb",
+       "user-timeline-service->user-timeline-mongodb",
+       "user-timeline-service->user-timeline-redis"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "synth": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 30,
+      "P": 18,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.533,
+      "false_deny_n": 16,
+      "false_deny_port": 0.533,
+      "false_deny_port_n": 16,
+      "missed": [
+       "compose-post-service->home-timeline-service",
+       "compose-post-service->media-service",
+       "compose-post-service->post-storage-service",
+       "compose-post-service->text-service",
+       "compose-post-service->unique-id-service",
+       "compose-post-service->user-service",
+       "compose-post-service->user-timeline-service",
+       "home-timeline-service->social-graph-service",
+       "media-service->jaeger",
+       "nginx-thrift->compose-post-service",
+       "social-graph-service->jaeger",
+       "text-service->url-shorten-service",
+       "text-service->user-mention-service",
+       "unique-id-service->jaeger",
+       "user-mention-service->user-memcached",
+       "user-service->jaeger"
+      ],
+      "missed_triples": [
+       "compose-post-service->home-timeline-service:9090",
+       "compose-post-service->media-service:9090",
+       "compose-post-service->post-storage-service:9090",
+       "compose-post-service->text-service:9090",
+       "compose-post-service->unique-id-service:9090",
+       "compose-post-service->user-service:9090",
+       "compose-post-service->user-timeline-service:9090",
+       "home-timeline-service->social-graph-service:9090",
+       "media-service->jaeger:6831",
+       "nginx-thrift->compose-post-service:9090",
+       "social-graph-service->jaeger:6831",
+       "text-service->url-shorten-service:9090",
+       "text-service->user-mention-service:9090",
+       "unique-id-service->jaeger:6831",
+       "user-mention-service->user-memcached:11211",
+       "user-service->jaeger:6831"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 30,
+      "P": 18,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.533,
+      "false_deny_n": 16,
+      "false_deny_port": 0.533,
+      "false_deny_port_n": 16,
+      "missed": [
+       "compose-post-service->home-timeline-service",
+       "compose-post-service->media-service",
+       "compose-post-service->post-storage-service",
+       "compose-post-service->text-service",
+       "compose-post-service->unique-id-service",
+       "compose-post-service->user-service",
+       "compose-post-service->user-timeline-service",
+       "home-timeline-service->social-graph-service",
+       "media-service->jaeger",
+       "nginx-thrift->compose-post-service",
+       "social-graph-service->jaeger",
+       "text-service->url-shorten-service",
+       "text-service->user-mention-service",
+       "unique-id-service->jaeger",
+       "user-mention-service->user-memcached",
+       "user-service->jaeger"
+      ],
+      "missed_triples": [
+       "compose-post-service->home-timeline-service:9090",
+       "compose-post-service->media-service:9090",
+       "compose-post-service->post-storage-service:9090",
+       "compose-post-service->text-service:9090",
+       "compose-post-service->unique-id-service:9090",
+       "compose-post-service->user-service:9090",
+       "compose-post-service->user-timeline-service:9090",
+       "home-timeline-service->social-graph-service:9090",
+       "media-service->jaeger:6831",
+       "nginx-thrift->compose-post-service:9090",
+       "social-graph-service->jaeger:6831",
+       "text-service->url-shorten-service:9090",
+       "text-service->user-mention-service:9090",
+       "unique-id-service->jaeger:6831",
+       "user-mention-service->user-memcached:11211",
+       "user-service->jaeger:6831"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "synth_plus_config": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 30,
+      "P": 42,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.533,
+      "false_deny_n": 16,
+      "false_deny_port": 0.533,
+      "false_deny_port_n": 16,
+      "missed": [
+       "compose-post-service->home-timeline-service",
+       "compose-post-service->media-service",
+       "compose-post-service->post-storage-service",
+       "compose-post-service->text-service",
+       "compose-post-service->unique-id-service",
+       "compose-post-service->user-service",
+       "compose-post-service->user-timeline-service",
+       "home-timeline-service->social-graph-service",
+       "media-service->jaeger",
+       "nginx-thrift->compose-post-service",
+       "social-graph-service->jaeger",
+       "text-service->url-shorten-service",
+       "text-service->user-mention-service",
+       "unique-id-service->jaeger",
+       "user-mention-service->user-memcached",
+       "user-service->jaeger"
+      ],
+      "missed_triples": [
+       "compose-post-service->home-timeline-service:9090",
+       "compose-post-service->media-service:9090",
+       "compose-post-service->post-storage-service:9090",
+       "compose-post-service->text-service:9090",
+       "compose-post-service->unique-id-service:9090",
+       "compose-post-service->user-service:9090",
+       "compose-post-service->user-timeline-service:9090",
+       "home-timeline-service->social-graph-service:9090",
+       "media-service->jaeger:6831",
+       "nginx-thrift->compose-post-service:9090",
+       "social-graph-service->jaeger:6831",
+       "text-service->url-shorten-service:9090",
+       "text-service->user-mention-service:9090",
+       "unique-id-service->jaeger:6831",
+       "user-mention-service->user-memcached:11211",
+       "user-service->jaeger:6831"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 30,
+      "P": 42,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.533,
+      "false_deny_n": 16,
+      "false_deny_port": 0.533,
+      "false_deny_port_n": 16,
+      "missed": [
+       "compose-post-service->home-timeline-service",
+       "compose-post-service->media-service",
+       "compose-post-service->post-storage-service",
+       "compose-post-service->text-service",
+       "compose-post-service->unique-id-service",
+       "compose-post-service->user-service",
+       "compose-post-service->user-timeline-service",
+       "home-timeline-service->social-graph-service",
+       "media-service->jaeger",
+       "nginx-thrift->compose-post-service",
+       "social-graph-service->jaeger",
+       "text-service->url-shorten-service",
+       "text-service->user-mention-service",
+       "unique-id-service->jaeger",
+       "user-mention-service->user-memcached",
+       "user-service->jaeger"
+      ],
+      "missed_triples": [
+       "compose-post-service->home-timeline-service:9090",
+       "compose-post-service->media-service:9090",
+       "compose-post-service->post-storage-service:9090",
+       "compose-post-service->text-service:9090",
+       "compose-post-service->unique-id-service:9090",
+       "compose-post-service->user-service:9090",
+       "compose-post-service->user-timeline-service:9090",
+       "home-timeline-service->social-graph-service:9090",
+       "media-service->jaeger:6831",
+       "nginx-thrift->compose-post-service:9090",
+       "social-graph-service->jaeger:6831",
+       "text-service->url-shorten-service:9090",
+       "text-service->user-mention-service:9090",
+       "unique-id-service->jaeger:6831",
+       "user-mention-service->user-memcached:11211",
+       "user-service->jaeger:6831"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    }
+   }
+  },
+  "otel": {
+   "A_size": 8,
+   "L_B": {
+    "stored": {
+     "ingress_pairs": 25,
+     "ingress_triples": 25,
+     "pairs": 35
+    },
+    "uniform": {
+     "gained_ingress_pairs": [],
+     "ingress_pairs": 25,
+     "ingress_triples": 25,
+     "lost_ingress_pairs": [],
+     "pairs": 35
+    }
+   },
+   "diagnostics": {
+    "hubble_A_stored_dropped_sources": {
+     "stored_drop_src_no_role": 31895,
+     "stored_drop_src_reserved:host": 2624
+    },
+    "hubble_B_stored_dropped_sources": {
+     "stored_drop_src_no_role": 30983,
+     "stored_drop_src_reserved:host": 2639
+    },
+    "otterize_intents": {
+     "intents": 81
+    },
+    "snapshot_listen_ports": {
+     "adservice": [
+      8080
+     ],
+     "cartservice": [
+      8080
+     ],
+     "checkoutservice": [
+      8080
+     ],
+     "currencyservice": [
+      8080
+     ],
+     "emailservice": [
+      8080
+     ],
+     "flagd": [
+      8013,
+      8014,
+      8015,
+      8016
+     ],
+     "frontend": [
+      8080
+     ],
+     "imageprovider": [
+      8081
+     ],
+     "kafka": [
+      9092,
+      9093,
+      33321
+     ],
+     "paymentservice": [
+      8080
+     ],
+     "productcatalogservice": [
+      8080
+     ],
+     "quoteservice": [
+      8080
+     ],
+     "recommendationservice": [
+      8080
+     ],
+     "shippingservice": [
+      8080
+     ],
+     "valkey": [
+      6379
+     ]
+    }
+   },
+   "dir": "OTEL-20260906",
+   "isolation_rule_stored_policies": {
+    "ig_snapshot_socket": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "accountingservice",
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "flagd",
+      "frauddetectionservice",
+      "frontend",
+      "imageprovider",
+      "kafka",
+      "paymentservice",
+      "productcatalogservice",
+      "quoteservice",
+      "recommendationservice",
+      "shippingservice",
+      "valkey"
+     ]
+    },
+    "ig_trace_tcp": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "accountingservice",
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "flagd",
+      "frauddetectionservice",
+      "frontend",
+      "imageprovider",
+      "kafka",
+      "paymentservice",
+      "productcatalogservice",
+      "quoteservice",
+      "recommendationservice",
+      "shippingservice",
+      "valkey"
+     ]
+    },
+    "otterize": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "accountingservice",
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "flagd",
+      "frauddetectionservice",
+      "frontend",
+      "imageprovider",
+      "kafka",
+      "paymentservice",
+      "productcatalogservice",
+      "quoteservice",
+      "recommendationservice",
+      "shippingservice",
+      "valkey"
+     ]
+    },
+    "synth": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "accountingservice",
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "flagd",
+      "frauddetectionservice",
+      "frontend",
+      "imageprovider",
+      "kafka",
+      "paymentservice",
+      "productcatalogservice",
+      "quoteservice",
+      "recommendationservice",
+      "shippingservice",
+      "valkey"
+     ]
+    },
+    "synth_plus_config": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "accountingservice",
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "flagd",
+      "frauddetectionservice",
+      "frontend",
+      "imageprovider",
+      "kafka",
+      "paymentservice",
+      "productcatalogservice",
+      "quoteservice",
+      "recommendationservice",
+      "shippingservice",
+      "valkey"
+     ]
+    }
+   },
+   "live_entries_not_in_stored_scores": [
+    "ig_snapshot_socket",
+    "ig_trace_tcp",
+    "otterize",
+    "synth (ours, traffic A)",
+    "synth_plus_config (ours, traffic A + config)"
+   ],
+   "render_check": {
+    "ig_snapshot_socket": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 21,
+     "adapter_not_in_policy": [
+      "loadgen->frontend:8080"
+     ],
+     "equal": false,
+     "label_keys": [
+      "app.kubernetes.io/component"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 20,
+     "policy_triples": 20,
+     "targets": [
+      "accountingservice",
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "flagd",
+      "frauddetectionservice",
+      "frontend",
+      "imageprovider",
+      "kafka",
+      "paymentservice",
+      "productcatalogservice",
+      "quoteservice",
+      "recommendationservice",
+      "shippingservice",
+      "valkey"
+     ]
+    },
+    "ig_trace_tcp": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 4,
+     "adapter_not_in_policy": [
+      "loadgen->frontend:8080"
+     ],
+     "equal": false,
+     "label_keys": [
+      "app.kubernetes.io/component"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 3,
+     "policy_triples": 3,
+     "targets": [
+      "accountingservice",
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "flagd",
+      "frauddetectionservice",
+      "frontend",
+      "imageprovider",
+      "kafka",
+      "paymentservice",
+      "productcatalogservice",
+      "quoteservice",
+      "recommendationservice",
+      "shippingservice",
+      "valkey"
+     ]
+    },
+    "otterize": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 23,
+     "adapter_not_in_policy": [
+      "loadgen->frontend"
+     ],
+     "equal": false,
+     "label_keys": [
+      "app.kubernetes.io/component"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 22,
+     "policy_triples": 22,
+     "targets": [
+      "accountingservice",
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "flagd",
+      "frauddetectionservice",
+      "frontend",
+      "imageprovider",
+      "kafka",
+      "paymentservice",
+      "productcatalogservice",
+      "quoteservice",
+      "recommendationservice",
+      "shippingservice",
+      "valkey"
+     ]
+    },
+    "synth": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 20,
+     "adapter_not_in_policy": [
+      "loadgen->frontend:8080"
+     ],
+     "equal": false,
+     "label_keys": [
+      "app.kubernetes.io/component"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 19,
+     "policy_triples": 19,
+     "targets": [
+      "accountingservice",
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "flagd",
+      "frauddetectionservice",
+      "frontend",
+      "imageprovider",
+      "kafka",
+      "paymentservice",
+      "productcatalogservice",
+      "quoteservice",
+      "recommendationservice",
+      "shippingservice",
+      "valkey"
+     ]
+    },
+    "synth_plus_config": {
+     "adapter_dst_without_policy": [
+      "frontend->loadgen:8089",
+      "frontend->opentelemetry-demo-jaeger:16686"
+     ],
+     "adapter_ingress_triples": 33,
+     "adapter_not_in_policy": [
+      "frontend->loadgen:8089",
+      "frontend->opentelemetry-demo-jaeger:16686",
+      "loadgen->flagd:8013",
+      "loadgen->frontend:8080"
+     ],
+     "equal": false,
+     "label_keys": [
+      "app.kubernetes.io/component"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 29,
+     "policy_triples": 29,
+     "targets": [
+      "accountingservice",
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "flagd",
+      "frauddetectionservice",
+      "frontend",
+      "imageprovider",
+      "kafka",
+      "paymentservice",
+      "productcatalogservice",
+      "quoteservice",
+      "recommendationservice",
+      "shippingservice",
+      "valkey"
+     ]
+    }
+   },
+   "sensitivity": {
+    "snapshot_all_tcp_states": {
+     "P": 21,
+     "beyond_L_B": 0,
+     "false_deny": 0.16,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_snapshot_socket"
+    },
+    "snapshot_eph_direction": {
+     "P": 21,
+     "beyond_L_B": 0,
+     "false_deny": 0.16,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_snapshot_socket"
+    },
+    "trace_tcp_plus_close": {
+     "P": 8,
+     "beyond_L_B": 0,
+     "false_deny": 0.68,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [
+      "checkoutservice->cartservice",
+      "checkoutservice->kafka",
+      "checkoutservice->productcatalogservice",
+      "frauddetectionservice->kafka"
+     ],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_trace_tcp"
+    }
+   },
+   "title": "OpenTelemetry demo",
+   "tools": {
+    "ig_snapshot_socket": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 25,
+      "P": 21,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.16,
+      "false_deny_n": 4,
+      "false_deny_port": 0.16,
+      "false_deny_port_n": 4,
+      "missed": [
+       "checkoutservice->cartservice",
+       "checkoutservice->emailservice",
+       "checkoutservice->productcatalogservice",
+       "shippingservice->quoteservice"
+      ],
+      "missed_triples": [
+       "checkoutservice->cartservice:8080",
+       "checkoutservice->emailservice:8080",
+       "checkoutservice->productcatalogservice:8080",
+       "shippingservice->quoteservice:8080"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 25,
+      "P": 21,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.16,
+      "false_deny_n": 4,
+      "false_deny_port": 0.16,
+      "false_deny_port_n": 4,
+      "missed": [
+       "checkoutservice->cartservice",
+       "checkoutservice->emailservice",
+       "checkoutservice->productcatalogservice",
+       "shippingservice->quoteservice"
+      ],
+      "missed_triples": [
+       "checkoutservice->cartservice:8080",
+       "checkoutservice->emailservice:8080",
+       "checkoutservice->productcatalogservice:8080",
+       "shippingservice->quoteservice:8080"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "ig_trace_tcp": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 25,
+      "P": 4,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.84,
+      "false_deny_n": 21,
+      "false_deny_port": 0.84,
+      "false_deny_port_n": 21,
+      "missed": [
+       "accountingservice->kafka",
+       "adservice->flagd",
+       "cartservice->flagd",
+       "cartservice->valkey",
+       "checkoutservice->cartservice",
+       "checkoutservice->currencyservice",
+       "checkoutservice->emailservice",
+       "checkoutservice->flagd",
+       "checkoutservice->kafka",
+       "checkoutservice->paymentservice",
+       "checkoutservice->productcatalogservice",
+       "checkoutservice->shippingservice",
+       "frauddetectionservice->flagd",
+       "frauddetectionservice->kafka",
+       "frontend->adservice",
+       "frontend->cartservice",
+       "frontend->checkoutservice",
+       "frontend->recommendationservice",
+       "paymentservice->flagd",
+       "recommendationservice->flagd",
+       "shippingservice->quoteservice"
+      ],
+      "missed_triples": [
+       "accountingservice->kafka:9092",
+       "adservice->flagd:8013",
+       "cartservice->flagd:8013",
+       "cartservice->valkey:6379",
+       "checkoutservice->cartservice:8080",
+       "checkoutservice->currencyservice:8080",
+       "checkoutservice->emailservice:8080",
+       "checkoutservice->flagd:8013",
+       "checkoutservice->kafka:9092",
+       "checkoutservice->paymentservice:8080",
+       "checkoutservice->productcatalogservice:8080",
+       "checkoutservice->shippingservice:8080",
+       "frauddetectionservice->flagd:8013",
+       "frauddetectionservice->kafka:9092",
+       "frontend->adservice:8080",
+       "frontend->cartservice:8080",
+       "frontend->checkoutservice:8080",
+       "frontend->recommendationservice:8080",
+       "paymentservice->flagd:8013",
+       "recommendationservice->flagd:8013",
+       "shippingservice->quoteservice:8080"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 25,
+      "P": 4,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.84,
+      "false_deny_n": 21,
+      "false_deny_port": 0.84,
+      "false_deny_port_n": 21,
+      "missed": [
+       "accountingservice->kafka",
+       "adservice->flagd",
+       "cartservice->flagd",
+       "cartservice->valkey",
+       "checkoutservice->cartservice",
+       "checkoutservice->currencyservice",
+       "checkoutservice->emailservice",
+       "checkoutservice->flagd",
+       "checkoutservice->kafka",
+       "checkoutservice->paymentservice",
+       "checkoutservice->productcatalogservice",
+       "checkoutservice->shippingservice",
+       "frauddetectionservice->flagd",
+       "frauddetectionservice->kafka",
+       "frontend->adservice",
+       "frontend->cartservice",
+       "frontend->checkoutservice",
+       "frontend->recommendationservice",
+       "paymentservice->flagd",
+       "recommendationservice->flagd",
+       "shippingservice->quoteservice"
+      ],
+      "missed_triples": [
+       "accountingservice->kafka:9092",
+       "adservice->flagd:8013",
+       "cartservice->flagd:8013",
+       "cartservice->valkey:6379",
+       "checkoutservice->cartservice:8080",
+       "checkoutservice->currencyservice:8080",
+       "checkoutservice->emailservice:8080",
+       "checkoutservice->flagd:8013",
+       "checkoutservice->kafka:9092",
+       "checkoutservice->paymentservice:8080",
+       "checkoutservice->productcatalogservice:8080",
+       "checkoutservice->shippingservice:8080",
+       "frauddetectionservice->flagd:8013",
+       "frauddetectionservice->kafka:9092",
+       "frontend->adservice:8080",
+       "frontend->cartservice:8080",
+       "frontend->checkoutservice:8080",
+       "frontend->recommendationservice:8080",
+       "paymentservice->flagd:8013",
+       "recommendationservice->flagd:8013",
+       "shippingservice->quoteservice:8080"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "otterize": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "stored": {
+      "P": 23,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.08,
+      "false_deny_n": 2,
+      "missed": [
+       "checkoutservice->emailservice",
+       "shippingservice->quoteservice"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "P": 23,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.08,
+      "false_deny_n": 2,
+      "missed": [
+       "checkoutservice->emailservice",
+       "shippingservice->quoteservice"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "synth": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 25,
+      "P": 26,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.2,
+      "false_deny_n": 5,
+      "false_deny_port": 0.2,
+      "false_deny_port_n": 5,
+      "missed": [
+       "checkoutservice->currencyservice",
+       "checkoutservice->emailservice",
+       "checkoutservice->paymentservice",
+       "checkoutservice->shippingservice",
+       "shippingservice->quoteservice"
+      ],
+      "missed_triples": [
+       "checkoutservice->currencyservice:8080",
+       "checkoutservice->emailservice:8080",
+       "checkoutservice->paymentservice:8080",
+       "checkoutservice->shippingservice:8080",
+       "shippingservice->quoteservice:8080"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 25,
+      "P": 26,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.2,
+      "false_deny_n": 5,
+      "false_deny_port": 0.2,
+      "false_deny_port_n": 5,
+      "missed": [
+       "checkoutservice->currencyservice",
+       "checkoutservice->emailservice",
+       "checkoutservice->paymentservice",
+       "checkoutservice->shippingservice",
+       "shippingservice->quoteservice"
+      ],
+      "missed_triples": [
+       "checkoutservice->currencyservice:8080",
+       "checkoutservice->emailservice:8080",
+       "checkoutservice->paymentservice:8080",
+       "checkoutservice->shippingservice:8080",
+       "shippingservice->quoteservice:8080"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "synth_plus_config": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 25,
+      "P": 51,
+      "admitted_attacks": [],
+      "beyond_L_B": 8,
+      "beyond_L_B_pairs": [
+       "frontend->currencyservice",
+       "frontend->flagd",
+       "frontend->frontend",
+       "frontend->imageprovider",
+       "frontend->loadgen",
+       "frontend->opentelemetry-demo-jaeger",
+       "frontend->shippingservice",
+       "loadgen->flagd"
+      ],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 25,
+      "P": 51,
+      "admitted_attacks": [],
+      "beyond_L_B": 8,
+      "beyond_L_B_pairs": [
+       "frontend->currencyservice",
+       "frontend->flagd",
+       "frontend->frontend",
+       "frontend->imageprovider",
+       "frontend->loadgen",
+       "frontend->opentelemetry-demo-jaeger",
+       "frontend->shippingservice",
+       "loadgen->flagd"
+      ],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    }
+   }
+  },
+  "teastore": {
+   "A_size": 7,
+   "L_B": {
+    "stored": {
+     "ingress_pairs": 12,
+     "ingress_triples": 12,
+     "pairs": 18
+    },
+    "uniform": {
+     "gained_ingress_pairs": [],
+     "ingress_pairs": 12,
+     "ingress_triples": 12,
+     "lost_ingress_pairs": [],
+     "pairs": 18
+    }
+   },
+   "diagnostics": {
+    "hubble_A_stored_dropped_sources": {},
+    "hubble_B_stored_dropped_sources": {},
+    "otterize_intents": {
+     "intents": 51
+    },
+    "snapshot_listen_ports": {
+     "auth": [
+      8005,
+      8009,
+      8080
+     ],
+     "db": [
+      3306
+     ],
+     "image": [
+      8005,
+      8009,
+      8080
+     ],
+     "persistence": [
+      8005,
+      8009,
+      8080
+     ],
+     "recommender": [
+      8005,
+      8009,
+      8080
+     ],
+     "registry": [
+      8005,
+      8009,
+      8080
+     ],
+     "webui": [
+      8005,
+      8009,
+      8080
+     ]
+    }
+   },
+   "dir": "TEASTORE-20260906",
+   "isolation_rule_stored_policies": {
+    "ig_snapshot_socket": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "auth",
+      "db",
+      "image",
+      "persistence",
+      "recommender",
+      "registry",
+      "webui"
+     ]
+    },
+    "ig_trace_tcp": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "auth",
+      "db",
+      "image",
+      "persistence",
+      "recommender",
+      "registry",
+      "webui"
+     ]
+    },
+    "otterize": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "auth",
+      "db",
+      "image",
+      "persistence",
+      "recommender",
+      "registry",
+      "webui"
+     ]
+    },
+    "synth": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "auth",
+      "db",
+      "image",
+      "persistence",
+      "recommender",
+      "registry",
+      "webui"
+     ]
+    },
+    "synth_plus_config": {
+     "admitted": [],
+     "attack_targets_not_selected": [],
+     "over_privilege_isolation": 0.0,
+     "targets": [
+      "auth",
+      "db",
+      "image",
+      "persistence",
+      "recommender",
+      "registry",
+      "webui"
+     ]
+    }
+   },
+   "live_entries_not_in_stored_scores": [
+    "ig_trace_tcp"
+   ],
+   "render_check": {
+    "ig_snapshot_socket": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 12,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "run"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 12,
+     "policy_triples": 12,
+     "targets": [
+      "auth",
+      "db",
+      "image",
+      "persistence",
+      "recommender",
+      "registry",
+      "webui"
+     ]
+    },
+    "ig_trace_tcp": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 11,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "run"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 11,
+     "policy_triples": 11,
+     "targets": [
+      "auth",
+      "db",
+      "image",
+      "persistence",
+      "recommender",
+      "registry",
+      "webui"
+     ]
+    },
+    "otterize": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 12,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "run"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 12,
+     "policy_triples": 12,
+     "targets": [
+      "auth",
+      "db",
+      "image",
+      "persistence",
+      "recommender",
+      "registry",
+      "webui"
+     ]
+    },
+    "synth": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 12,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "run"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 12,
+     "policy_triples": 12,
+     "targets": [
+      "auth",
+      "db",
+      "image",
+      "persistence",
+      "recommender",
+      "registry",
+      "webui"
+     ]
+    },
+    "synth_plus_config": {
+     "adapter_dst_without_policy": [],
+     "adapter_ingress_triples": 12,
+     "adapter_not_in_policy": [],
+     "equal": true,
+     "label_keys": [
+      "run"
+     ],
+     "other_peer_kinds": 0,
+     "policy_not_in_adapter": [],
+     "policy_pairs": 12,
+     "policy_triples": 12,
+     "targets": [
+      "auth",
+      "db",
+      "image",
+      "persistence",
+      "recommender",
+      "registry",
+      "webui"
+     ]
+    }
+   },
+   "sensitivity": {
+    "snapshot_all_tcp_states": {
+     "P": 12,
+     "beyond_L_B": 0,
+     "false_deny": 0.0,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_snapshot_socket"
+    },
+    "snapshot_eph_direction": {
+     "P": 12,
+     "beyond_L_B": 0,
+     "false_deny": 0.0,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_snapshot_socket"
+    },
+    "trace_tcp_plus_close": {
+     "P": 12,
+     "beyond_L_B": 0,
+     "false_deny": 0.0,
+     "over_privilege": 0.0,
+     "pairs_added_over_uniform": [
+      "persistence->db"
+     ],
+     "pairs_removed_from_uniform": [],
+     "tool": "ig_trace_tcp"
+    }
+   },
+   "title": "TeaStore",
+   "tools": {
+    "ig_snapshot_socket": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 12,
+      "P": 12,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 12,
+      "P": 12,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "ig_trace_tcp": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 12,
+      "P": 11,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.083,
+      "false_deny_n": 1,
+      "false_deny_port": 0.083,
+      "false_deny_port_n": 1,
+      "missed": [
+       "persistence->db"
+      ],
+      "missed_triples": [
+       "persistence->db:3306"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 12,
+      "P": 11,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.083,
+      "false_deny_n": 1,
+      "false_deny_port": 0.083,
+      "false_deny_port_n": 1,
+      "missed": [
+       "persistence->db"
+      ],
+      "missed_triples": [
+       "persistence->db:3306"
+      ],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "otterize": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "stored": {
+      "P": 12,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "missed": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "P": 12,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "missed": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "synth": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 12,
+      "P": 18,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 12,
+      "P": 18,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    },
+    "synth_plus_config": {
+     "any_change": false,
+     "changed": {
+      "P": false,
+      "beyond_L_B": false,
+      "false_deny": false,
+      "over_privilege": false
+     },
+     "gained_pairs": [],
+     "lost_pairs": [],
+     "port_granularity_note": "computed here from the adapter triples; the stored scorer does not report port granularity",
+     "stored": {
+      "L_B_ingress_triples": 12,
+      "P": 20,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     },
+     "uniform": {
+      "L_B_ingress_triples": 12,
+      "P": 20,
+      "admitted_attacks": [],
+      "beyond_L_B": 0,
+      "beyond_L_B_pairs": [],
+      "false_deny": 0.0,
+      "false_deny_n": 0,
+      "false_deny_port": 0.0,
+      "false_deny_port_n": 0,
+      "missed": [],
+      "missed_triples": [],
+      "over_privilege": 0.0,
+      "over_privilege_n": 0
+     }
+    }
+   }
+  }
+ },
+ "artifact": "HELDOUT-UNIFORM-20261105",
+ "cells_changed": [
+  "dsb.ig_snapshot_socket"
+ ],
+ "checks": {
+  "groups": {
+   "stored_scores.bank": {
+    "fail": 0,
+    "failures": [],
+    "pass": 63
+   },
+   "stored_scores.boutique": {
+    "fail": 0,
+    "failures": [],
+    "pass": 63
+   },
+   "stored_scores.dsb": {
+    "fail": 0,
+    "failures": [],
+    "pass": 63
+   },
+   "stored_scores.otel": {
+    "fail": 0,
+    "failures": [],
+    "pass": 38
+   },
+   "stored_scores.teastore": {
+    "fail": 0,
+    "failures": [],
+    "pass": 58
+   },
+   "thesis_tab_twojourney.bank": {
+    "fail": 0,
+    "failures": [],
+    "pass": 22
+   },
+   "thesis_tab_twojourney.boutique": {
+    "fail": 0,
+    "failures": [],
+    "pass": 22
+   },
+   "thesis_tab_twojourney.dsb": {
+    "fail": 0,
+    "failures": [],
+    "pass": 22
+   },
+   "thesis_tab_twojourney.otel": {
+    "fail": 0,
+    "failures": [],
+    "pass": 22
+   },
+   "thesis_tab_twojourney.teastore": {
+    "fail": 0,
+    "failures": [],
+    "pass": 22
+   }
+  },
+  "stored_scores_reproduction": {
+   "fail": 0,
+   "pass": 285
+  },
+  "thesis_tab_twojourney": {
+   "fail": 0,
+   "pass": 110
+  },
+  "total": {
+   "fail": 0,
+   "pass": 395
+  }
+ },
+ "facts": {
+  "bank_trace_tcp_entry_port": {
+   "L_B_ports": [
+    8080
+   ],
+   "accept_events_by_src_port": {
+    "8080": 1288
+   },
+   "connect_events_by_dst_port": {
+    "80": 1288
+   },
+   "live_snapshot_hubble_drops": {
+    "by_edge": {
+     "frontend->userservice:TCP/8080 POLICY_DENIED INGRESS": 40
+    },
+    "source_labels": {
+     "frontend k8s:app=frontend": 40
+    },
+    "total": 40
+   },
+   "live_trace_tcp_hubble_drops": {
+    "by_edge": {
+     "loadgenerator-b->frontend:TCP/8080 POLICY_DENIED INGRESS": 210,
+     "reserved:world->frontend:TCP/8080 POLICY_DENIED INGRESS": 50
+    },
+    "source_labels": {
+     "loadgenerator-b k8s:app=loadgenerator": 210
+    },
+    "total": 260
+   },
+   "live_trace_tcp_result_drops_by_edge": {
+    "?->frontend:8080": 50,
+    "loadgenerator-b->frontend:8080": 210
+   },
+   "live_trace_tcp_result_locust_fails": "5(100.00%)",
+   "loadgenerator_b_template_labels": {
+    "app": "loadgenerator",
+    "journey": "B"
+   },
+   "missed_absent_from_capture_A": [
+    "frontend->ledgerwriter"
+   ],
+   "missed_seen_only_on_preexisting_connections": [
+    "contacts->accounts-db",
+    "ledgerwriter->balancereader",
+    "userservice->accounts-db"
+   ],
+   "pair": "loadgenerator->frontend",
+   "rendered_snapshot_policy_ports": [
+    80,
+    8080
+   ],
+   "rendered_trace_tcp_policy_ports": [
+    80
+   ],
+   "rendered_trace_tcp_policy_targets": [
+    "accounts-db",
+    "balancereader",
+    "contacts",
+    "frontend",
+    "ledger-db",
+    "ledgerwriter",
+    "transactionhistory",
+    "userservice"
+   ],
+   "roles_without_trace_tcp_policy": [
+    "loadgenerator"
+   ],
+   "stored_adapter_ports": [
+    80
+   ],
+   "trace_tcp_drop_destinations": [
+    "frontend"
+   ],
+   "trace_tcp_drops_on_missed_pairs": 0,
+   "trace_tcp_missed_pairs": [
+    {
+     "destination_selected_by_trace_tcp_policy": true,
+     "events": {
+      "snapshot_TCP_state1": 4
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "contacts->accounts-db"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": true,
+     "events": {},
+     "in_hubble_A_stored_adapter": false,
+     "pair": "frontend->ledgerwriter"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": true,
+     "events": {
+      "trace_tcp_close": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "ledgerwriter->balancereader"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": true,
+     "events": {
+      "snapshot_TCP_state1": 4
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "userservice->accounts-db"
+    }
+   ],
+   "uniform_adapter_ports": [
+    80,
+    8080
+   ],
+   "uniform_ports_equal_rendered_snapshot_ports": true
+  },
+  "boutique_trace_tcp_entry_port": {
+   "L_B_ports": [
+    8080
+   ],
+   "accept_events_by_src_port": {
+    "8080": 11
+   },
+   "connect_events_by_dst_port": {
+    "80": 11
+   },
+   "live_snapshot_hubble_drops": {
+    "by_edge": {
+     "reserved:world->frontend:TCP/8080 POLICY_DENIED INGRESS": 32
+    },
+    "source_labels": {},
+    "total": 32
+   },
+   "live_trace_tcp_hubble_drops": {
+    "by_edge": {
+     "loadgenerator-b->frontend:TCP/8080 POLICY_DENIED INGRESS": 600
+    },
+    "source_labels": {
+     "loadgenerator-b k8s:app=loadgenerator": 600
+    },
+    "total": 600
+   },
+   "live_trace_tcp_result_drops_by_edge": {
+    "loadgenerator-b->frontend:8080": 600
+   },
+   "live_trace_tcp_result_locust_fails": "21(100.00%)",
+   "loadgenerator_b_template_labels": {
+    "app": "loadgenerator",
+    "journey": "B"
+   },
+   "missed_absent_from_capture_A": [],
+   "missed_seen_only_on_preexisting_connections": [
+    "cartservice->redis-cart",
+    "checkoutservice->cartservice",
+    "checkoutservice->currencyservice",
+    "checkoutservice->emailservice",
+    "checkoutservice->paymentservice",
+    "checkoutservice->productcatalogservice",
+    "checkoutservice->shippingservice",
+    "frontend->adservice",
+    "frontend->cartservice",
+    "frontend->checkoutservice",
+    "frontend->currencyservice",
+    "frontend->productcatalogservice",
+    "frontend->recommendationservice",
+    "frontend->shippingservice",
+    "recommendationservice->productcatalogservice"
+   ],
+   "pair": "loadgenerator->frontend",
+   "rendered_snapshot_policy_ports": [
+    80,
+    8080
+   ],
+   "rendered_trace_tcp_policy_ports": [
+    80
+   ],
+   "rendered_trace_tcp_policy_targets": [
+    "frontend"
+   ],
+   "roles_without_trace_tcp_policy": [
+    "adservice",
+    "cartservice",
+    "checkoutservice",
+    "currencyservice",
+    "emailservice",
+    "loadgenerator",
+    "paymentservice",
+    "productcatalogservice",
+    "recommendationservice",
+    "redis-cart",
+    "shippingservice"
+   ],
+   "stored_adapter_ports": [
+    80
+   ],
+   "trace_tcp_drop_destinations": [
+    "frontend"
+   ],
+   "trace_tcp_drops_on_missed_pairs": 0,
+   "trace_tcp_missed_pairs": [
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 4
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "cartservice->redis-cart"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "checkoutservice->cartservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "checkoutservice->currencyservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "checkoutservice->emailservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "checkoutservice->paymentservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "checkoutservice->productcatalogservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "checkoutservice->shippingservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "frontend->adservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "frontend->cartservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "frontend->checkoutservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "frontend->currencyservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "frontend->productcatalogservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "frontend->recommendationservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "frontend->shippingservice"
+    },
+    {
+     "destination_selected_by_trace_tcp_policy": false,
+     "events": {
+      "snapshot_TCP_state1": 2
+     },
+     "in_hubble_A_stored_adapter": true,
+     "pair": "recommendationservice->productcatalogservice"
+    }
+   ],
+   "uniform_adapter_ports": [
+    80,
+    8080
+   ],
+   "uniform_ports_equal_rendered_snapshot_ports": true
+  },
+  "dsb_snapshot_udp": {
+   "L_B_edges_uniform_snapshot_admits_and_synth_does_not": [
+    "compose-post-service->home-timeline-service",
+    "compose-post-service->media-service",
+    "compose-post-service->post-storage-service",
+    "compose-post-service->text-service",
+    "compose-post-service->unique-id-service",
+    "compose-post-service->user-service",
+    "compose-post-service->user-timeline-service",
+    "home-timeline-service->social-graph-service",
+    "media-service->jaeger",
+    "social-graph-service->jaeger",
+    "text-service->url-shorten-service",
+    "text-service->user-mention-service",
+    "unique-id-service->jaeger",
+    "user-service->jaeger"
+   ],
+   "stored": {
+    "P": 25,
+    "beyond_L_B": 3,
+    "false_deny": 0.267,
+    "missed": [
+     "media-service->jaeger",
+     "nginx-thrift->compose-post-service",
+     "nginx-thrift->jaeger",
+     "post-storage-service->post-storage-memcached",
+     "social-graph-service->jaeger",
+     "unique-id-service->jaeger",
+     "user-mention-service->user-memcached",
+     "user-service->jaeger"
+    ]
+   },
+   "tcp_sockets_not_established_or_listen": {
+    "state 6": 57
+   },
+   "udp_sockets_by_edge": {
+    "compose-post-service->jaeger:6831": 1,
+    "home-timeline-service->jaeger:6831": 1,
+    "media-service->jaeger:6831": 1,
+    "nginx-thrift->jaeger:6831": 4,
+    "nginx-thrift->kube-dns:53": 4,
+    "post-storage-service->jaeger:6831": 1,
+    "social-graph-service->jaeger:6831": 1,
+    "text-service->jaeger:6831": 1,
+    "unique-id-service->jaeger:6831": 1,
+    "url-shorten-service->jaeger:6831": 1,
+    "user-mention-service->jaeger:6831": 1,
+    "user-service->jaeger:6831": 1,
+    "user-timeline-service->jaeger:6831": 1
+   },
+   "udp_sockets_with_remote_port": 19,
+   "udp_to_jaeger_6831_services": [
+    "compose-post-service",
+    "home-timeline-service",
+    "media-service",
+    "nginx-thrift",
+    "post-storage-service",
+    "social-graph-service",
+    "text-service",
+    "unique-id-service",
+    "url-shorten-service",
+    "user-mention-service",
+    "user-service",
+    "user-timeline-service"
+   ],
+   "udp_to_jaeger_6831_sockets": 15,
+   "udp_to_kube_dns_53_sockets": 4,
+   "udp_to_kube_dns_53_sources": [
+    "nginx-thrift"
+   ],
+   "uniform": {
+    "P": 38,
+    "beyond_L_B": 10,
+    "beyond_L_B_pairs": [
+     "compose-post-service->jaeger",
+     "home-timeline-service->jaeger",
+     "post-storage-service->jaeger",
+     "social-graph-service->user-service",
+     "text-service->jaeger",
+     "url-shorten-service->jaeger",
+     "user-mention-service->jaeger",
+     "user-service->social-graph-service",
+     "user-service->user-memcached",
+     "user-timeline-service->jaeger"
+    ],
+    "false_deny": 0.1,
+    "missed": [
+     "nginx-thrift->compose-post-service",
+     "post-storage-service->post-storage-memcached",
+     "user-mention-service->user-memcached"
+    ]
+   },
+   "uniform_gains": [
+    {
+     "in_A": false,
+     "in_L_B_ingress": false,
+     "pair": "compose-post-service->jaeger",
+     "relaxations": [
+      "udp"
+     ]
+    },
+    {
+     "in_A": false,
+     "in_L_B_ingress": false,
+     "pair": "home-timeline-service->jaeger",
+     "relaxations": [
+      "udp"
+     ]
+    },
+    {
+     "in_A": false,
+     "in_L_B_ingress": true,
+     "pair": "media-service->jaeger",
+     "relaxations": [
+      "udp"
+     ]
+    },
+    {
+     "in_A": false,
+     "in_L_B_ingress": true,
+     "pair": "nginx-thrift->jaeger",
+     "relaxations": [
+      "udp"
+     ]
+    },
+    {
+     "in_A": false,
+     "in_L_B_ingress": false,
+     "pair": "nginx-thrift->kube-dns",
+     "relaxations": [
+      "udp"
+     ]
+    },
+    {
+     "in_A": false,
+     "in_L_B_ingress": false,
+     "pair": "post-storage-service->jaeger",
+     "relaxations": [
+      "udp"
+     ]
+    },
+    {
+     "in_A": false,
+     "in_L_B_ingress": true,
+     "pair": "social-graph-service->jaeger",
+     "relaxations": [
+      "udp"
+     ]
+    },
+    {
+     "in_A": false,
+     "in_L_B_ingress": false,
+     "pair": "text-service->jaeger",
+     "relaxations": [
+      "udp"
+     ]
+    },
+    {
+     "in_A": false,
+     "in_L_B_ingress": true,
+     "pair": "unique-id-service->jaeger",
+     "relaxations": [
+      "udp"
+     ]
+    },
+    {
+     "in_A": false,
+     "in_L_B_ingress": false,
+     "pair": "url-shorten-service->jaeger",
+     "relaxations": [
+      "udp"
+     ]
+    },
+    {
+     "in_A": false,
+     "in_L_B_ingress": false,
+     "pair": "user-mention-service->jaeger",
+     "relaxations": [
+      "udp"
+     ]
+    },
+    {
+     "in_A": false,
+     "in_L_B_ingress": true,
+     "pair": "user-service->jaeger",
+     "relaxations": [
+      "udp"
+     ]
+    },
+    {
+     "in_A": false,
+     "in_L_B_ingress": false,
+     "pair": "user-timeline-service->jaeger",
+     "relaxations": [
+      "udp"
+     ]
+    }
+   ]
+  },
+  "otel_loadgen_and_fused": {
+   "fused_beyond_L_B": {
+    "all_in_declared_set": true,
+    "count": 8,
+    "declared_for_source_role_itself": [
+     "frontend->currencyservice",
+     "frontend->flagd",
+     "frontend->shippingservice"
+    ],
+    "pairs": [
+     {
+      "admitted_by_rendered_fused_policy": true,
+      "declared_by": [
+       {
+        "dst": "default/opentelemetry-demo-currencyservice",
+        "port": 8080,
+        "src": "default/opentelemetry-demo-frontend",
+        "src_has_pod_in_A_or_B": true,
+        "src_name_is_role": true
+       }
+      ],
+      "declared_for_source_role_itself": true,
+      "declared_only_through_prefix_match": false,
+      "in_declared_set": true,
+      "in_hubble_A": false,
+      "pair": "frontend->currencyservice"
+     },
+     {
+      "admitted_by_rendered_fused_policy": true,
+      "declared_by": [
+       {
+        "dst": "default/opentelemetry-demo-flagd",
+        "port": 8013,
+        "src": "default/opentelemetry-demo-frontend",
+        "src_has_pod_in_A_or_B": true,
+        "src_name_is_role": true
+       },
+       {
+        "dst": "default/opentelemetry-demo-flagd",
+        "port": 8013,
+        "src": "default/opentelemetry-demo-frontendproxy",
+        "src_has_pod_in_A_or_B": false,
+        "src_name_is_role": false
+       }
+      ],
+      "declared_for_source_role_itself": true,
+      "declared_only_through_prefix_match": false,
+      "in_declared_set": true,
+      "in_hubble_A": false,
+      "pair": "frontend->flagd"
+     },
+     {
+      "admitted_by_rendered_fused_policy": true,
+      "declared_by": [
+       {
+        "dst": "default/opentelemetry-demo-frontend",
+        "port": 8080,
+        "src": "default/opentelemetry-demo-frontendproxy",
+        "src_has_pod_in_A_or_B": false,
+        "src_name_is_role": false
+       }
+      ],
+      "declared_for_source_role_itself": false,
+      "declared_only_through_prefix_match": true,
+      "in_declared_set": true,
+      "in_hubble_A": false,
+      "pair": "frontend->frontend"
+     },
+     {
+      "admitted_by_rendered_fused_policy": true,
+      "declared_by": [
+       {
+        "dst": "default/opentelemetry-demo-imageprovider",
+        "port": 8081,
+        "src": "default/opentelemetry-demo-frontendproxy",
+        "src_has_pod_in_A_or_B": false,
+        "src_name_is_role": false
+       }
+      ],
+      "declared_for_source_role_itself": false,
+      "declared_only_through_prefix_match": true,
+      "in_declared_set": true,
+      "in_hubble_A": false,
+      "pair": "frontend->imageprovider"
+     },
+     {
+      "admitted_by_rendered_fused_policy": false,
+      "declared_by": [
+       {
+        "dst": "default/opentelemetry-demo-loadgenerator",
+        "port": 8089,
+        "src": "default/opentelemetry-demo-frontendproxy",
+        "src_has_pod_in_A_or_B": false,
+        "src_name_is_role": false
+       }
+      ],
+      "declared_for_source_role_itself": false,
+      "declared_only_through_prefix_match": true,
+      "in_declared_set": true,
+      "in_hubble_A": false,
+      "pair": "frontend->loadgen"
+     },
+     {
+      "admitted_by_rendered_fused_policy": false,
+      "declared_by": [
+       {
+        "dst": "default/opentelemetry-demo-jaeger",
+        "port": 16686,
+        "src": "default/opentelemetry-demo-frontendproxy",
+        "src_has_pod_in_A_or_B": false,
+        "src_name_is_role": false
+       }
+      ],
+      "declared_for_source_role_itself": false,
+      "declared_only_through_prefix_match": true,
+      "in_declared_set": true,
+      "in_hubble_A": false,
+      "pair": "frontend->opentelemetry-demo-jaeger"
+     },
+     {
+      "admitted_by_rendered_fused_policy": true,
+      "declared_by": [
+       {
+        "dst": "default/opentelemetry-demo-shippingservice",
+        "port": 8080,
+        "src": "default/opentelemetry-demo-frontend",
+        "src_has_pod_in_A_or_B": true,
+        "src_name_is_role": true
+       }
+      ],
+      "declared_for_source_role_itself": true,
+      "declared_only_through_prefix_match": false,
+      "in_declared_set": true,
+      "in_hubble_A": false,
+      "pair": "frontend->shippingservice"
+     },
+     {
+      "admitted_by_rendered_fused_policy": false,
+      "declared_by": [
+       {
+        "dst": "default/opentelemetry-demo-flagd",
+        "port": 8013,
+        "src": "default/opentelemetry-demo-loadgenerator",
+        "src_has_pod_in_A_or_B": false,
+        "src_name_is_role": false
+       }
+      ],
+      "declared_for_source_role_itself": false,
+      "declared_only_through_prefix_match": true,
+      "in_declared_set": true,
+      "in_hubble_A": false,
+      "pair": "loadgen->flagd"
+     }
+    ],
+    "prefix_match_only": [
+     "frontend->frontend",
+     "frontend->imageprovider",
+     "frontend->loadgen",
+     "frontend->opentelemetry-demo-jaeger",
+     "loadgen->flagd"
+    ]
+   },
+   "live_loadgen_b_drops": {
+    "ig_snapshot_socket": {
+     "hubble_drops_loadgen_b": {
+      "loadgen-b->opentelemetry-demo-frontend:TCP/8080 POLICY_DENIED INGRESS": 336
+     },
+     "hubble_drops_loadgen_b_source_labels": {
+      "loadgen-b k8s:app.kubernetes.io/component=loadgen": 336
+     },
+     "result_loadgen_b_frontend_8080": 336
+    },
+    "ig_trace_tcp": {
+     "hubble_drops_loadgen_b": {
+      "loadgen-b->opentelemetry-demo-frontend:TCP/8080 POLICY_DENIED INGRESS": 336
+     },
+     "hubble_drops_loadgen_b_source_labels": {
+      "loadgen-b k8s:app.kubernetes.io/component=loadgen": 336
+     },
+     "result_loadgen_b_frontend_8080": 336
+    },
+    "otterize": {
+     "hubble_drops_loadgen_b": {
+      "loadgen-b->opentelemetry-demo-frontend:TCP/8080 POLICY_DENIED INGRESS": 336
+     },
+     "hubble_drops_loadgen_b_source_labels": {
+      "loadgen-b k8s:app.kubernetes.io/component=loadgen": 336
+     },
+     "result_loadgen_b_frontend_8080": 336
+    },
+    "synth": {
+     "hubble_drops_loadgen_b": {
+      "loadgen-b->opentelemetry-demo-frontend:TCP/8080 POLICY_DENIED INGRESS": 336
+     },
+     "hubble_drops_loadgen_b_source_labels": {
+      "loadgen-b k8s:app.kubernetes.io/component=loadgen": 336
+     },
+     "result_loadgen_b_frontend_8080": 336
+    },
+    "synth_plus_config": {
+     "hubble_drops_loadgen_b": {
+      "loadgen-b->opentelemetry-demo-frontend:TCP/8080 POLICY_DENIED INGRESS": 336
+     },
+     "hubble_drops_loadgen_b_source_labels": {
+      "loadgen-b k8s:app.kubernetes.io/component=loadgen": 336
+     },
+     "result_loadgen_b_frontend_8080": 336
+    }
+   },
+   "load_generator_pods_A": [
+    "loadgen-a-85bf4799f8-l2lrv"
+   ],
+   "load_generator_pods_B": [
+    "loadgen-b-85bb867664-kfnrh"
+   ],
+   "loadgen_a_b_share_component_label": true,
+   "loadgen_a_template_labels": {
+    "app.kubernetes.io/component": "loadgen",
+    "journey": "A"
+   },
+   "loadgen_b_template_labels": {
+    "app.kubernetes.io/component": "loadgen",
+    "journey": "B"
+   },
+   "no_policy_has_loadgen_selector": true,
+   "policies": {
+    "ig_snapshot_socket": {
+     "label_keys": [
+      "app.kubernetes.io/component"
+     ],
+     "policy_has_loadgen_selector": false,
+     "selectors_mapping_to_loadgen": [],
+     "stored_adapter_ingress_edges_from_loadgen": [
+      "loadgen->frontend:8080"
+     ]
+    },
+    "ig_trace_tcp": {
+     "label_keys": [
+      "app.kubernetes.io/component"
+     ],
+     "policy_has_loadgen_selector": false,
+     "selectors_mapping_to_loadgen": [],
+     "stored_adapter_ingress_edges_from_loadgen": [
+      "loadgen->frontend:8080"
+     ]
+    },
+    "otterize": {
+     "label_keys": [
+      "app.kubernetes.io/component"
+     ],
+     "policy_has_loadgen_selector": false,
+     "selectors_mapping_to_loadgen": [],
+     "stored_adapter_ingress_edges_from_loadgen": [
+      "loadgen->frontend"
+     ]
+    },
+    "synth": {
+     "label_keys": [
+      "app.kubernetes.io/component"
+     ],
+     "policy_has_loadgen_selector": false,
+     "selectors_mapping_to_loadgen": [],
+     "stored_adapter_ingress_edges_from_loadgen": [
+      "loadgen->frontend:8080"
+     ]
+    },
+    "synth_plus_config": {
+     "label_keys": [
+      "app.kubernetes.io/component"
+     ],
+     "policy_has_loadgen_selector": false,
+     "selectors_mapping_to_loadgen": [],
+     "stored_adapter_ingress_edges_from_loadgen": [
+      "loadgen->flagd:8013",
+      "loadgen->frontend:8080"
+     ]
+    }
+   }
+  },
+  "teastore_trace_tcp_db_pool": {
+   "close_events": [
+    {
+     "comm": "mysqld",
+     "dst_port": 34418,
+     "peer_role": "persistence",
+     "pod": "teastore-db-5c9f5b96d7-75phf",
+     "src_port": 3306,
+     "timestamp": "2026-09-06T15:53:55.959411313Z"
+    },
+    {
+     "comm": "mysqld",
+     "dst_port": 34394,
+     "peer_role": "persistence",
+     "pod": "teastore-db-5c9f5b96d7-75phf",
+     "src_port": 3306,
+     "timestamp": "2026-09-06T15:53:56.083557458Z"
+    }
+   ],
+   "in_stored_trace_tcp_policy": false,
+   "in_uniform_trace_tcp": false,
+   "live_trace_tcp_result_drops_by_edge": {
+    "?->teastore-webui:None": 2,
+    "teastore-persistence->teastore-db:3306": 204,
+    "teastore-webui->?:8080": 21
+   },
+   "pair": "persistence->db",
+   "rendered_trace_tcp_policy_db_sources": [],
+   "rendered_trace_tcp_policy_targets_db": true,
+   "snapshot_sockets_between_persistence_and_db": {
+    "TCP state 1 on db": 2,
+    "TCP state 1 on persistence": 2
+   },
+   "trace_tcp_events_between_persistence_and_db": {
+    "close on db": 2
+   }
+  }
+ },
+ "inputs": {
+  "bad": 0,
+  "bytes": 3387803207,
+  "files": 163,
+  "ok": 163
+ },
+ "rule_reference": "RESCORE-20261104/rescore_platform.py",
+ "table": [
+  {
+   "app": "boutique",
+   "changed": false,
+   "stored": {
+    "P": 18,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0,
+    "over_privilege_isolation": 0.0
+   },
+   "tool": "synth",
+   "uniform": {
+    "P": 18,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0,
+    "over_privilege_isolation": 0.0
+   }
+  },
+  {
+   "app": "boutique",
+   "changed": false,
+   "stored": {
+    "P": 28,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0,
+    "over_privilege_isolation": 0.0
+   },
+   "tool": "synth_plus_config",
+   "uniform": {
+    "P": 28,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0,
+    "over_privilege_isolation": 0.0
+   }
+  },
+  {
+   "app": "boutique",
+   "changed": false,
+   "stored": {
+    "P": 16,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0,
+    "over_privilege_isolation": 0.0
+   },
+   "tool": "otterize",
+   "uniform": {
+    "P": 16,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0,
+    "over_privilege_isolation": 0.0
+   }
+  },
+  {
+   "app": "boutique",
+   "changed": false,
+   "stored": {
+    "P": 1,
+    "beyond_L_B": 0,
+    "false_deny": 0.938,
+    "over_privilege": 0.0,
+    "over_privilege_isolation": 1.0
+   },
+   "tool": "ig_trace_tcp",
+   "uniform": {
+    "P": 1,
+    "beyond_L_B": 0,
+    "false_deny": 0.938,
+    "over_privilege": 0.0,
+    "over_privilege_isolation": 1.0
+   }
+  },
+  {
+   "app": "boutique",
+   "changed": false,
+   "stored": {
+    "P": 16,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0,
+    "over_privilege_isolation": 0.0
+   },
+   "tool": "ig_snapshot_socket",
+   "uniform": {
+    "P": 16,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0,
+    "over_privilege_isolation": 0.0
+   }
+  },
+  {
+   "app": "dsb",
+   "changed": false,
+   "stored": {
+    "P": 18,
+    "beyond_L_B": 0,
+    "false_deny": 0.533,
+    "over_privilege": 0.0
+   },
+   "tool": "synth",
+   "uniform": {
+    "P": 18,
+    "beyond_L_B": 0,
+    "false_deny": 0.533,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "dsb",
+   "changed": false,
+   "stored": {
+    "P": 42,
+    "beyond_L_B": 0,
+    "false_deny": 0.533,
+    "over_privilege": 0.0
+   },
+   "tool": "synth_plus_config",
+   "uniform": {
+    "P": 42,
+    "beyond_L_B": 0,
+    "false_deny": 0.533,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "dsb",
+   "changed": false,
+   "stored": {
+    "P": 5,
+    "beyond_L_B": 0,
+    "false_deny": 0.833,
+    "over_privilege": 0.0
+   },
+   "tool": "otterize",
+   "uniform": {
+    "P": 5,
+    "beyond_L_B": 0,
+    "false_deny": 0.833,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "dsb",
+   "changed": false,
+   "stored": {
+    "P": 5,
+    "beyond_L_B": 0,
+    "false_deny": 0.833,
+    "over_privilege": 0.0
+   },
+   "tool": "ig_trace_tcp",
+   "uniform": {
+    "P": 5,
+    "beyond_L_B": 0,
+    "false_deny": 0.833,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "dsb",
+   "changed": true,
+   "stored": {
+    "P": 25,
+    "beyond_L_B": 3,
+    "false_deny": 0.267,
+    "over_privilege": 0.0
+   },
+   "tool": "ig_snapshot_socket",
+   "uniform": {
+    "P": 38,
+    "beyond_L_B": 10,
+    "false_deny": 0.1,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "bank",
+   "changed": false,
+   "stored": {
+    "P": 16,
+    "beyond_L_B": 0,
+    "false_deny": 0.083,
+    "over_privilege": 0.0
+   },
+   "tool": "synth",
+   "uniform": {
+    "P": 16,
+    "beyond_L_B": 0,
+    "false_deny": 0.083,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "bank",
+   "changed": false,
+   "stored": {
+    "P": 24,
+    "beyond_L_B": 3,
+    "false_deny": 0.0,
+    "over_privilege": 0.0
+   },
+   "tool": "synth_plus_config",
+   "uniform": {
+    "P": 24,
+    "beyond_L_B": 3,
+    "false_deny": 0.0,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "bank",
+   "changed": false,
+   "stored": {
+    "P": 11,
+    "beyond_L_B": 0,
+    "false_deny": 0.083,
+    "over_privilege": 0.0
+   },
+   "tool": "otterize",
+   "uniform": {
+    "P": 11,
+    "beyond_L_B": 0,
+    "false_deny": 0.083,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "bank",
+   "changed": false,
+   "stored": {
+    "P": 8,
+    "beyond_L_B": 0,
+    "false_deny": 0.333,
+    "over_privilege": 0.0
+   },
+   "tool": "ig_trace_tcp",
+   "uniform": {
+    "P": 8,
+    "beyond_L_B": 0,
+    "false_deny": 0.333,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "bank",
+   "changed": false,
+   "stored": {
+    "P": 6,
+    "beyond_L_B": 0,
+    "false_deny": 0.5,
+    "over_privilege": 0.0
+   },
+   "tool": "ig_snapshot_socket",
+   "uniform": {
+    "P": 6,
+    "beyond_L_B": 0,
+    "false_deny": 0.5,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "otel",
+   "changed": false,
+   "stored": {
+    "P": 26,
+    "beyond_L_B": 0,
+    "false_deny": 0.2,
+    "over_privilege": 0.0
+   },
+   "tool": "synth",
+   "uniform": {
+    "P": 26,
+    "beyond_L_B": 0,
+    "false_deny": 0.2,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "otel",
+   "changed": false,
+   "stored": {
+    "P": 51,
+    "beyond_L_B": 8,
+    "false_deny": 0.0,
+    "over_privilege": 0.0
+   },
+   "tool": "synth_plus_config",
+   "uniform": {
+    "P": 51,
+    "beyond_L_B": 8,
+    "false_deny": 0.0,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "otel",
+   "changed": false,
+   "stored": {
+    "P": 23,
+    "beyond_L_B": 0,
+    "false_deny": 0.08,
+    "over_privilege": 0.0
+   },
+   "tool": "otterize",
+   "uniform": {
+    "P": 23,
+    "beyond_L_B": 0,
+    "false_deny": 0.08,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "otel",
+   "changed": false,
+   "stored": {
+    "P": 4,
+    "beyond_L_B": 0,
+    "false_deny": 0.84,
+    "over_privilege": 0.0
+   },
+   "tool": "ig_trace_tcp",
+   "uniform": {
+    "P": 4,
+    "beyond_L_B": 0,
+    "false_deny": 0.84,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "otel",
+   "changed": false,
+   "stored": {
+    "P": 21,
+    "beyond_L_B": 0,
+    "false_deny": 0.16,
+    "over_privilege": 0.0
+   },
+   "tool": "ig_snapshot_socket",
+   "uniform": {
+    "P": 21,
+    "beyond_L_B": 0,
+    "false_deny": 0.16,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "teastore",
+   "changed": false,
+   "stored": {
+    "P": 18,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0
+   },
+   "tool": "synth",
+   "uniform": {
+    "P": 18,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "teastore",
+   "changed": false,
+   "stored": {
+    "P": 20,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0
+   },
+   "tool": "synth_plus_config",
+   "uniform": {
+    "P": 20,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "teastore",
+   "changed": false,
+   "stored": {
+    "P": 12,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0
+   },
+   "tool": "otterize",
+   "uniform": {
+    "P": 12,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "teastore",
+   "changed": false,
+   "stored": {
+    "P": 11,
+    "beyond_L_B": 0,
+    "false_deny": 0.083,
+    "over_privilege": 0.0
+   },
+   "tool": "ig_trace_tcp",
+   "uniform": {
+    "P": 11,
+    "beyond_L_B": 0,
+    "false_deny": 0.083,
+    "over_privilege": 0.0
+   }
+  },
+  {
+   "app": "teastore",
+   "changed": false,
+   "stored": {
+    "P": 12,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0
+   },
+   "tool": "ig_snapshot_socket",
+   "uniform": {
+    "P": 12,
+    "beyond_L_B": 0,
+    "false_deny": 0.0,
+    "over_privilege": 0.0
+   }
+  }
+ ]
+}

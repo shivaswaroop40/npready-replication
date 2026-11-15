@@ -1,0 +1,49 @@
+PB_TP_BEGIN epoch=1790936805 app=bank n=64 c=4 flags=[] url=http://frontend:80/home
+
+Summary:
+  Total:	0.6846 secs
+  Slowest:	0.0455 secs
+  Fastest:	0.0354 secs
+  Average:	0.0424 secs
+  Requests/sec:	93.4867
+  
+  Total data:	704 bytes
+  Size/request:	11 bytes
+
+Response time histogram:
+  0.035 [1]	|■
+  0.036 [3]	|■■■■
+  0.037 [0]	|
+  0.038 [0]	|
+  0.039 [0]	|
+  0.040 [0]	|
+  0.041 [7]	|■■■■■■■■■■
+  0.042 [15]	|■■■■■■■■■■■■■■■■■■■■■■
+  0.043 [27]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.045 [6]	|■■■■■■■■■
+  0.046 [5]	|■■■■■■■
+
+
+Latency distribution:
+  10% in 0.0412 secs
+  25% in 0.0420 secs
+  50% in 0.0427 secs
+  75% in 0.0433 secs
+  90% in 0.0442 secs
+  95% in 0.0453 secs
+  0% in 0.0000 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0010 secs, 0.0354 secs, 0.0455 secs
+  DNS-lookup:	0.0006 secs, 0.0000 secs, 0.0130 secs
+  req write:	0.0003 secs, 0.0000 secs, 0.0045 secs
+  resp wait:	0.0009 secs, 0.0002 secs, 0.0039 secs
+  resp read:	0.0394 secs, 0.0003 secs, 0.0447 secs
+
+Status code distribution:
+  [200]	64 responses
+
+
+
+PB_TP_RC=0 epoch=1790936806
+=== PB_END ===

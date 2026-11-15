@@ -1,0 +1,8 @@
+[2026-11-09T09:33:10Z] namespace teastore
+namespace/teastore created
+[2026-11-09T09:33:10Z] apply TEASTORE-20260906/manifests/teastore-ribbon.yaml
+[2026-11-09T09:33:10Z] waiting for pods
+[2026-11-09T09:33:21Z] not ready after wait: 0
+[2026-11-09T09:33:21Z] settle 120 s (no readiness probes in some manifests)
+[2026-11-09T09:35:21Z] probe
+[2026-11-09T09:40:25Z] delete namespace

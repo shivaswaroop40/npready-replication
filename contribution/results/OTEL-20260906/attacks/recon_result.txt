@@ -1,0 +1,10 @@
+=== npready probe family=06-internal-recon technique=T1046 expect=blocked ===
+RESULT 06-internal-recon opentelemetry-demo-valkey.otel.svc:6379 OPEN (reachable)
+RESULT 06-internal-recon opentelemetry-demo-kafka.otel.svc:9092 OPEN (reachable)
+RESULT 06-internal-recon opentelemetry-demo-paymentservice.otel.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon opentelemetry-demo-checkoutservice.otel.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon opentelemetry-demo-cartservice.otel.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon opentelemetry-demo-shippingservice.otel.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon opentelemetry-demo-emailservice.otel.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon opentelemetry-demo-frontend.otel.svc:8080 OPEN (reachable)
+=== npready probe done family=06-internal-recon any_open=0 ===

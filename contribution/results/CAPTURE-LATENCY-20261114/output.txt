@@ -1,0 +1,10 @@
+bank-b1      n=10 baseline    26.7 ±    0.5 ms | hubble    +7.9 ±   2.1 | otterize    +0.7 ±   0.9 | ig_tcp    +3.2 ±   1.1 | ig_snap    +0.5 ±   0.7
+bank-b2      n=10 baseline     9.4 ±    0.5 ms | hubble    +2.2 ±   0.8 | otterize    +0.1 ±   0.9 | ig_tcp    +1.1 ±   0.7 | ig_snap    +0.3 ±   0.5
+boutique-b1  n=10 baseline    22.7 ±    2.5 ms | hubble    -3.9 ±   4.0 | otterize    -1.7 ±   3.4 | ig_tcp    -1.9 ±   1.7 | ig_snap    -1.0 ±   2.5
+boutique-b2  n=10 baseline    21.2 ±    0.9 ms | hubble    +0.1 ±   1.1 | otterize    +0.0 ±   1.3 | ig_tcp    +0.1 ±   1.1 | ig_snap    +0.4 ±   1.3
+dsb-b1       n=10 baseline   272.1 ±  352.5 ms | hubble  +173.5 ± 935.9 | otterize  -181.0 ± 359.2 | ig_tcp  -199.5 ± 326.1 | ig_snap  -197.0 ± 350.2
+dsb-b2       n=10 baseline     2.8 ±    0.3 ms | hubble    +0.4 ±   0.3 | otterize    +0.1 ±   0.3 | ig_tcp    +0.1 ±   0.3 | ig_snap    -0.1 ±   0.3
+otel-b1      n=10 baseline     6.7 ±    0.5 ms | hubble    -0.7 ±   0.5 | otterize    -0.2 ±   0.9 | ig_tcp    -0.5 ±   0.5 | ig_snap    -0.4 ±   0.8
+otel-b2      n=10 baseline     3.2 ±    0.4 ms | hubble    +0.0 ±   0.5 | otterize    -0.1 ±   0.3 | ig_tcp    +0.0 ±   0.5 | ig_snap    +0.0 ±   0.5
+teastore-b1  n=10 baseline    20.8 ±    1.1 ms | hubble    -0.5 ±   1.6 | otterize    -1.3 ±   1.8 | ig_tcp    +0.0 ±   1.5 | ig_snap    -1.2 ±   3.4
+teastore-b2  n=10 baseline     9.9 ±    1.1 ms | hubble    +0.4 ±   0.5 | otterize    +0.0 ±   1.1 | ig_tcp    +0.5 ±   1.2 | ig_snap    +1.0 ±   3.7

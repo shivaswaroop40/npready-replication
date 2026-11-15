@@ -1,0 +1,4 @@
+[2026-09-06 16:35:36,712] loadgen-b-6df54c46d7-9tbk9/INFO/locust.main: No run time limit set, use CTRL+C to interrupt
+[2026-09-06 16:35:36,712] loadgen-b-6df54c46d7-9tbk9/INFO/locust.main: Starting Locust 2.31.5
+[2026-09-06 16:35:36,713] loadgen-b-6df54c46d7-9tbk9/INFO/locust.runners: Ramping to 8 users at a rate of 2.00 per second
+[2026-09-06 16:35:39,716] loadgen-b-6df54c46d7-9tbk9/INFO/locust.runners: All users spawned: {"JourneyBUser": 8} (8 total users)

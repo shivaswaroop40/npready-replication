@@ -1,0 +1,6 @@
+# sha256 of the thesis files this bundle was built from, relative to results/OTEL-20260906/
+33614c35c95db69aa0ec68426e0b580cd1c4dc6eb517786ea45327d176c95a6f  enforce_missing_three.sh
+e5d0d7b84e8ce921aa9dc954475256e6544b142b0671b3f8f3839c8653aaef01  manifests/otel-demo-1.12.0.yaml
+413fee5e992d5db95c5e0974e01d5e1144d7b7b7d24630198c7d3b9b4ea39ee7  otel_capture.sh
+8565761afbf0487fdb28bb202b3a422ec2c82d43576c2f3c919e0f11e22a11b7  workloads/loadgen-a.yaml
+6e9d0e6aacb537051993383712780b39ddc5356bf4bfde01704f4cf6390986cb  workloads/locustfile_A.py

@@ -1,0 +1,132 @@
+{
+ "evaluation": "journey B traffic only; policies generated from journey A",
+ "L_B_pairs": 18,
+ "L_B_ingress_pairs": 16,
+ "A_size": 8,
+ "attack_edges_seen_in_A_traffic": [],
+ "L_B": [
+  "cartservice->redis-cart",
+  "checkoutservice->cartservice",
+  "checkoutservice->currencyservice",
+  "checkoutservice->emailservice",
+  "checkoutservice->paymentservice",
+  "checkoutservice->productcatalogservice",
+  "checkoutservice->shippingservice",
+  "frontend->adservice",
+  "frontend->cartservice",
+  "frontend->checkoutservice",
+  "frontend->currencyservice",
+  "frontend->kube-dns",
+  "frontend->productcatalogservice",
+  "frontend->recommendationservice",
+  "frontend->shippingservice",
+  "loadgenerator->frontend",
+  "loadgenerator->kube-dns",
+  "recommendationservice->productcatalogservice"
+ ],
+ "analytical": {
+  "synth (ours, traffic A)": {
+   "admit": 18,
+   "false_deny": 0.0,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [],
+   "admitted_attacks": []
+  },
+  "synth_plus_config (ours, traffic A + config)": {
+   "admit": 28,
+   "false_deny": 0.0,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [],
+   "admitted_attacks": []
+  },
+  "otterize": {
+   "admit": 16,
+   "false_deny": 0.0,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [],
+   "admitted_attacks": []
+  },
+  "ig_trace_tcp": {
+   "admit": 1,
+   "false_deny": 0.938,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "cartservice->redis-cart",
+    "checkoutservice->cartservice",
+    "checkoutservice->currencyservice",
+    "checkoutservice->emailservice",
+    "checkoutservice->paymentservice",
+    "checkoutservice->productcatalogservice",
+    "checkoutservice->shippingservice",
+    "frontend->adservice",
+    "frontend->cartservice",
+    "frontend->checkoutservice",
+    "frontend->currencyservice",
+    "frontend->productcatalogservice",
+    "frontend->recommendationservice",
+    "frontend->shippingservice",
+    "recommendationservice->productcatalogservice"
+   ],
+   "admitted_attacks": []
+  },
+  "ig_snapshot_socket": {
+   "admit": 16,
+   "false_deny": 0.0,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [],
+   "admitted_attacks": []
+  }
+ },
+ "live_enforcement": {
+  "synth (ours, traffic A)": {
+   "drops": 0,
+   "distinct_dropped_edges": 0,
+   "locust_fails": "1(0.15%)",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": []
+  },
+  "synth_plus_config (ours, traffic A + config)": {
+   "drops": 0,
+   "distinct_dropped_edges": 0,
+   "locust_fails": "1(0.15%)",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": []
+  },
+  "otterize": {
+   "drops": 0,
+   "distinct_dropped_edges": 0,
+   "locust_fails": "1(0.15%)",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": []
+  },
+  "ig_trace_tcp": {
+   "drops": 600,
+   "distinct_dropped_edges": 1,
+   "locust_fails": "21(100.00%)",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": [
+    [
+     "loadgenerator-b->frontend:8080",
+     600
+    ]
+   ]
+  },
+  "ig_snapshot_socket": {
+   "drops": 32,
+   "distinct_dropped_edges": 1,
+   "locust_fails": "0(0.00%)",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": [
+    [
+     "?->frontend:8080",
+     32
+    ]
+   ]
+  }
+ }
+}

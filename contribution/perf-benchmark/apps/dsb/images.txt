@@ -1,0 +1,11 @@
+deathstarbench/wrk2-client:latest
+docker.io/alpine/git:latest
+docker.io/deathstarbench/social-network-microservices:latest
+docker.io/jaegertracing/all-in-one:latest
+docker.io/library/memcached:1.6.7
+docker.io/library/mongo:4.4.6
+docker.io/library/redis:6.2.4
+docker.io/yg397/media-frontend:xenial
+docker.io/yg397/openresty-thrift:xenial
+python:3.12-slim
+williamyeh/hey@sha256:6e63ae9c5801204cf7abe22c9ddf82d1bcbc7140ffd206a9bd83a8a643dcd6f2

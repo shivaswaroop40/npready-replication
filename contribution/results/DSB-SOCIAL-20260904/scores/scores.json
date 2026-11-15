@@ -1,0 +1,314 @@
+{
+ "evaluation": "journey B traffic only; policies generated from journey A",
+ "L_B_pairs": 38,
+ "L_B_ingress_pairs": 30,
+ "A_size": 8,
+ "attack_edges_seen_in_A_traffic": [],
+ "L_B": [
+  "compose-post-service->home-timeline-service",
+  "compose-post-service->kube-dns",
+  "compose-post-service->media-service",
+  "compose-post-service->post-storage-service",
+  "compose-post-service->text-service",
+  "compose-post-service->unique-id-service",
+  "compose-post-service->user-service",
+  "compose-post-service->user-timeline-service",
+  "home-timeline-service->home-timeline-redis",
+  "home-timeline-service->kube-dns",
+  "home-timeline-service->post-storage-service",
+  "home-timeline-service->social-graph-service",
+  "media-service->jaeger",
+  "nginx-thrift->compose-post-service",
+  "nginx-thrift->home-timeline-service",
+  "nginx-thrift->jaeger",
+  "nginx-thrift->kube-dns",
+  "post-storage-service->post-storage-memcached",
+  "post-storage-service->post-storage-mongodb",
+  "social-graph-service->jaeger",
+  "social-graph-service->kube-dns",
+  "social-graph-service->social-graph-mongodb",
+  "social-graph-service->social-graph-redis",
+  "text-service->kube-dns",
+  "text-service->url-shorten-service",
+  "text-service->user-mention-service",
+  "unique-id-service->jaeger",
+  "url-shorten-service->kube-dns",
+  "url-shorten-service->url-shorten-mongodb",
+  "user-mention-service->user-memcached",
+  "user-mention-service->user-mongodb",
+  "user-service->jaeger",
+  "user-service->user-mongodb",
+  "user-timeline-service->kube-dns",
+  "user-timeline-service->user-timeline-mongodb",
+  "user-timeline-service->user-timeline-redis",
+  "wrk2-client->kube-dns",
+  "wrk2-client->nginx-thrift"
+ ],
+ "analytical": {
+  "synth (ours, traffic A)": {
+   "admit": 18,
+   "false_deny": 0.533,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "compose-post-service->home-timeline-service",
+    "compose-post-service->media-service",
+    "compose-post-service->post-storage-service",
+    "compose-post-service->text-service",
+    "compose-post-service->unique-id-service",
+    "compose-post-service->user-service",
+    "compose-post-service->user-timeline-service",
+    "home-timeline-service->social-graph-service",
+    "media-service->jaeger",
+    "nginx-thrift->compose-post-service",
+    "social-graph-service->jaeger",
+    "text-service->url-shorten-service",
+    "text-service->user-mention-service",
+    "unique-id-service->jaeger",
+    "user-mention-service->user-memcached",
+    "user-service->jaeger"
+   ],
+   "admitted_attacks": []
+  },
+  "synth_plus_config (ours, traffic A + config)": {
+   "admit": 42,
+   "false_deny": 0.533,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "compose-post-service->home-timeline-service",
+    "compose-post-service->media-service",
+    "compose-post-service->post-storage-service",
+    "compose-post-service->text-service",
+    "compose-post-service->unique-id-service",
+    "compose-post-service->user-service",
+    "compose-post-service->user-timeline-service",
+    "home-timeline-service->social-graph-service",
+    "media-service->jaeger",
+    "nginx-thrift->compose-post-service",
+    "social-graph-service->jaeger",
+    "text-service->url-shorten-service",
+    "text-service->user-mention-service",
+    "unique-id-service->jaeger",
+    "user-mention-service->user-memcached",
+    "user-service->jaeger"
+   ],
+   "admitted_attacks": []
+  },
+  "otterize": {
+   "admit": 5,
+   "false_deny": 0.833,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "compose-post-service->home-timeline-service",
+    "compose-post-service->media-service",
+    "compose-post-service->post-storage-service",
+    "compose-post-service->text-service",
+    "compose-post-service->unique-id-service",
+    "compose-post-service->user-service",
+    "compose-post-service->user-timeline-service",
+    "home-timeline-service->social-graph-service",
+    "media-service->jaeger",
+    "nginx-thrift->compose-post-service",
+    "nginx-thrift->jaeger",
+    "post-storage-service->post-storage-mongodb",
+    "social-graph-service->jaeger",
+    "social-graph-service->social-graph-mongodb",
+    "social-graph-service->social-graph-redis",
+    "text-service->url-shorten-service",
+    "text-service->user-mention-service",
+    "unique-id-service->jaeger",
+    "url-shorten-service->url-shorten-mongodb",
+    "user-mention-service->user-memcached",
+    "user-mention-service->user-mongodb",
+    "user-service->jaeger",
+    "user-service->user-mongodb",
+    "user-timeline-service->user-timeline-mongodb",
+    "user-timeline-service->user-timeline-redis"
+   ],
+   "admitted_attacks": []
+  },
+  "ig_trace_tcp": {
+   "admit": 5,
+   "false_deny": 0.833,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "compose-post-service->home-timeline-service",
+    "compose-post-service->media-service",
+    "compose-post-service->post-storage-service",
+    "compose-post-service->text-service",
+    "compose-post-service->unique-id-service",
+    "compose-post-service->user-service",
+    "compose-post-service->user-timeline-service",
+    "home-timeline-service->social-graph-service",
+    "media-service->jaeger",
+    "nginx-thrift->compose-post-service",
+    "nginx-thrift->jaeger",
+    "post-storage-service->post-storage-mongodb",
+    "social-graph-service->jaeger",
+    "social-graph-service->social-graph-mongodb",
+    "social-graph-service->social-graph-redis",
+    "text-service->url-shorten-service",
+    "text-service->user-mention-service",
+    "unique-id-service->jaeger",
+    "url-shorten-service->url-shorten-mongodb",
+    "user-mention-service->user-memcached",
+    "user-mention-service->user-mongodb",
+    "user-service->jaeger",
+    "user-service->user-mongodb",
+    "user-timeline-service->user-timeline-mongodb",
+    "user-timeline-service->user-timeline-redis"
+   ],
+   "admitted_attacks": []
+  },
+  "ig_snapshot_socket": {
+   "admit": 25,
+   "false_deny": 0.267,
+   "over_privilege": 0.0,
+   "block_rate": 1.0,
+   "missed_legit": [
+    "media-service->jaeger",
+    "nginx-thrift->compose-post-service",
+    "nginx-thrift->jaeger",
+    "post-storage-service->post-storage-memcached",
+    "social-graph-service->jaeger",
+    "unique-id-service->jaeger",
+    "user-mention-service->user-memcached",
+    "user-service->jaeger"
+   ],
+   "admitted_attacks": []
+  }
+ },
+ "live_enforcement": {
+  "synth (ours, traffic A)": {
+   "drops": 1942,
+   "distinct_dropped_edges": 5,
+   "locust_fails": "non2xx=0/n/a sockerr=('0', '0', '0', '0')",
+   "pods_not_ready_after_restart": 1,
+   "top_dropped": [
+    [
+     "nginx-thrift->compose-post-service:9090",
+     1918
+    ],
+    [
+     "nginx-thrift->jaeger:None",
+     20
+    ],
+    [
+     "?->user-timeline-service:None",
+     2
+    ],
+    [
+     "user-timeline-service->?:34110",
+     1
+    ],
+    [
+     "user-timeline-service->?:34096",
+     1
+    ]
+   ]
+  },
+  "synth_plus_config (ours, traffic A + config)": {
+   "drops": 2011,
+   "distinct_dropped_edges": 7,
+   "locust_fails": "non2xx=111/111 sockerr=('0', '0', '0', '4')",
+   "pods_not_ready_after_restart": 1,
+   "top_dropped": [
+    [
+     "nginx-thrift->compose-post-service:9090",
+     1986
+    ],
+    [
+     "nginx-thrift->jaeger:None",
+     20
+    ],
+    [
+     "user-timeline-service->?:60166",
+     1
+    ],
+    [
+     "user-timeline-service->?:60170",
+     1
+    ],
+    [
+     "user-timeline-service->?:60154",
+     1
+    ]
+   ]
+  },
+  "otterize": {
+   "drops": 3249,
+   "distinct_dropped_edges": 12,
+   "locust_fails": "non2xx=112/112 sockerr=('0', '0', '0', '4')",
+   "pods_not_ready_after_restart": 1,
+   "top_dropped": [
+    [
+     "nginx-thrift->compose-post-service:9090",
+     1979
+    ],
+    [
+     "user-timeline-service->user-timeline-mongodb:27017",
+     262
+    ],
+    [
+     "url-shorten-service->url-shorten-mongodb:27017",
+     246
+    ],
+    [
+     "post-storage-service->post-storage-mongodb:27017",
+     244
+    ],
+    [
+     "social-graph-service->social-graph-mongodb:27017",
+     244
+    ]
+   ]
+  },
+  "ig_trace_tcp": {
+   "drops": 3260,
+   "distinct_dropped_edges": 7,
+   "locust_fails": "non2xx=112/112 sockerr=('0', '0', '0', '4')",
+   "pods_not_ready_after_restart": 1,
+   "top_dropped": [
+    [
+     "nginx-thrift->compose-post-service:9090",
+     1996
+    ],
+    [
+     "user-timeline-service->user-timeline-mongodb:27017",
+     256
+    ],
+    [
+     "url-shorten-service->url-shorten-mongodb:27017",
+     248
+    ],
+    [
+     "post-storage-service->post-storage-mongodb:27017",
+     246
+    ],
+    [
+     "social-graph-service->social-graph-mongodb:27017",
+     244
+    ]
+   ]
+  },
+  "ig_snapshot_socket": {
+   "drops": 2052,
+   "distinct_dropped_edges": 2,
+   "locust_fails": "non2xx=112/112 sockerr=('0', '0', '0', '4')",
+   "pods_not_ready_after_restart": 0,
+   "top_dropped": [
+    [
+     "nginx-thrift->compose-post-service:9090",
+     2016
+    ],
+    [
+     "nginx-thrift->jaeger:None",
+     36
+    ]
+   ]
+  }
+ }
+}

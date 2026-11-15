@@ -1,0 +1,17 @@
+=== npready probe family=06-internal-recon technique=T1046 expect=blocked ===
+RESULT 06-internal-recon redis-cart.boutique.svc:6379 OPEN (reachable)
+RESULT 06-internal-recon paymentservice.boutique.svc:50051 OPEN (reachable)
+RESULT 06-internal-recon emailservice.boutique.svc:8080 BLOCKED (denied or unreachable)
+RESULT 06-internal-recon checkoutservice.boutique.svc:5050 OPEN (reachable)
+RESULT 06-internal-recon cartservice.boutique.svc:7070 OPEN (reachable)
+RESULT 06-internal-recon currencyservice.boutique.svc:7000 OPEN (reachable)
+RESULT 06-internal-recon productcatalogservice.boutique.svc:3550 OPEN (reachable)
+RESULT 06-internal-recon shippingservice.boutique.svc:50051 OPEN (reachable)
+RESULT 06-internal-recon adservice.boutique.svc:9555 OPEN (reachable)
+RESULT 06-internal-recon recommendationservice.boutique.svc:8080 OPEN (reachable)
+RESULT 06-internal-recon frontend.boutique.svc:80 OPEN (reachable)
+=== npready probe done family=06-internal-recon any_open=0 ===
+
+NOTE (author, after the run): emailservice was probed on :8080, its pod port. Its Service listens on :5000
+(targetPort 8080), so "BLOCKED" there is a probe-target error, not a policy. 10 of 11 targets reachable
+unprotected; the attack edge frontend->emailservice is scored at the pod port, which is what a NetworkPolicy governs.

@@ -1,0 +1,326 @@
+{
+  "app": "otel",
+  "attack_edges": 8,
+  "rounds": {
+    "unprotected": [
+      {
+        "edge": "frontend->valkey:6379",
+        "dst_ip": "10.42.0.186",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "frontend->kafka:9092",
+        "dst_ip": "10.42.1.213",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "adservice->paymentservice:8080",
+        "dst_ip": "10.42.1.79",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "recommendationservice->checkoutservice:8080",
+        "dst_ip": "10.42.0.251",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "currencyservice->valkey:6379",
+        "dst_ip": "10.42.0.186",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "productcatalogservice->kafka:9092",
+        "dst_ip": "10.42.1.213",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "emailservice->cartservice:8080",
+        "dst_ip": "10.42.0.152",
+        "reachable": true,
+        "log": "RC=0"
+      },
+      {
+        "edge": "paymentservice->productcatalogservice:8080",
+        "dst_ip": "10.42.1.37",
+        "reachable": true,
+        "log": "RC=0"
+      }
+    ],
+    "synth": {
+      "edges": [
+        {
+          "edge": "frontend->valkey:6379",
+          "dst_ip": "10.42.0.186",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->kafka:9092",
+          "dst_ip": "10.42.1.213",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "adservice->paymentservice:8080",
+          "dst_ip": "10.42.1.79",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommendationservice->checkoutservice:8080",
+          "dst_ip": "10.42.0.251",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "currencyservice->valkey:6379",
+          "dst_ip": "10.42.0.186",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "productcatalogservice->kafka:9092",
+          "dst_ip": "10.42.1.213",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "emailservice->cartservice:8080",
+          "dst_ip": "10.42.0.152",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "paymentservice->productcatalogservice:8080",
+          "dst_ip": "10.42.1.37",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "synth_plus_config": {
+      "edges": [
+        {
+          "edge": "frontend->valkey:6379",
+          "dst_ip": "10.42.0.186",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->kafka:9092",
+          "dst_ip": "10.42.1.213",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "adservice->paymentservice:8080",
+          "dst_ip": "10.42.1.79",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommendationservice->checkoutservice:8080",
+          "dst_ip": "10.42.0.251",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "currencyservice->valkey:6379",
+          "dst_ip": "10.42.0.186",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "productcatalogservice->kafka:9092",
+          "dst_ip": "10.42.1.213",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "emailservice->cartservice:8080",
+          "dst_ip": "10.42.0.152",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "paymentservice->productcatalogservice:8080",
+          "dst_ip": "10.42.1.37",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "otterize": {
+      "edges": [
+        {
+          "edge": "frontend->valkey:6379",
+          "dst_ip": "10.42.0.186",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->kafka:9092",
+          "dst_ip": "10.42.1.213",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "adservice->paymentservice:8080",
+          "dst_ip": "10.42.1.79",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommendationservice->checkoutservice:8080",
+          "dst_ip": "10.42.0.251",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "currencyservice->valkey:6379",
+          "dst_ip": "10.42.0.186",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "productcatalogservice->kafka:9092",
+          "dst_ip": "10.42.1.213",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "emailservice->cartservice:8080",
+          "dst_ip": "10.42.0.152",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "paymentservice->productcatalogservice:8080",
+          "dst_ip": "10.42.1.37",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "ig_snapshot_socket": {
+      "edges": [
+        {
+          "edge": "frontend->valkey:6379",
+          "dst_ip": "10.42.0.186",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->kafka:9092",
+          "dst_ip": "10.42.1.213",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "adservice->paymentservice:8080",
+          "dst_ip": "10.42.1.79",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommendationservice->checkoutservice:8080",
+          "dst_ip": "10.42.0.251",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "currencyservice->valkey:6379",
+          "dst_ip": "10.42.0.186",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "productcatalogservice->kafka:9092",
+          "dst_ip": "10.42.1.213",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "emailservice->cartservice:8080",
+          "dst_ip": "10.42.0.152",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "paymentservice->productcatalogservice:8080",
+          "dst_ip": "10.42.1.37",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    },
+    "ig_trace_tcp": {
+      "edges": [
+        {
+          "edge": "frontend->valkey:6379",
+          "dst_ip": "10.42.0.186",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "frontend->kafka:9092",
+          "dst_ip": "10.42.1.213",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "adservice->paymentservice:8080",
+          "dst_ip": "10.42.1.79",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "recommendationservice->checkoutservice:8080",
+          "dst_ip": "10.42.0.251",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "currencyservice->valkey:6379",
+          "dst_ip": "10.42.0.186",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "productcatalogservice->kafka:9092",
+          "dst_ip": "10.42.1.213",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "emailservice->cartservice:8080",
+          "dst_ip": "10.42.0.152",
+          "reachable": false,
+          "log": "RC=1"
+        },
+        {
+          "edge": "paymentservice->productcatalogservice:8080",
+          "dst_ip": "10.42.1.37",
+          "reachable": false,
+          "log": "RC=1"
+        }
+      ],
+      "attack_reachable": 0,
+      "over_privilege": 0.0
+    }
+  }
+}

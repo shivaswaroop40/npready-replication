@@ -1,0 +1,7 @@
+# Otterize network-mapper chart 3.0.47 (repo https://helm.otterize.com), release
+# `network-mapper` in ns otterize-system, exactly as on test-cluster (helm install from the
+# laptop on 2026-07-28). The thesis values were never saved and are believed to be the chart
+# defaults (REBUILD-SPEC section 3, row 12), so nothing is overridden here.
+# cond.sh scales deploy/otterize-network-mapper and gates ds/otterize-network-sniffer with a
+# nodeSelector at run time; it does not change these values.
+{}

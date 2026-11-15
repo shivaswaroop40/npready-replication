@@ -1,0 +1,168 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-adservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: adservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 9555, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-cartservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: cartservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+    ports: [{port: 7070, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 7070, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-checkoutservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: checkoutservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 5050, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-currencyservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: currencyservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+    ports: [{port: 7000, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 7000, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-emailservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: emailservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-frontend
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: frontend}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: loadgenerator}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-paymentservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: paymentservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+    ports: [{port: 50051, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-productcatalogservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: productcatalogservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+    ports: [{port: 3550, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 3550, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: recommendationservice}}
+    ports: [{port: 3550, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-recommendationservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: recommendationservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 8080, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-redis-cart
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: redis-cart}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: cartservice}}
+    ports: [{port: 6379, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-shippingservice
+  namespace: boutique
+  labels: {thesis.ankra.dev/generated-from: synth_plus_config, thesis.ankra.dev/journey: A}
+spec:
+  podSelector: {matchLabels: {app: shippingservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+    ports: [{port: 50051, protocol: TCP}]
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 50051, protocol: TCP}]

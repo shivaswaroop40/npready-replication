@@ -1,0 +1,8 @@
+evaluation set: journey B, 25 ingress pairs (35 incl. DNS egress); attacks |A|=8; attack-in-A-traffic=[]
+
+tool                                           admit false_deny_B over_priv |  drops dropped_edges locust_fails not_ready
+synth (ours, traffic A)                           26          0.2       0.0 |      -             -            -         -
+synth_plus_config (ours, traffic A + config)      51          0.0       0.0 |      -             -            -         -
+otterize                                          23         0.08       0.0 |      -             -            -         -
+ig_trace_tcp                                       4         0.84       0.0 |      -             -            -         -
+ig_snapshot_socket                                21         0.16       0.0 |      -             -            -         -

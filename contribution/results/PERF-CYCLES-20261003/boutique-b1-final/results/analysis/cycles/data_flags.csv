@@ -1,0 +1,12 @@
+app,rep,cond,flag
+boutique,1,hubble,"Hubble lost 61 events during the run (ring buffer), 0 of them in the steady window"
+boutique,10,hubble,"Hubble lost 72 events during the run (ring buffer), 0 of them in the steady window"
+boutique,2,hubble,"Hubble lost 65 events during the run (ring buffer), 0 of them in the steady window"
+boutique,3,hubble,"Hubble lost 61 events during the run (ring buffer), 0 of them in the steady window"
+boutique,4,hubble,"Hubble lost 59 events during the run (ring buffer), 0 of them in the steady window"
+boutique,5,hubble,"Hubble lost 68 events during the run (ring buffer), 0 of them in the steady window"
+boutique,6,hubble,"Hubble lost 63 events during the run (ring buffer), 0 of them in the steady window"
+boutique,7,hubble,"Hubble lost 66 events during the run (ring buffer), 0 of them in the steady window"
+boutique,8,hubble,"Hubble lost 61 events during the run (ring buffer), 0 of them in the steady window"
+boutique,8,hubble,steal 1.32% is more than twice the app median (0.05%)
+boutique,9,hubble,"Hubble lost 59 events during the run (ring buffer), 0 of them in the steady window"

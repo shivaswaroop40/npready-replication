@@ -1,0 +1,7 @@
+# boutique: fields of manifest.yaml that differ from the thesis manifest
+# source: results/BOUTIQUE-20260903/{manifests/online-boutique-v0.10.6.yaml}
+# objects: 35 in thesis, 35 in manifest.yaml
+Service/frontend-external: spec.type: LoadBalancer -> ClusterIP
+Deployment/loadgenerator: spec.replicas: 1 -> 0
+Deployment/recommendationservice: spec.template.spec.containers[0].startupProbe: (absent) -> {failureThreshold: 90, grpc: {port: 8080}, periodSeconds: 2, timeoutSeconds: 1}
+Deployment/emailservice: spec.template.spec.containers[0].startupProbe: (absent) -> {failureThreshold: 90, grpc: {port: 8080}, periodSeconds: 2, timeoutSeconds: 1}

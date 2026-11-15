@@ -1,0 +1,108 @@
+{
+  "needed": [
+    {
+      "src": "default/teastore-persistence",
+      "dst": "default/teastore-registry",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:REGISTRY_HOST=teastore-registry:8080"
+    },
+    {
+      "src": "default/teastore-persistence",
+      "dst": "default/teastore-db",
+      "port": 3306,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:DB_HOST=teastore-db:3306"
+    },
+    {
+      "src": "default/teastore-auth",
+      "dst": "default/teastore-registry",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:REGISTRY_HOST=teastore-registry:8080"
+    },
+    {
+      "src": "default/teastore-image",
+      "dst": "default/teastore-registry",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:REGISTRY_HOST=teastore-registry:8080"
+    },
+    {
+      "src": "default/teastore-recommender",
+      "dst": "default/teastore-registry",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:REGISTRY_HOST=teastore-registry:8080"
+    },
+    {
+      "src": "default/teastore-webui",
+      "dst": "default/teastore-registry",
+      "port": 8080,
+      "class": "in_cluster",
+      "provenance": "s1_env",
+      "evidence": "env:REGISTRY_HOST=teastore-registry:8080"
+    },
+    {
+      "src": "default/teastore-db",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/teastore-registry",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/teastore-persistence",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/teastore-auth",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/teastore-image",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/teastore-recommender",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    },
+    {
+      "src": "default/teastore-webui",
+      "dst": "kube-dns",
+      "port": 53,
+      "class": "in_cluster",
+      "provenance": "s4_dns",
+      "evidence": "cluster DNS invariant"
+    }
+  ]
+}

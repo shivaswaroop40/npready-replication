@@ -1,0 +1,14 @@
+{
+ "drops_total": 50,
+ "drops_by_edge": {
+  "teastore-webui->?:8080": 17,
+  "teastore-recommender->?:8080": 10,
+  "teastore-image->?:8080": 9,
+  "teastore-auth->?:8080": 8,
+  "teastore-recommender->teastore-persistence:8080": 2,
+  "?->teastore-webui:None": 2,
+  "?->teastore-recommender:None": 2
+ },
+ "locust_aggregated_last": null,
+ "locust_fails": "n/a"
+}

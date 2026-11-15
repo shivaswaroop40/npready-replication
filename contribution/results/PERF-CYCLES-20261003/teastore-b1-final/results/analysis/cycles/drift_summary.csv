@@ -1,0 +1,3 @@
+app,layout,mode,blocks,cv_raw_pct,cv_norm_pct,r_time_vs_inv_speed
+teastore,cycle,keep-alive,10,6.968182435436699,11.817838458105156,-0.16562113893725589
+teastore,cycle,new conn,10,6.848037639666633,9.878722243299483,-0.06727717605103155

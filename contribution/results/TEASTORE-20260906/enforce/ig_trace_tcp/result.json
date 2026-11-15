@@ -1,0 +1,10 @@
+{
+ "drops_total": 227,
+ "drops_by_edge": {
+  "teastore-persistence->teastore-db:3306": 204,
+  "teastore-webui->?:8080": 21,
+  "?->teastore-webui:None": 2
+ },
+ "locust_aggregated_last": null,
+ "locust_fails": "n/a"
+}

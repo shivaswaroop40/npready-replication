@@ -1,0 +1,62 @@
+=== otel: 8 attack edges ===
+--- unprotected ---
+  [unprot] frontend->valkey:6379  reachable=True
+  [unprot] frontend->kafka:9092  reachable=True
+  [unprot] adservice->paymentservice:8080  reachable=True
+  [unprot] recommendationservice->checkoutservice:8080  reachable=True
+  [unprot] currencyservice->valkey:6379  reachable=True
+  [unprot] productcatalogservice->kafka:9092  reachable=True
+  [unprot] emailservice->cartservice:8080  reachable=True
+  [unprot] paymentservice->productcatalogservice:8080  reachable=True
+--- synth (17 policies) ---
+  [synth] frontend->valkey:6379  reachable=False
+  [synth] frontend->kafka:9092  reachable=False
+  [synth] adservice->paymentservice:8080  reachable=False
+  [synth] recommendationservice->checkoutservice:8080  reachable=False
+  [synth] currencyservice->valkey:6379  reachable=False
+  [synth] productcatalogservice->kafka:9092  reachable=False
+  [synth] emailservice->cartservice:8080  reachable=False
+  [synth] paymentservice->productcatalogservice:8080  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- synth_plus_config (17 policies) ---
+  [synth_plus_config] frontend->valkey:6379  reachable=False
+  [synth_plus_config] frontend->kafka:9092  reachable=False
+  [synth_plus_config] adservice->paymentservice:8080  reachable=False
+  [synth_plus_config] recommendationservice->checkoutservice:8080  reachable=False
+  [synth_plus_config] currencyservice->valkey:6379  reachable=False
+  [synth_plus_config] productcatalogservice->kafka:9092  reachable=False
+  [synth_plus_config] emailservice->cartservice:8080  reachable=False
+  [synth_plus_config] paymentservice->productcatalogservice:8080  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- otterize (17 policies) ---
+  [otterize] frontend->valkey:6379  reachable=False
+  [otterize] frontend->kafka:9092  reachable=False
+  [otterize] adservice->paymentservice:8080  reachable=False
+  [otterize] recommendationservice->checkoutservice:8080  reachable=False
+  [otterize] currencyservice->valkey:6379  reachable=False
+  [otterize] productcatalogservice->kafka:9092  reachable=False
+  [otterize] emailservice->cartservice:8080  reachable=False
+  [otterize] paymentservice->productcatalogservice:8080  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- ig_snapshot_socket (17 policies) ---
+  [ig_snapshot_socket] frontend->valkey:6379  reachable=False
+  [ig_snapshot_socket] frontend->kafka:9092  reachable=False
+  [ig_snapshot_socket] adservice->paymentservice:8080  reachable=False
+  [ig_snapshot_socket] recommendationservice->checkoutservice:8080  reachable=False
+  [ig_snapshot_socket] currencyservice->valkey:6379  reachable=False
+  [ig_snapshot_socket] productcatalogservice->kafka:9092  reachable=False
+  [ig_snapshot_socket] emailservice->cartservice:8080  reachable=False
+  [ig_snapshot_socket] paymentservice->productcatalogservice:8080  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+--- ig_trace_tcp (17 policies) ---
+  [ig_trace_tcp] frontend->valkey:6379  reachable=False
+  [ig_trace_tcp] frontend->kafka:9092  reachable=False
+  [ig_trace_tcp] adservice->paymentservice:8080  reachable=False
+  [ig_trace_tcp] recommendationservice->checkoutservice:8080  reachable=False
+  [ig_trace_tcp] currencyservice->valkey:6379  reachable=False
+  [ig_trace_tcp] productcatalogservice->kafka:9092  reachable=False
+  [ig_trace_tcp] emailservice->cartservice:8080  reachable=False
+  [ig_trace_tcp] paymentservice->productcatalogservice:8080  reachable=False
+    => over_privilege(executed) = 0/8 = 0.0
+written /root/ae/out/otel/otel.json
+probe exit 0

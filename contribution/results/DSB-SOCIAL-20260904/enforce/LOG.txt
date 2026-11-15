@@ -1,0 +1,210 @@
+[enforce 10:20:50Z] === synth: apply policy ===
+[enforce 10:20:59Z] policies active: 27 / expected 27
+[enforce 10:20:59Z] restart every deployment one at a time (scale 0->1) so connections re-establish under the policy
+   compose-post-service ready=yes after ~0s
+   home-timeline-redis ready=yes after ~5s
+   home-timeline-service ready=yes after ~0s
+   jaeger ready=yes after ~5s
+   media-frontend ready=yes after ~55s
+   media-memcached ready=yes after ~5s
+   media-mongodb ready=yes after ~5s
+   media-service ready=yes after ~0s
+   nginx-thrift ready=yes after ~60s
+   post-storage-memcached ready=yes after ~5s
+   post-storage-mongodb ready=yes after ~5s
+   post-storage-service ready=yes after ~0s
+   social-graph-mongodb ready=yes after ~5s
+   social-graph-redis ready=yes after ~5s
+   social-graph-service ready=yes after ~0s
+   text-service ready=yes after ~0s
+   unique-id-service ready=yes after ~0s
+   url-shorten-memcached ready=yes after ~5s
+   url-shorten-mongodb ready=yes after ~5s
+   url-shorten-service ready=yes after ~0s
+   user-memcached ready=yes after ~5s
+   user-mention-service ready=yes after ~0s
+   user-mongodb ready=yes after ~5s
+   user-service ready=yes after ~0s
+   user-timeline-mongodb ready=yes after ~5s
+   user-timeline-redis ready=yes after ~5s
+   user-timeline-service ready=yes after ~0s
+[enforce 10:25:55Z] pods not ready after restart: 1
+[enforce 10:26:11Z] wrk2-b: Running
+[enforce 10:26:11Z] journey B running 180s under synth policy
+   drops=1942 distinct_edges=5 wrk2: non2xx=0/n/a sockerr=('0', '0', '0', '0')
+       1918  nginx-thrift->compose-post-service:9090
+         20  nginx-thrift->jaeger:None
+          2  ?->user-timeline-service:None
+          1  user-timeline-service->?:34110
+          1  user-timeline-service->?:34096
+[enforce 10:29:13Z] remove synth policy
+[enforce 10:29:16Z] policies left after removal: 0
+[enforce 10:29:16Z] === synth_plus_config: apply policy ===
+[enforce 10:29:26Z] policies active: 27 / expected 27
+[enforce 10:29:26Z] restart every deployment one at a time (scale 0->1) so connections re-establish under the policy
+   compose-post-service ready=yes after ~0s
+   home-timeline-redis ready=yes after ~5s
+   home-timeline-service ready=yes after ~0s
+   jaeger ready=yes after ~5s
+   media-frontend ready=yes after ~55s
+   media-memcached ready=yes after ~5s
+   media-mongodb ready=yes after ~5s
+   media-service ready=yes after ~0s
+   nginx-thrift ready=yes after ~60s
+   post-storage-memcached ready=yes after ~5s
+   post-storage-mongodb ready=yes after ~5s
+   post-storage-service ready=yes after ~0s
+   social-graph-mongodb ready=yes after ~5s
+   social-graph-redis ready=yes after ~5s
+   social-graph-service ready=yes after ~0s
+   text-service ready=yes after ~0s
+   unique-id-service ready=yes after ~0s
+   url-shorten-memcached ready=yes after ~5s
+   url-shorten-mongodb ready=yes after ~5s
+   url-shorten-service ready=yes after ~0s
+   user-memcached ready=yes after ~5s
+   user-mention-service ready=yes after ~0s
+   user-mongodb ready=yes after ~5s
+   user-service ready=yes after ~0s
+   user-timeline-mongodb ready=yes after ~5s
+   user-timeline-redis ready=yes after ~5s
+   user-timeline-service ready=yes after ~0s
+[enforce 10:34:25Z] pods not ready after restart: 1
+[enforce 10:34:40Z] wrk2-b: Running
+[enforce 10:34:40Z] journey B running 180s under synth_plus_config policy
+   drops=2011 distinct_edges=7 wrk2: non2xx=111/111 sockerr=('0', '0', '0', '4')
+       1986  nginx-thrift->compose-post-service:9090
+         20  nginx-thrift->jaeger:None
+          1  user-timeline-service->?:60166
+          1  user-timeline-service->?:60170
+          1  user-timeline-service->?:60154
+          1  user-timeline-service->?:60190
+          1  user-timeline-service->?:60180
+[enforce 10:37:41Z] remove synth_plus_config policy
+[enforce 10:37:44Z] policies left after removal: 0
+[enforce 10:37:44Z] === ig_snapshot_socket: apply policy ===
+[enforce 10:37:52Z] policies active: 27 / expected 27
+[enforce 10:37:52Z] restart every deployment one at a time (scale 0->1) so connections re-establish under the policy
+   compose-post-service ready=yes after ~0s
+   home-timeline-redis ready=yes after ~5s
+   home-timeline-service ready=yes after ~0s
+   jaeger ready=yes after ~5s
+   media-frontend ready=yes after ~55s
+   media-memcached ready=yes after ~5s
+   media-mongodb ready=yes after ~5s
+   media-service ready=yes after ~0s
+   nginx-thrift ready=yes after ~55s
+   post-storage-memcached ready=yes after ~5s
+   post-storage-mongodb ready=yes after ~5s
+   post-storage-service ready=yes after ~0s
+   social-graph-mongodb ready=yes after ~5s
+   social-graph-redis ready=yes after ~5s
+   social-graph-service ready=yes after ~0s
+   text-service ready=yes after ~0s
+   unique-id-service ready=yes after ~0s
+   url-shorten-memcached ready=yes after ~5s
+   url-shorten-mongodb ready=yes after ~5s
+   url-shorten-service ready=yes after ~0s
+   user-memcached ready=yes after ~5s
+   user-mention-service ready=yes after ~0s
+   user-mongodb ready=yes after ~5s
+   user-service ready=yes after ~0s
+   user-timeline-mongodb ready=yes after ~5s
+   user-timeline-redis ready=yes after ~5s
+   user-timeline-service ready=yes after ~0s
+[enforce 10:42:46Z] pods not ready after restart: 0
+[enforce 10:43:03Z] wrk2-b: Running
+[enforce 10:43:03Z] journey B running 180s under ig_snapshot_socket policy
+   drops=2052 distinct_edges=2 wrk2: non2xx=112/112 sockerr=('0', '0', '0', '4')
+       2016  nginx-thrift->compose-post-service:9090
+         36  nginx-thrift->jaeger:None
+[enforce 10:46:06Z] remove ig_snapshot_socket policy
+[enforce 10:46:14Z] policies left after removal: 0
+[enforce 10:46:14Z] === otterize: apply policy ===
+[enforce 10:46:32Z] policies active: 27 / expected 27
+[enforce 10:46:32Z] restart every deployment one at a time (scale 0->1) so connections re-establish under the policy
+   compose-post-service ready=yes after ~0s
+   home-timeline-redis ready=yes after ~0s
+   home-timeline-service ready=yes after ~0s
+   jaeger ready=yes after ~5s
+   media-frontend ready=yes after ~45s
+   media-memcached ready=yes after ~5s
+   media-mongodb ready=yes after ~5s
+   media-service ready=yes after ~0s
+   nginx-thrift ready=yes after ~55s
+   post-storage-memcached ready=yes after ~5s
+   post-storage-mongodb ready=yes after ~5s
+   post-storage-service ready=yes after ~0s
+   social-graph-mongodb ready=yes after ~5s
+   social-graph-redis ready=yes after ~5s
+   social-graph-service ready=yes after ~0s
+   text-service ready=yes after ~0s
+   unique-id-service ready=yes after ~0s
+   url-shorten-memcached ready=yes after ~5s
+   url-shorten-mongodb ready=yes after ~5s
+   url-shorten-service ready=yes after ~0s
+   user-memcached ready=yes after ~5s
+   user-mention-service ready=yes after ~0s
+   user-mongodb ready=yes after ~5s
+   user-service ready=yes after ~0s
+   user-timeline-mongodb ready=yes after ~5s
+   user-timeline-redis ready=yes after ~5s
+   user-timeline-service ready=yes after ~0s
+[enforce 10:51:26Z] pods not ready after restart: 1
+[enforce 10:51:41Z] wrk2-b: Running
+[enforce 10:51:41Z] journey B running 180s under otterize policy
+   drops=3249 distinct_edges=12 wrk2: non2xx=112/112 sockerr=('0', '0', '0', '4')
+       1979  nginx-thrift->compose-post-service:9090
+        262  user-timeline-service->user-timeline-mongodb:27017
+        246  url-shorten-service->url-shorten-mongodb:27017
+        244  post-storage-service->post-storage-mongodb:27017
+        244  social-graph-service->social-graph-mongodb:27017
+        240  user-service->user-mongodb:27017
+         24  nginx-thrift->jaeger:None
+          6  user-timeline-service->user-timeline-redis:6379
+[enforce 10:54:43Z] remove otterize policy
+[enforce 10:54:45Z] policies left after removal: 0
+[enforce 10:54:45Z] === ig_trace_tcp: apply policy ===
+[enforce 10:54:55Z] policies active: 27 / expected 27
+[enforce 10:54:55Z] restart every deployment one at a time (scale 0->1) so connections re-establish under the policy
+   compose-post-service ready=yes after ~0s
+   home-timeline-redis ready=yes after ~5s
+   home-timeline-service ready=yes after ~0s
+   jaeger ready=yes after ~5s
+   media-frontend ready=yes after ~75s
+   media-memcached ready=yes after ~5s
+   media-mongodb ready=yes after ~5s
+   media-service ready=yes after ~0s
+   nginx-thrift ready=yes after ~55s
+   post-storage-memcached ready=yes after ~5s
+   post-storage-mongodb ready=yes after ~5s
+   post-storage-service ready=yes after ~0s
+   social-graph-mongodb ready=yes after ~5s
+   social-graph-redis ready=yes after ~5s
+   social-graph-service ready=yes after ~0s
+   text-service ready=yes after ~0s
+   unique-id-service ready=yes after ~0s
+   url-shorten-memcached ready=yes after ~5s
+   url-shorten-mongodb ready=yes after ~5s
+   url-shorten-service ready=yes after ~0s
+   user-memcached ready=yes after ~5s
+   user-mention-service ready=yes after ~0s
+   user-mongodb ready=yes after ~5s
+   user-service ready=yes after ~0s
+   user-timeline-mongodb ready=yes after ~5s
+   user-timeline-redis ready=yes after ~5s
+   user-timeline-service ready=yes after ~0s
+[enforce 11:00:05Z] pods not ready after restart: 1
+[enforce 11:00:20Z] wrk2-b: Running
+[enforce 11:00:20Z] journey B running 180s under ig_trace_tcp policy
+   drops=3260 distinct_edges=7 wrk2: non2xx=112/112 sockerr=('0', '0', '0', '4')
+       1996  nginx-thrift->compose-post-service:9090
+        256  user-timeline-service->user-timeline-mongodb:27017
+        248  url-shorten-service->url-shorten-mongodb:27017
+        246  post-storage-service->post-storage-mongodb:27017
+        244  social-graph-service->social-graph-mongodb:27017
+        242  user-service->user-mongodb:27017
+         28  nginx-thrift->jaeger:None
+[enforce 11:03:22Z] remove ig_trace_tcp policy
+[enforce 11:03:24Z] policies left after removal: 0
+[enforce 11:03:27Z] ENFORCEMENT EVAL DONE
